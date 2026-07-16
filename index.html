@@ -385,7 +385,7 @@
           <!-- LEFT: text -->
           <div>
             <div class="se-hero-1" style="display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:100px;padding:8px 20px 8px 8px;margin-bottom:26px;box-shadow:0 8px 26px -12px rgba(255,153,0,.5)">
-              <span style="display:inline-flex;align-items:center;background:#fff;border-radius:100px;padding:6px 13px;box-shadow:0 2px 8px -2px rgba(0,0,0,.3)"><img src="https://growth.shopinecom.com/badges/amazon-verified-partner.webp" alt="Amazon Ads Verified Partner" style="height:26px;width:auto;display:block"/></span>
+              <span style="display:inline-flex;align-items:center;background:#fff;border-radius:100px;padding:6px 13px;box-shadow:0 2px 8px -2px rgba(0,0,0,.3)"><img src="assets/badges/amazon-verified-partner.webp" alt="Amazon Ads Verified Partner" style="height:40px;width:auto;display:block"/></span>
               <span style="display:flex;flex-direction:column;line-height:1.15"><span style="font-size:13.5px;font-weight:700;color:#fff">Amazon Ads Verified Partner</span><span style="display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:500;color:#D9D7EC"><span style="color:var(--amber)">&#9733;</span>4.8 client rating</span></span>
             </div>
             <h1 class="se-hero-2" style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.6rem,5.4vw,4.5rem);line-height:1.02;letter-spacing:-.025em;margin:0 0 22px">Marketplace growth,<br/><span class="se-gradtext">managed end to end.</span></h1>
@@ -1070,27 +1070,27 @@
               <span style="font-size:13px;color:#A8A6C4">You sell on <strong style="color:#fff;font-weight:700">{{ exFromName }}</strong>. Here's where we take you next:</span>
             </div>
             <div class="se-fill-grid se-grid-anim">
-              <div class="se-tilt" style="background:{{ exF.amazon.cardBg }};border:1px solid {{ exF.amazon.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.amazon.dim }};transition:all .3s">
+              <div class="se-tilt" style="display:{{ exF.amazon.show }};background:{{ exF.amazon.cardBg }};border:1px solid {{ exF.amazon.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.amazon.dim }};transition:all .3s">
                 <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:32px;background:#fff;border-radius:9px;padding:6px;margin-bottom:12px"><svg viewBox="0 0 50 30" style="width:100%;height:auto"><path d="M7 19c7 4 23 4.5 31 0" stroke="#FF9900" stroke-width="3.4" fill="none" stroke-linecap="round"/><path d="M35 15l4.5 1.3-1.3 4.6" stroke="#FF9900" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="24" y="13" font-family="Arial,sans-serif" font-weight="800" font-size="14" fill="#232F3E" text-anchor="middle">a</text></svg></span>
                 <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:#fff;margin-bottom:8px">Amazon</div>
                 <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:{{ exF.amazon.badgeColor }};background:{{ exF.amazon.badgeBg }};padding:4px 9px;border-radius:6px">{{ exF.amazon.badge }}</span>
               </div>
-              <div class="se-tilt" style="background:{{ exF.walmart.cardBg }};border:1px solid {{ exF.walmart.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.walmart.dim }};transition:all .3s">
+              <div class="se-tilt" style="display:{{ exF.walmart.show }};background:{{ exF.walmart.cardBg }};border:1px solid {{ exF.walmart.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.walmart.dim }};transition:all .3s">
                 <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:32px;background:#fff;border-radius:9px;padding:6px;margin-bottom:12px"><svg viewBox="0 0 32 32" style="width:100%;height:100%"><g stroke="#0071CE" stroke-width="3.6" stroke-linecap="round"><line x1="16" y1="3" x2="16" y2="11"/><line x1="16" y1="21" x2="16" y2="29"/><line x1="4.8" y1="9.5" x2="11.6" y2="13.5"/><line x1="20.4" y1="18.5" x2="27.2" y2="22.5"/><line x1="4.8" y1="22.5" x2="11.6" y2="18.5"/><line x1="20.4" y1="13.5" x2="27.2" y2="9.5"/></g></svg></span>
                 <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:#fff;margin-bottom:8px">Walmart</div>
                 <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:{{ exF.walmart.badgeColor }};background:{{ exF.walmart.badgeBg }};padding:4px 9px;border-radius:6px">{{ exF.walmart.badge }}</span>
               </div>
-              <div class="se-tilt" style="background:{{ exF.tiktok.cardBg }};border:1px solid {{ exF.tiktok.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.tiktok.dim }};transition:all .3s">
+              <div class="se-tilt" style="display:{{ exF.tiktok.show }};background:{{ exF.tiktok.cardBg }};border:1px solid {{ exF.tiktok.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.tiktok.dim }};transition:all .3s">
                 <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:32px;background:#111;border-radius:9px;padding:7px;margin-bottom:12px"><svg viewBox="0 0 32 34" style="width:100%;height:100%"><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#25F4EE" transform="translate(-1.2,-1.2)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#FE2C55" transform="translate(1.2,1.2)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#fff"/></svg></span>
                 <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:#fff;margin-bottom:8px">TikTok Shop</div>
                 <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:{{ exF.tiktok.badgeColor }};background:{{ exF.tiktok.badgeBg }};padding:4px 9px;border-radius:6px">{{ exF.tiktok.badge }}</span>
               </div>
-              <div class="se-tilt" style="background:{{ exF.ebay.cardBg }};border:1px solid {{ exF.ebay.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.ebay.dim }};transition:all .3s">
+              <div class="se-tilt" style="display:{{ exF.ebay.show }};background:{{ exF.ebay.cardBg }};border:1px solid {{ exF.ebay.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.ebay.dim }};transition:all .3s">
                 <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:32px;background:#fff;border-radius:9px;padding:5px;margin-bottom:12px"><svg viewBox="0 0 50 24" style="width:100%;height:auto"><text x="25" y="19" font-family="Arial,sans-serif" font-weight="800" font-style="italic" font-size="20" text-anchor="middle"><tspan fill="#E53238">e</tspan><tspan fill="#0064D2">b</tspan><tspan fill="#F5AF02">a</tspan><tspan fill="#86B817">y</tspan></text></svg></span>
                 <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:#fff;margin-bottom:8px">eBay</div>
                 <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:{{ exF.ebay.badgeColor }};background:{{ exF.ebay.badgeBg }};padding:4px 9px;border-radius:6px">{{ exF.ebay.badge }}</span>
               </div>
-              <div class="se-tilt" style="background:{{ exF.shopify.cardBg }};border:1px solid {{ exF.shopify.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.shopify.dim }};transition:all .3s">
+              <div class="se-tilt" style="display:{{ exF.shopify.show }};background:{{ exF.shopify.cardBg }};border:1px solid {{ exF.shopify.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.shopify.dim }};transition:all .3s">
                 <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:32px;background:#95BF47;border-radius:9px;padding:6px;margin-bottom:12px"><svg viewBox="0 0 30 32" style="width:100%;height:100%"><path d="M19 8l2.6.6L25 30 8 32 5 11l4-1.5z" fill="#fff"/><text x="14.5" y="25" font-family="Arial" font-weight="800" font-size="12" fill="#95BF47" text-anchor="middle">S</text></svg></span>
                 <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:#fff;margin-bottom:8px">Shopify</div>
                 <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:{{ exF.shopify.badgeColor }};background:{{ exF.shopify.badgeBg }};padding:4px 9px;border-radius:6px">{{ exF.shopify.badge }}</span>
@@ -2796,7 +2796,7 @@
             <span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:21px;color:#fff">Shopin<span style="color:var(--lav)">ecom</span></span>
           </a>
           <p style="font-size:14.5px;line-height:1.6;color:#A8A6C4;margin:0 0 18px">The end-to-end growth partner for established eCommerce brands, across every major marketplace.</p>
-          <span style="display:inline-flex;align-items:center;background:#fff;border-radius:10px;padding:8px 12px;margin-bottom:18px"><img src="https://growth.shopinecom.com/badges/amazon-verified-partner.webp" alt="Amazon Ads Verified Partner" width="120" height="40" style="height:26px;width:auto;display:block"/></span><br/>
+          <span style="display:inline-flex;align-items:center;background:#fff;border-radius:10px;padding:8px 12px;margin-bottom:18px"><img src="assets/badges/amazon-verified-partner.webp" alt="Amazon Ads Verified Partner" width="120" height="40" style="height:40px;width:auto;display:block"/></span><br/>
           <a href="#/contact" onClick="{{ go }}" class="se-shine" style="display:inline-flex;align-items:center;gap:8px;background:var(--purple);color:#fff;font-weight:600;font-size:14px;text-decoration:none;padding:12px 20px;border-radius:11px;box-shadow:0 12px 26px -12px rgba(90,86,165,.9)">Get a Free Audit <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
         <div>
@@ -3949,7 +3949,7 @@ class Component extends DCLogic {
           o[k] = {
             set: this.setExpandFrom(k),
             chipBg: on ? '#fff' : 'rgba(255,255,255,.06)', chipColor: on ? 'var(--ink)' : '#fff', chipBorder: on ? '#fff' : 'rgba(255,255,255,.14)',
-            isSource: on,
+            isSource: on, show: on ? 'none' : 'block',
             cardBg: on ? 'linear-gradient(150deg,rgba(90,86,165,.4),rgba(58,54,128,.15))' : 'rgba(255,255,255,.04)',
             cardBorder: on ? 'rgba(139,136,201,.6)' : 'rgba(255,255,255,.1)',
             badge: on ? 'Selling here' : 'Ready to launch',
