@@ -2777,7 +2777,7 @@
   </div>
 
   <!-- ===== FOOTER ===== -->
-  <footer style="background:var(--ink-2);color:#fff;padding:0 0 32px;position:relative">
+  <footer style="background:var(--ink-2);color:#fff;padding:0 0 {{ footerPad }};position:relative">
     <div style="height:3px;background:linear-gradient(90deg,#FF9900,#0071CE,#FE2C55,#95BF47,#FEEE00,#5A56A5);background-size:200% 100%;animation:seGradShift 8s ease infinite"></div>
     <div style="max-width:1280px;margin:0 auto;padding:clamp(40px,5vw,64px) clamp(20px,4vw,48px) 0">
       <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;justify-content:center;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:40px">
@@ -3986,6 +3986,7 @@ class Component extends DCLogic {
       heroMove: this.heroMove, setHeroLayer: this.setHeroLayer,
       stickyCtaDisplay: (this.state.isMobile && r.name !== 'contact') ? 'flex' : 'none',
       waBottom: (this.state.isMobile && r.name !== 'contact') ? 'calc(88px + env(safe-area-inset-bottom))' : 'clamp(16px,3vw,26px)',
+      footerPad: (this.state.isMobile && r.name !== 'contact') ? 'calc(104px + env(safe-area-inset-bottom))' : '32px',
       setMkt: this.setMkt,
       caseFilters: ['All','Amazon','Amazon UK','Amazon US'].map(f => ({ label:f, active: this.state.filter === f, set: this.setFilter(f), chipBg: this.state.filter === f ? 'var(--ink)' : '#fff', chipColor: this.state.filter === f ? '#fff' : 'var(--ink-soft)', chipBorder: this.state.filter === f ? 'var(--ink)' : 'var(--line)' })),
       filteredCases: (this.state.filter === 'All') ? cases : cases.filter(c => c.market === this.state.filter || (this.state.filter === 'Amazon' && c.market.indexOf('Amazon') === 0)),
