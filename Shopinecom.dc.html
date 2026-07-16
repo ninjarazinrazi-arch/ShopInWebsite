@@ -158,6 +158,7 @@
   .se-ps-row:hover .se-ps-arrow{transform:translateX(4px);opacity:1}
   .se-ps-arrow{transition:transform .35s cubic-bezier(.34,1.56,.64,1),opacity .3s;opacity:.5}
   @media (prefers-reduced-motion: reduce){.se-card-hover:hover,.se-tilt:hover,.se-fill-grid>*:hover{transform:none!important}.se-particle,.se-ring-spin{animation:none!important}.se-metric-glow::after{animation:none!important}.se-grid-anim>*{animation:none!important;opacity:1!important}}
+  @media (max-width:640px){.se-announce-sub{display:none}}
   :root{--ink:#16112A;--ink-2:#1F1838;--purple:#5A56A5;--purple-d:#4A4690;--lav:#8B88C9;--lav-2:#E9E8F4;--mist:#F2F3F7;--paper:#FFFFFF;--line:#E7E6F0;--muted:#6B6880;--ink-soft:#3A3650;--amber:#F5A623}
 </style>
 <script type="application/ld+json">
@@ -174,7 +175,7 @@
     <div style="max-width:1280px;margin:0 auto;padding:9px clamp(20px,4vw,48px);display:flex;align-items:center;justify-content:center;gap:12px;text-align:center;flex-wrap:wrap">
       <span style="display:inline-flex;align-items:center;gap:8px;color:#D9D7EC">
         <span style="position:relative;width:8px;height:8px;flex-shrink:0"><span style="position:absolute;inset:0;border-radius:50%;background:#36C281"></span><span style="position:absolute;inset:0;border-radius:50%;background:#36C281;animation:sePing 2.2s ease-out infinite"></span></span>
-        Amazon Ads Verified Partner. Full-service marketplace management across 6 platforms.
+        Amazon Ads Verified Partner.<span class="se-announce-sub"> Full-service marketplace management across 6 platforms.</span>
       </span>
       <a href="#/contact" onClick="{{ go }}" style="color:#fff;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);white-space:nowrap">Get a free audit</a>
     </div>
@@ -204,7 +205,7 @@
         <a href="#/contact" onClick="{{ go }}" style="display:{{ ctaDisplay }};align-items:center;gap:8px;white-space:nowrap;background:var(--purple);color:#fff;font-weight:600;font-size:15px;text-decoration:none;padding:11px 20px;border-radius:11px;box-shadow:0 8px 22px -10px rgba(90,86,165,.8);transition:transform .2s,box-shadow .2s" style-hover="transform:translateY(-1px);box-shadow:0 12px 26px -10px rgba(90,86,165,.9)">Get a Free Audit
           <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <button onClick="{{ toggleMenu }}" aria-label="Menu" style="display:{{ burgerDisplay }};flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px;border-radius:8px">
+        <button onClick="{{ toggleMenu }}" aria-label="Menu" style="display:{{ burgerDisplay }};flex-direction:column;justify-content:center;align-items:center;gap:5px;background:none;border:0;cursor:pointer;padding:8px;min-width:44px;min-height:44px;border-radius:8px">
           <span style="width:22px;height:2px;background:{{ navColor }};border-radius:2px;display:block"></span>
           <span style="width:22px;height:2px;background:{{ navColor }};border-radius:2px;display:block"></span>
         </button>
@@ -2753,7 +2754,7 @@
   </main>
 
   <!-- ===== WHATSAPP FLOATING POPUP ===== -->
-  <div style="position:fixed;right:clamp(16px,3vw,26px);bottom:clamp(16px,3vw,26px);z-index:55;display:flex;flex-direction:column;align-items:flex-end;gap:14px">
+  <div style="position:fixed;right:clamp(16px,3vw,26px);bottom:{{ waBottom }};z-index:55;display:flex;flex-direction:column;align-items:flex-end;gap:14px;transition:bottom .25s">
     <sc-if value="{{ waOpen }}">
       <div style="width:min(320px,calc(100vw - 32px));background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 30px 70px -24px rgba(22,17,42,.5);border:1px solid var(--line);animation:seFadeUp .28s cubic-bezier(.16,1,.3,1) both">
         <div style="background:linear-gradient(135deg,#1F8A5B,#25D366);padding:18px 20px;display:flex;align-items:center;gap:12px;position:relative">
@@ -3984,6 +3985,7 @@ class Component extends DCLogic {
       arrowRot: this.state.isMobile ? '90deg' : '0deg',
       heroMove: this.heroMove, setHeroLayer: this.setHeroLayer,
       stickyCtaDisplay: (this.state.isMobile && r.name !== 'contact') ? 'flex' : 'none',
+      waBottom: (this.state.isMobile && r.name !== 'contact') ? 'calc(88px + env(safe-area-inset-bottom))' : 'clamp(16px,3vw,26px)',
       setMkt: this.setMkt,
       caseFilters: ['All','Amazon','Amazon UK','Amazon US'].map(f => ({ label:f, active: this.state.filter === f, set: this.setFilter(f), chipBg: this.state.filter === f ? 'var(--ink)' : '#fff', chipColor: this.state.filter === f ? '#fff' : 'var(--ink-soft)', chipBorder: this.state.filter === f ? 'var(--ink)' : 'var(--line)' })),
       filteredCases: (this.state.filter === 'All') ? cases : cases.filter(c => c.market === this.state.filter || (this.state.filter === 'Amazon' && c.market.indexOf('Amazon') === 0)),
