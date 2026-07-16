@@ -161,6 +161,7 @@
   @media (max-width:640px){.se-announce-sub{display:none}.se-subnav-cta{display:none!important}}
   @media (max-width:560px){.se-hero-4>a{width:100%;justify-content:center}.se-hero-divider{display:none}}
   @media (max-width:900px){.se-ps-arrow2{left:50%!important;top:-18px!important;transform:translateX(-50%) rotate(90deg)!important}.se-ps-sol{border-left:none!important;border-top:1px solid var(--line)!important}}
+  @media (max-width:900px){.se-subnav-link{padding:14px 13px}.se-flink{padding:6px 0;display:inline-block}.se-alink{display:inline-block;padding:6px 0}}
   :root{--ink:#16112A;--ink-2:#1F1838;--purple:#5A56A5;--purple-d:#4A4690;--lav:#8B88C9;--lav-2:#E9E8F4;--mist:#F2F3F7;--paper:#FFFFFF;--line:#E7E6F0;--muted:#6B6880;--ink-soft:#3A3650;--amber:#F5A623}
 </style>
 <script type="application/ld+json">
@@ -179,7 +180,7 @@
         <span style="position:relative;width:8px;height:8px;flex-shrink:0"><span style="position:absolute;inset:0;border-radius:50%;background:#36C281"></span><span style="position:absolute;inset:0;border-radius:50%;background:#36C281;animation:sePing 2.2s ease-out infinite"></span></span>
         Amazon Ads Verified Partner.<span class="se-announce-sub"> Full-service marketplace management across 6 platforms.</span>
       </span>
-      <a href="#/contact" onClick="{{ go }}" style="color:#fff;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);white-space:nowrap">Get a free audit</a>
+      <a href="#/contact" onClick="{{ go }}" style="color:#fff;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);white-space:nowrap" class="se-alink">Get a free audit</a>
     </div>
   </div>
 
@@ -312,7 +313,7 @@
 
   <!-- MOBILE MENU -->
   <sc-if value="{{ menuOpen }}">
-    <div style="position:fixed;inset:0;z-index:70;background:var(--ink);color:#fff;display:flex;flex-direction:column;padding:24px clamp(20px,5vw,40px);animation:seFadeUp .25s ease both;overflow-y:auto">
+    <div style="position:fixed;inset:0;z-index:70;background:var(--ink);color:#fff;display:flex;flex-direction:column;padding:24px clamp(20px,5vw,40px);animation:seFadeUp .25s ease both;overflow-y:auto;overscroll-behavior:contain">
       <div style="display:flex;align-items:center;height:50px">
         <a href="#/" onClick="{{ go }}" style="display:flex;align-items:center;gap:10px;text-decoration:none">
           <img src="assets/logo-mark-dark.png" alt="" width="36" height="36" style="border-radius:9px"/>
@@ -2632,30 +2633,30 @@
                 <div style="display:grid;grid-template-columns:{{ whyCols }};gap:16px">
                   <label style="display:block">
                     <span style="display:block;font-size:13px;font-weight:600;margin-bottom:7px">Name</span>
-                    <input value="{{ form.name }}" onInput="{{ setName }}" placeholder="Your name" style="width:100%;font:inherit;font-size:15px;padding:12px 14px;border:1px solid {{ bName }};border-radius:11px;background:#fff;color:var(--ink);outline:none" style-focus="border-color:var(--purple)"/>
+                    <input value="{{ form.name }}" onInput="{{ setName }}" autocomplete="name" placeholder="Your name" style="width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1px solid {{ bName }};border-radius:11px;background:#fff;color:var(--ink);outline:none" style-focus="border-color:var(--purple)"/>
                     <sc-if value="{{ errors.name }}"><span style="display:block;font-size:12.5px;color:#D14343;margin-top:6px">{{ errors.name }}</span></sc-if>
                   </label>
                   <label style="display:block">
                     <span style="display:block;font-size:13px;font-weight:600;margin-bottom:7px">Work email</span>
-                    <input value="{{ form.email }}" onInput="{{ setEmail }}" type="email" placeholder="you@brand.com" style="width:100%;font:inherit;font-size:15px;padding:12px 14px;border:1px solid {{ bEmail }};border-radius:11px;background:#fff;color:var(--ink);outline:none" style-focus="border-color:var(--purple)"/>
+                    <input value="{{ form.email }}" onInput="{{ setEmail }}" type="email" autocomplete="email" placeholder="you@brand.com" style="width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1px solid {{ bEmail }};border-radius:11px;background:#fff;color:var(--ink);outline:none" style-focus="border-color:var(--purple)"/>
                     <sc-if value="{{ errors.email }}"><span style="display:block;font-size:12.5px;color:#D14343;margin-top:6px">{{ errors.email }}</span></sc-if>
                   </label>
                 </div>
                 <div style="display:grid;grid-template-columns:{{ whyCols }};gap:16px">
                   <label style="display:block">
                     <span style="display:block;font-size:13px;font-weight:600;margin-bottom:7px">Brand name</span>
-                    <input value="{{ form.brand }}" onInput="{{ setBrand }}" placeholder="Your brand" style="width:100%;font:inherit;font-size:15px;padding:12px 14px;border:1px solid {{ bBrand }};border-radius:11px;background:#fff;color:var(--ink);outline:none" style-focus="border-color:var(--purple)"/>
+                    <input value="{{ form.brand }}" onInput="{{ setBrand }}" autocomplete="organization" placeholder="Your brand" style="width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1px solid {{ bBrand }};border-radius:11px;background:#fff;color:var(--ink);outline:none" style-focus="border-color:var(--purple)"/>
                     <sc-if value="{{ errors.brand }}"><span style="display:block;font-size:12.5px;color:#D14343;margin-top:6px">{{ errors.brand }}</span></sc-if>
                   </label>
                   <label style="display:block">
                     <span style="display:block;font-size:13px;font-weight:600;margin-bottom:7px">Website / store URL <span style="color:var(--muted);font-weight:400">(optional)</span></span>
-                    <input value="{{ form.url }}" onInput="{{ setUrl }}" placeholder="https://" style="width:100%;font:inherit;font-size:15px;padding:12px 14px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);outline:none" style-focus="border-color:var(--purple)"/>
+                    <input value="{{ form.url }}" onInput="{{ setUrl }}" autocomplete="url" inputmode="url" placeholder="https://" style="width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);outline:none" style-focus="border-color:var(--purple)"/>
                   </label>
                 </div>
                 <div style="display:grid;grid-template-columns:{{ whyCols }};gap:16px">
                   <label style="display:block">
                     <span style="display:block;font-size:13px;font-weight:600;margin-bottom:7px">Primary marketplace</span>
-                    <select value="{{ form.marketplace }}" onChange="{{ setMarketplace }}" style="width:100%;font:inherit;font-size:15px;padding:12px 14px;border:1px solid {{ bMarket }};border-radius:11px;background:#fff;color:var(--ink);outline:none;appearance:none" style-focus="border-color:var(--purple)">
+                    <select value="{{ form.marketplace }}" onChange="{{ setMarketplace }}" style="width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1px solid {{ bMarket }};border-radius:11px;background:#fff;color:var(--ink);outline:none;appearance:none" style-focus="border-color:var(--purple)">
                       <option value="">Select…</option>
                       <option value="Amazon">Amazon</option>
                       <option value="Walmart">Walmart</option>
@@ -2668,7 +2669,7 @@
                   </label>
                   <label style="display:block">
                     <span style="display:block;font-size:13px;font-weight:600;margin-bottom:7px">Monthly revenue <span style="color:var(--muted);font-weight:400">(optional)</span></span>
-                    <select value="{{ form.revenue }}" onChange="{{ setRevenue }}" style="width:100%;font:inherit;font-size:15px;padding:12px 14px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);outline:none;appearance:none" style-focus="border-color:var(--purple)">
+                    <select value="{{ form.revenue }}" onChange="{{ setRevenue }}" style="width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);outline:none;appearance:none" style-focus="border-color:var(--purple)">
                       <option value="">Select a range…</option>
                       <option value="<$10k">Under $10k</option>
                       <option value="$10k to $50k">$10k to $50k</option>
@@ -2680,11 +2681,11 @@
                 </div>
                 <label style="display:block">
                   <span style="display:block;font-size:13px;font-weight:600;margin-bottom:7px">Your main challenge <span style="color:var(--muted);font-weight:400">(optional)</span></span>
-                  <textarea value="{{ form.challenge }}" onInput="{{ setChallenge }}" rows="3" placeholder="e.g. ACoS is climbing and I can't find the leak…" style="width:100%;font:inherit;font-size:15px;padding:12px 14px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);outline:none;resize:vertical" style-focus="border-color:var(--purple)"></textarea>
+                  <textarea value="{{ form.challenge }}" onInput="{{ setChallenge }}" rows="3" placeholder="e.g. ACoS is climbing and I can't find the leak…" style="width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);outline:none;resize:vertical" style-focus="border-color:var(--purple)"></textarea>
                 </label>
                 <label style="display:block">
                   <span style="display:block;font-size:13px;font-weight:600;margin-bottom:7px">Preferred contact</span>
-                  <select value="{{ form.contact }}" onChange="{{ setContact }}" style="width:100%;font:inherit;font-size:15px;padding:12px 14px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);outline:none;appearance:none" style-focus="border-color:var(--purple)">
+                  <select value="{{ form.contact }}" onChange="{{ setContact }}" style="width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);outline:none;appearance:none" style-focus="border-color:var(--purple)">
                     <option value="Email">Email</option>
                     <option value="WhatsApp">WhatsApp</option>
                     <option value="Phone call">Phone call</option>
@@ -2803,29 +2804,29 @@
         <div>
           <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--lav);font-weight:600;margin-bottom:16px">Services</div>
           <div style="display:flex;flex-direction:column;gap:11px">
-            <a href="#/services/amazon-account-management" onClick="{{ go }}" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">Amazon Account Management</a>
-            <a href="#/services/tiktok-shop-management" onClick="{{ go }}" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">TikTok Shop Management</a>
-            <a href="#/services/walmart-seller-management" onClick="{{ go }}" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">Walmart Seller Management</a>
-            <a href="#/services/ebay-store-management" onClick="{{ go }}" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">eBay Store Management</a>
-            <a href="#/services/global-expansion" onClick="{{ go }}" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">International Expansion</a>
+            <a href="#/services/amazon-account-management" onClick="{{ go }}" class="se-flink" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">Amazon Account Management</a>
+            <a href="#/services/tiktok-shop-management" onClick="{{ go }}" class="se-flink" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">TikTok Shop Management</a>
+            <a href="#/services/walmart-seller-management" onClick="{{ go }}" class="se-flink" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">Walmart Seller Management</a>
+            <a href="#/services/ebay-store-management" onClick="{{ go }}" class="se-flink" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">eBay Store Management</a>
+            <a href="#/services/global-expansion" onClick="{{ go }}" class="se-flink" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">International Expansion</a>
           </div>
         </div>
         <div>
           <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--lav);font-weight:600;margin-bottom:16px">Company</div>
           <div style="display:flex;flex-direction:column;gap:11px">
-            <a href="#/about" onClick="{{ go }}" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">About</a>
-            <a href="#/case-studies" onClick="{{ go }}" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">Case Studies</a>
-            <a href="#/resources" onClick="{{ go }}" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">Resources</a>
-            <a href="#/contact" onClick="{{ go }}" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">Contact</a>
+            <a href="#/about" onClick="{{ go }}" class="se-flink" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">About</a>
+            <a href="#/case-studies" onClick="{{ go }}" class="se-flink" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">Case Studies</a>
+            <a href="#/resources" onClick="{{ go }}" class="se-flink" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">Resources</a>
+            <a href="#/contact" onClick="{{ go }}" class="se-flink" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">Contact</a>
           </div>
         </div>
         <div>
           <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--lav);font-weight:600;margin-bottom:16px">Get in touch</div>
           <div style="display:flex;flex-direction:column;gap:11px">
-            <a href="mailto:privatelabel@shopinecom.com" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">privatelabel@shopinecom.com</a>
-            <a href="https://wa.me/16829070853" target="_blank" rel="noopener" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">WhatsApp: +1 682 907 0853</a>
-            <a href="https://www.linkedin.com/company/shopin-ecom/" target="_blank" rel="noopener" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">LinkedIn</a>
-            <a href="https://www.facebook.com/shopinecomm" target="_blank" rel="noopener" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">Facebook</a>
+            <a href="mailto:privatelabel@shopinecom.com" class="se-flink" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">privatelabel@shopinecom.com</a>
+            <a href="https://wa.me/16829070853" target="_blank" rel="noopener" class="se-flink" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">WhatsApp: +1 682 907 0853</a>
+            <a href="https://www.linkedin.com/company/shopin-ecom/" target="_blank" rel="noopener" class="se-flink" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">LinkedIn</a>
+            <a href="https://www.facebook.com/shopinecomm" target="_blank" rel="noopener" class="se-flink" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">Facebook</a>
           </div>
           <div style="display:flex;gap:10px;margin-top:18px">
             <a href="https://www.linkedin.com/company/shopin-ecom/" target="_blank" rel="noopener" aria-label="LinkedIn" class="se-social" style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:11px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#C2C0D4;transition:all .22s" style-hover="background:var(--purple);color:#fff;border-color:var(--purple);transform:translateY(-2px)"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05C20.2 8.65 21 11 21 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3s-2.3 1.57-2.3 3.2V21H9z"/></svg></a>
@@ -2839,9 +2840,9 @@
       <div style="display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between;padding-top:24px">
         <span style="font-size:13px;color:#8C8AA8">© 2026 Shopinecom. All rights reserved.</span>
         <div style="display:flex;flex-wrap:wrap;gap:18px">
-          <a href="#/privacy" onClick="{{ go }}" style="font-size:13px;color:#8C8AA8;text-decoration:none" style-hover="color:#fff">Privacy Policy</a>
-          <a href="#/privacy" onClick="{{ go }}" style="font-size:13px;color:#8C8AA8;text-decoration:none" style-hover="color:#fff">Terms</a>
-          <a href="#/privacy" onClick="{{ go }}" style="font-size:13px;color:#8C8AA8;text-decoration:none" style-hover="color:#fff">Results Disclaimer</a>
+          <a href="#/privacy" onClick="{{ go }}" class="se-flink" style="font-size:13px;color:#8C8AA8;text-decoration:none" style-hover="color:#fff">Privacy Policy</a>
+          <a href="#/privacy" onClick="{{ go }}" class="se-flink" style="font-size:13px;color:#8C8AA8;text-decoration:none" style-hover="color:#fff">Terms</a>
+          <a href="#/privacy" onClick="{{ go }}" class="se-flink" style="font-size:13px;color:#8C8AA8;text-decoration:none" style-hover="color:#fff">Results Disclaimer</a>
         </div>
       </div>
     </div>
