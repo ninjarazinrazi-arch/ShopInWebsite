@@ -631,8 +631,8 @@
             <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:clamp(24px,3.5vw,40px)">
               <div style="display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);font-size:12px;font-weight:700;letter-spacing:.04em;padding:5px 14px 5px 5px;border-radius:100px;margin-bottom:18px;color:#fff"><span style="width:8px;height:8px;border-radius:50%;background:var(--lav)"></span>{{ activeMkt.name }}</div>
               <h3 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.3rem,3.5vw,2rem);line-height:1.1;letter-spacing:-.02em;margin:0 0 22px">{{ activeMkt.headline }}</h3>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px 32px;margin-bottom:24px">
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px">
+              <div style="margin-bottom:24px">
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:14px;margin-bottom:22px">
                 <div style="background:rgba(224,133,127,.08);border:1px solid rgba(224,133,127,.2);border-radius:14px;padding:clamp(16px,2.5vw,20px)">
                   <div style="display:inline-flex;align-items:center;gap:7px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#F0A6A0;font-weight:700;margin-bottom:14px"><span style="width:18px;height:18px;border-radius:6px;background:rgba(224,133,127,.18);display:flex;align-items:center;justify-content:center"><svg width="10" height="10" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#F0A6A0" stroke-width="2" stroke-linecap="round"/></svg></span>Common challenges</div>
                   <div style="display:flex;flex-direction:column;gap:11px">
@@ -799,7 +799,7 @@
             <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2rem,5.5vw,3.5rem);line-height:.95;letter-spacing:-.03em;margin:0 0 12px">The difference a managed account makes.</h2>
             <p style="font-size:1rem;line-height:1.6;color:#C2C0DE;margin:0">A women's lifestyle brand, before and after we took over. Verified result.</p>
           </div>
-          <div data-reveal style="display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center">
+          <div data-reveal style="display:grid;grid-template-columns:{{ baCols }};gap:12px;align-items:center">
             <div style="background:rgba(255,255,255,.04);border:1px solid rgba(224,133,127,.3);border-radius:20px;padding:clamp(22px,3vw,32px)">
               <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px"><span style="font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#F0A6A0;background:rgba(224,133,127,.16);padding:5px 11px;border-radius:7px">Before</span></div>
               <div style="font-size:12px;color:#A8A6C4;margin-bottom:4px">ACoS</div>
@@ -812,7 +812,7 @@
               </div>
             </div>
             <div style="display:flex;align-items:center;justify-content:center">
-              <span style="width:50px;height:50px;border-radius:50%;background:var(--purple);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px -10px rgba(90,86,165,.9);flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12h13m0 0l-5-5m5 5l-5 5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span style="width:50px;height:50px;border-radius:50%;background:var(--purple);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px -10px rgba(90,86,165,.9);flex-shrink:0;transform:rotate({{ arrowRot }})"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12h13m0 0l-5-5m5 5l-5 5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </div>
             <div style="background:linear-gradient(150deg,#5A56A5,#3A3680);border-radius:20px;padding:clamp(22px,3vw,32px);box-shadow:0 24px 56px -32px rgba(90,86,165,.9)">
               <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px"><span style="display:inline-flex;align-items:center;gap:7px;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.18);padding:5px 11px;border-radius:7px"><span style="position:relative;width:7px;height:7px;flex-shrink:0"><span style="position:absolute;inset:0;border-radius:50%;background:#7CF0B6"></span><span class="se-anim" style="position:absolute;inset:0;border-radius:50%;background:#7CF0B6;animation:sePing 2s ease-out infinite"></span></span>After Shopinecom</span></div>
@@ -861,15 +861,15 @@
             <!-- Typical agency card -->
             <div style="background:var(--mist);border:1px solid var(--line);border-radius:24px;padding:clamp(24px,3.5vw,36px)">
               <div style="display:flex;align-items:center;gap:11px;margin-bottom:8px">
-                <span style="width:34px;height:34px;border-radius:9px;background:#E4E2EC;display:flex;align-items:center;justify-content:center;color:#9A98AE"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/></svg></span>
+                <span style="width:34px;height:34px;border-radius:9px;background:#E4E2EC;display:flex;align-items:center;justify-content:center;color:var(--muted)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/></svg></span>
                 <span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:1.4rem;color:var(--muted)">Typical agency</span>
               </div>
-              <div style="display:inline-flex;align-items:center;gap:6px;background:#EAE9F0;color:#9A98AE;font-size:11px;font-weight:700;letter-spacing:.04em;padding:5px 11px;border-radius:100px;margin-bottom:22px">ONE LEVER, IN ISOLATION</div>
+              <div style="display:inline-flex;align-items:center;gap:6px;background:#EAE9F0;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.04em;padding:5px 11px;border-radius:100px;margin-bottom:22px">ONE LEVER, IN ISOLATION</div>
               <div style="display:flex;flex-direction:column;gap:14px">
                 <sc-for list="{{ comparison }}" as="row" hint-placeholder-count="7">
                   <div style="display:flex;gap:12px;align-items:flex-start;border-top:1px solid var(--line);padding-top:14px">
                     <span style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#fff;border:1.5px solid #E0DEEA;display:flex;align-items:center;justify-content:center;color:#C0BED0;margin-top:1px"><svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M3.2 3.2l7.6 7.6M10.8 3.2l-7.6 7.6" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></svg></span>
-                    <div><div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#A8A6B8;font-weight:600;margin-bottom:2px">{{ row.area }}</div><div style="font-size:14.5px;line-height:1.4;color:var(--muted)">{{ row.typical }}</div></div>
+                    <div><div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:2px">{{ row.area }}</div><div style="font-size:14.5px;line-height:1.4;color:var(--muted)">{{ row.typical }}</div></div>
                   </div>
                 </sc-for>
               </div>
@@ -2041,7 +2041,7 @@
               <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:1.02;letter-spacing:-.03em;margin:0 0 12px">Hear it straight from the people we grow.</h2>
               <p style="font-size:1.05rem;line-height:1.6;color:#B8B6D4;margin:0">Real sellers, real accounts, no scripts. Tap any story to watch it.</p>
             </div>
-            <a href="#/results" onClick="{{ go }}" style="flex-shrink:0;display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:600;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,.22);padding:12px 20px;border-radius:12px" style-hover="background:rgba(255,255,255,.08)">More stories <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="#/case-studies" onClick="{{ go }}" style="flex-shrink:0;display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:600;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,.22);padding:12px 20px;border-radius:12px" style-hover="background:rgba(255,255,255,.08)">More stories <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
           <div style="display:flex;gap:clamp(12px,1.6vw,18px);overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 12px;-webkit-overflow-scrolling:touch;scrollbar-width:none">
             <sc-for list="{{ svcVideos }}" as="v" hint-placeholder-count="5">
@@ -2305,7 +2305,7 @@
           </div>
           <!-- proof visual -->
           <div data-reveal style="position:relative">
-            <div class="se-float-a" style="background:#fff;color:var(--ink);border-radius:20px;padding:22px;box-shadow:0 30px 60px -24px rgba(0,0,0,.55)">
+            <div class="se-float-a" style="background:#fff;color:var(--ink);border-radius:20px;padding:22px 22px 48px;box-shadow:0 30px 60px -24px rgba(0,0,0,.55)">
               <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
                 <span style="display:inline-flex;align-items:center;gap:8px;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14px">One team, every channel</span>
                 <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:#1F8A5B"><span style="width:7px;height:7px;border-radius:50%;background:#36C281;box-shadow:0 0 0 3px rgba(54,194,129,.18)"></span>LIVE</span>
@@ -3596,7 +3596,7 @@ class Component extends DCLogic {
       { key:'inventory', label:'Inventory risks', what:'We review stock cover and peak-season exposure.', why:'Stockouts kill rank that took months to build.', action:'Plan restock and forecast for peaks.' },
       { key:'creative', label:'Creative weaknesses', what:'We assess imagery, A+ Content and storefront.', why:'Weak creative loses the click before the sale.', action:'Direct new photography, infographics and A+.' },
       { key:'pricing', label:'Pricing opportunities', what:'We analyse price against margin and the market.', why:'Price is the fastest lever on profit, used carelessly.', action:'Set pricing and promotions to protect margin.' },
-      { key:'expansion', label:'Expansion opportunities', what:'We identify the next profitable marketplace or region.', why:'One channel caps your ceiling, the portfolio raises it.', action:'We sequence Walmart, TikTok Shop or the GCC.' }
+      { key:'expansion', label:'Expansion opportunities', what:'We identify the next profitable marketplace or region.', why:'One channel caps your ceiling, the portfolio raises it.', action:'We sequence Walmart, TikTok Shop or the EU.' }
     ];
   }
 
@@ -4000,7 +4000,7 @@ class Component extends DCLogic {
         'walmart-seller-management': { n: 'Walmart', g: 'linear-gradient(140deg,#0071CE,#004B97)', t: 'Done-for-you automation', w: 'W', sh: 'rgba(0,113,206,.55)' },
         'tiktok-shop-management': { n: 'TikTok Shop', g: 'linear-gradient(140deg,#2B2B33,#0F0F14)', t: 'Shop and content engine', w: 'T', sh: 'rgba(254,44,85,.4)' },
         'ebay-store-management': { n: 'eBay', g: 'linear-gradient(140deg,#E53238,#B71C1C)', t: 'Wholesale store growth', w: 'e', sh: 'rgba(229,50,56,.5)' },
-        'global-expansion': { n: 'Global Expansion', g: 'linear-gradient(140deg,#1A9455,#0B5B35)', t: 'US, UK, EU and GCC launch', w: 'G', sh: 'rgba(26,148,85,.5)' } };
+        'global-expansion': { n: 'Global Expansion', g: 'linear-gradient(140deg,#1A9455,#0B5B35)', t: 'US, UK and EU launch', w: 'G', sh: 'rgba(26,148,85,.5)' } };
         return Object.keys(M).filter(k => k !== r.slug).map(k => ({ slug: k, ...M[k] })); })() : [],
       resources: this.resourceData(),
       openFaq: this.state.openFaq,
