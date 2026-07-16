@@ -159,6 +159,7 @@
   .se-ps-arrow{transition:transform .35s cubic-bezier(.34,1.56,.64,1),opacity .3s;opacity:.5}
   @media (prefers-reduced-motion: reduce){.se-card-hover:hover,.se-tilt:hover,.se-fill-grid>*:hover{transform:none!important}.se-particle,.se-ring-spin{animation:none!important}.se-metric-glow::after{animation:none!important}.se-grid-anim>*{animation:none!important;opacity:1!important}}
   @media (max-width:640px){.se-announce-sub{display:none}}
+  @media (max-width:560px){.se-hero-4>a{width:100%;justify-content:center}.se-hero-divider{display:none}}
   :root{--ink:#16112A;--ink-2:#1F1838;--purple:#5A56A5;--purple-d:#4A4690;--lav:#8B88C9;--lav-2:#E9E8F4;--mist:#F2F3F7;--paper:#FFFFFF;--line:#E7E6F0;--muted:#6B6880;--ink-soft:#3A3650;--amber:#F5A623}
 </style>
 <script type="application/ld+json">
@@ -395,9 +396,9 @@
             </div>
             <div class="se-hero-5" style="display:flex;flex-wrap:wrap;gap:26px 38px;margin-bottom:28px">
               <div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:2rem;line-height:1;letter-spacing:-.02em"><span data-count="3.38" data-prefix="£" data-suffix="M" data-dec="2">£3.38M</span></div><div style="font-size:13px;color:#A8A6C4;margin-top:6px">on a single account</div></div>
-              <div style="width:1px;background:rgba(255,255,255,.12)"></div>
+              <div class="se-hero-divider" style="width:1px;background:rgba(255,255,255,.12)"></div>
               <div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:2rem;line-height:1;letter-spacing:-.02em">$25M+</div><div style="font-size:13px;color:#A8A6C4;margin-top:6px">across accounts we run</div></div>
-              <div style="width:1px;background:rgba(255,255,255,.12)"></div>
+              <div class="se-hero-divider" style="width:1px;background:rgba(255,255,255,.12)"></div>
               <div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:2rem;line-height:1;letter-spacing:-.02em">6</div><div style="font-size:13px;color:#A8A6C4;margin-top:6px">marketplaces, one team</div></div>
             </div>
             <div class="se-hero-5" style="display:flex;flex-wrap:wrap;gap:8px">
@@ -4059,7 +4060,7 @@ class Component extends DCLogic {
 
       // layout responsiveness
       heroCols: this.state.isMobile ? '1fr' : '1.05fr .95fr',
-      heroCardDisplay: this.state.isMobile ? 'none' : 'flex',
+      heroCardDisplay: 'flex',
       featCols: this.state.isMobile ? '1fr' : '1.3fr 1fr',
       whyCols: this.state.isMobile ? '1fr' : '1fr 1fr',
       footCols: this.state.isMobile ? '1fr' : '1.4fr 1fr 1fr 1.2fr',
