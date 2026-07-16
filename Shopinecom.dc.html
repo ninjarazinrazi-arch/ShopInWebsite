@@ -1825,14 +1825,17 @@
           <div style="display:grid;grid-template-columns:{{ capCols }};gap:clamp(14px,2vw,22px);align-items:start">
             <div style="display:flex;flex-direction:column;gap:8px">
               <sc-for list="{{ svcCaps }}" as="m" hint-placeholder-count="8">
-                <button onClick="{{ m.onSelect }}" class="se-cap-row" style="text-align:left;font:inherit;cursor:pointer;display:flex;align-items:center;gap:13px;background:{{ m.rowBg }};color:{{ m.rowFg }};border:1px solid {{ m.rowBorder }};border-radius:14px;padding:12px 15px;transition:background .25s,color .25s,border-color .25s,transform .25s;box-shadow:0 3px 14px -12px rgba(22,17,42,.4)">
+                <div>
+                <button onClick="{{ m.onSelect }}" class="se-cap-row" style="width:100%;text-align:left;font:inherit;cursor:pointer;display:flex;align-items:center;gap:13px;background:{{ m.rowBg }};color:{{ m.rowFg }};border:1px solid {{ m.rowBorder }};border-radius:14px;padding:12px 15px;transition:background .25s,color .25s,border-color .25s,transform .25s;box-shadow:0 3px 14px -12px rgba(22,17,42,.4)">
                   <span style="flex-shrink:0;width:40px;height:40px;border-radius:11px;background:{{ m.rowIcoBg }};color:{{ m.rowIcoFg }};display:flex;align-items:center;justify-content:center;transition:background .25s,color .25s">{{ m.iconEl }}</span>
                   <span style="flex:1;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;line-height:1.25">{{ m.label }}</span>
                   <span style="flex-shrink:0;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:12px;color:{{ m.rowNumFg }};transition:color .25s">{{ m.n }}</span>
                 </button>
+                <sc-if value="{{ m.mobileOpen }}"><div class="se-accordion-body" style="padding:2px 15px 16px 68px;font-size:13.5px;line-height:1.55;color:var(--ink-soft)">{{ m.desc }}</div></sc-if>
+                </div>
               </sc-for>
             </div>
-            <div class="se-tilt" style="position:sticky;top:132px;overflow:hidden;background:var(--ink);color:#fff;border-radius:22px;padding:clamp(26px,3.4vw,40px);display:flex;flex-direction:column;min-height:320px;box-shadow:0 30px 70px -40px rgba(22,17,42,.7)">
+            <div class="se-tilt" style="position:sticky;top:132px;overflow:hidden;background:var(--ink);color:#fff;border-radius:22px;padding:clamp(26px,3.4vw,40px);display:{{ capPreviewDisplay }};flex-direction:column;min-height:320px;box-shadow:0 30px 70px -40px rgba(22,17,42,.7)">
               <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,{{ activeService.accent }},{{ activeService.accent2 }})"></div>
               <div style="position:absolute;top:-90px;right:-70px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,{{ activeService.accentSoft }},transparent 70%);pointer-events:none;opacity:.55"></div>
               <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:22px 22px;opacity:.5;pointer-events:none;mask-image:linear-gradient(180deg,#000,transparent 90%);-webkit-mask-image:linear-gradient(180deg,#000,transparent 90%)"></div>
@@ -3986,8 +3989,8 @@ class Component extends DCLogic {
       filteredCases: (this.state.filter === 'All') ? cases : cases.filter(c => c.market === this.state.filter || (this.state.filter === 'Amazon' && c.market.indexOf('Amazon') === 0)),
       caseCols: this.state.isMobile ? '1fr' : 'repeat(auto-fit,minmax(300px,1fr))',
       detailCols: this.state.isMobile ? '1fr' : '1.5fr 1fr',
-      capCols: this.state.isMobile ? '1fr' : '0.82fr 1.18fr',
-      svcCaps: activeService ? activeService.manageList.map((m, i) => { const active = i === Math.min(this.state.capIdx || 0, activeService.manageList.length - 1); return { ...m, active, onSelect: this.setCap(i), rowBg: active ? activeService.accent : '#fff', rowFg: active ? '#fff' : 'var(--ink)', rowBorder: active ? activeService.accent : 'var(--line)', rowIcoBg: active ? 'rgba(255,255,255,.2)' : activeService.accentSoft, rowIcoFg: active ? '#fff' : activeService.accent, rowNumFg: active ? 'rgba(255,255,255,.72)' : 'var(--muted)' }; }) : [],
+      capCols: this.state.isMobile ? '1fr' : '0.82fr 1.18fr', capPreviewDisplay: this.state.isMobile ? 'none' : 'flex',
+      svcCaps: activeService ? activeService.manageList.map((m, i) => { const active = i === Math.min(this.state.capIdx || 0, activeService.manageList.length - 1); return { ...m, active, onSelect: this.setCap(i), rowBg: active ? activeService.accent : '#fff', rowFg: active ? '#fff' : 'var(--ink)', rowBorder: active ? activeService.accent : 'var(--line)', rowIcoBg: active ? 'rgba(255,255,255,.2)' : activeService.accentSoft, rowIcoFg: active ? '#fff' : activeService.accent, rowNumFg: active ? 'rgba(255,255,255,.72)' : 'var(--muted)', desc: mDescOf(m.label), mobileOpen: active && this.state.isMobile }; }) : [],
       svcCapActive: activeService ? (function () { const list = activeService.manageList; const idx = Math.min(this.state.capIdx || 0, list.length - 1); const m = list[idx] || list[0]; return m ? { ...m, desc: mDescOf(m.label), total: list.length, pos: (idx + 1 < 10 ? '0' : '') + (idx + 1) } : null; }).call(this) : null,
       svcCases: activeService ? cases.filter(c => c.slug !== (details[r.slug] || {}).caseSlug).slice(0, 3).map(c => ({ slug: c.slug, metric: c.metric, metricLabel: c.metricLabel, brand: c.brand, title: c.title, cat: c.cat, market: c.market })) : [],
       svcOthers: (r.name === 'service') ? (() => { const M = {
