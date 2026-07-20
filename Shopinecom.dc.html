@@ -106,7 +106,7 @@
   .se-metric-glow{position:relative;overflow:hidden}
   .se-metric-glow::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.3) 50%,transparent 70%);transform:translateX(-120%);animation:seMetricShimmer 4.5s ease-in-out 1s infinite;pointer-events:none}
   @keyframes seSlideCard{from{opacity:0;transform:translateY(50px) scale(.93);filter:blur(8px)}to{opacity:1;transform:none;filter:blur(0)}}
-  .se-grid-anim>*{animation:seSlideCard .85s cubic-bezier(.22,1.2,.36,1) both}
+  .se-grid-anim>*{animation:seSlideCard .85s cubic-bezier(.22,1.2,.36,1) backwards}
   .se-grid-anim>*:nth-child(1){animation-delay:.06s}.se-grid-anim>*:nth-child(2){animation-delay:.18s}.se-grid-anim>*:nth-child(3){animation-delay:.30s}.se-grid-anim>*:nth-child(4){animation-delay:.42s}.se-grid-anim>*:nth-child(5){animation-delay:.54s}.se-grid-anim>*:nth-child(6){animation-delay:.66s}
   @keyframes seNumFlash{0%{color:var(--ink)}40%{color:var(--purple);transform:scale(1.07)}100%{color:var(--ink);transform:scale(1)}}
   .se-fill-grid>*{transition:transform .4s cubic-bezier(.34,1.56,.64,1),box-shadow .4s}
@@ -209,7 +209,7 @@
         <span style="position:relative;width:8px;height:8px;flex-shrink:0"><span style="position:absolute;inset:0;border-radius:50%;background:#36C281"></span><span style="position:absolute;inset:0;border-radius:50%;background:#36C281;animation:sePing 2.2s ease-out infinite"></span></span>
         Amazon Ads Verified Partner.<span class="se-announce-sub"> Full-service marketplace management across 5 marketplaces.</span>
       </span>
-      <a href="#/contact" onClick="{{ go }}" style="color:#fff;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);white-space:nowrap" class="se-alink">Get a free audit</a>
+      <a href="#/contact" onClick="{{ go }}" style="color:#fff;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);white-space:nowrap" class="se-alink">Get a Free Audit</a>
     </div>
   </div>
 
@@ -302,12 +302,8 @@
               <div style="display:flex;align-items:center;gap:8px;margin:18px 0 12px"><span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700">Creative services</span><span style="flex:1;height:1px;background:var(--line)"></span></div>
               <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(160px,100%),1fr));gap:6px">
                 <a href="#/services/amazon-account-management" onClick="{{ go }}" class="se-mega-card" style="display:flex;gap:10px;align-items:center;padding:11px 13px;border-radius:14px;border:1px solid transparent;text-decoration:none">
-                  <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;background:linear-gradient(140deg,#B23A66,#8B4A9C);border-radius:10px;color:#fff;flex-shrink:0"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 14h5"/></svg></span>
-                  <span style="flex:1;min-width:0"><span style="display:block;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:13.5px;color:var(--ink)">Storefront Design</span><span style="display:block;font-size:11.5px;color:var(--muted);margin-top:1px">Branded, conversion-first stores</span></span>
-                </a>
-                <a href="#/services/amazon-account-management" onClick="{{ go }}" class="se-mega-card" style="display:flex;gap:10px;align-items:center;padding:11px 13px;border-radius:14px;border:1px solid transparent;text-decoration:none">
                   <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;background:linear-gradient(140deg,#5A56A5,#3A3680);border-radius:10px;color:#fff;flex-shrink:0"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h4M7 13h10M7 17h7"/></svg></span>
-                  <span style="flex:1;min-width:0"><span style="display:flex;align-items:center;gap:6px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:13.5px;color:var(--ink)">A+ Content</span><span style="font-size:9px;font-weight:800;letter-spacing:.05em;color:#5A56A5;background:var(--lav-2);padding:2px 6px;border-radius:5px">BASIC + PREMIUM</span></span><span style="display:block;font-size:11.5px;color:var(--muted);margin-top:1px">Standard modules to Premium A+</span></span>
+                  <span style="flex:1;min-width:0"><span style="display:flex;align-items:center;gap:6px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:13.5px;color:var(--ink)">A+ Content and Storefront Design</span><span style="font-size:9px;font-weight:800;letter-spacing:.05em;color:#5A56A5;background:var(--lav-2);padding:2px 6px;border-radius:5px">BASIC + PREMIUM</span></span><span style="display:block;font-size:11.5px;color:var(--muted);margin-top:1px">Standard modules to Premium A+, plus a branded storefront</span></span>
                 </a>
               </div>
             </div>
@@ -388,7 +384,7 @@
       </nav>
       <a href="#/contact" onClick="{{ go }}" style="margin-top:28px;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--purple);color:#fff;font-weight:600;font-size:17px;text-decoration:none;padding:16px;border-radius:13px">Get a Free Audit
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <div style="margin-top:auto;padding-top:24px;color:var(--lav);font-size:14px">privatelabel@shopinecom.com</div>
+      <div style="margin-top:auto;padding-top:24px"><a href="mailto:privatelabel@shopinecom.com" style="display:inline-block;padding:11px 0;color:var(--lav);font-size:14px;text-decoration:none">privatelabel@shopinecom.com</a></div>
     </div>
   </sc-if>
 
@@ -420,7 +416,7 @@
               <span style="display:flex;flex-direction:column;line-height:1.15"><span style="font-size:13.5px;font-weight:700;color:#fff">Amazon Ads Verified Partner</span><span style="display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:500;color:#D9D7EC"><span style="color:var(--amber)">&#9733;</span>4.8 client rating</span></span>
             </div>
             <h1 class="se-hero-2" style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.6rem,5.4vw,4.5rem);line-height:1.02;letter-spacing:-.025em;margin:0 0 22px">Marketplace growth,<br/><span class="se-gradtext">managed end to end.</span></h1>
-            <p class="se-hero-3" style="font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.6;color:#C2C0DE;max-width:540px;margin:0 0 32px">We run your listings, advertising, account health and marketplace operations as one coordinated growth system, across Amazon, TikTok Shop, Shopify and every major marketplace in the US, UK and Europe.</p>
+            <p class="se-hero-3" style="font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.6;color:#C2C0DE;max-width:540px;margin:0 0 32px">We run your listings, advertising, account health and marketplace operations as one coordinated growth system, across Amazon, TikTok Shop, Shopify, Walmart and eBay in the US, UK and Europe.</p>
             <div class="se-hero-4" style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px">
               <a href="#/contact" onClick="{{ go }}" class="se-sweep se-press" style="display:inline-flex;align-items:center;gap:9px;background:var(--purple);color:#fff;font-weight:700;font-size:16px;text-decoration:none;padding:15px 26px;border-radius:13px;box-shadow:0 14px 34px -12px rgba(90,86,165,1)">Get a Free Audit <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
               <a href="#/case-studies" onClick="{{ go }}" style="display:inline-flex;align-items:center;gap:9px;background:transparent;color:#fff;font-weight:600;font-size:16px;text-decoration:none;padding:15px 24px;border-radius:13px;border:1px solid rgba(255,255,255,.22)">View Results</a>
@@ -539,7 +535,7 @@
         <div style="max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,60px)">
           <div data-reveal style="max-width:580px;margin-bottom:32px">
             <div style="font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--lav);font-weight:700;margin-bottom:14px">One partner, every marketplace</div>
-            <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2rem,5.5vw,3.5rem);line-height:.95;letter-spacing:-.03em;margin:0">Pick a marketplace. See exactly how we grow it.</h2>
+            <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2rem,5.5vw,3.5rem);line-height:.95;letter-spacing:-.03em;margin:0">Pick a marketplace or region. See exactly how we grow it.</h2>
           </div>
           <div data-reveal style="display:grid;grid-template-columns:1fr;gap:12px">
             <!-- tabs: horizontal scroll on mobile -->
@@ -620,7 +616,7 @@
             <sc-for list="{{ proofShots }}" as="ps" hint-placeholder-count="4">
               <div class="se-tilt" style="flex:0 0 auto;width:min(250px,72vw);scroll-snap-align:start;background:linear-gradient(180deg,#221B36,#15101f);border:1px solid rgba(255,255,255,.1);border-radius:18px;overflow:hidden;box-shadow:0 20px 50px -30px rgba(0,0,0,.8)">
                 <div style="aspect-ratio:4/3;position:relative;background:#0a0716;overflow:hidden">
-                  <img src="{{ ps.src }}" alt="Amazon account result: {{ ps.value }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block"/>
+                  <img src="{{ ps.src }}" alt="Amazon account result: {{ ps.value }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top right;display:block"/>
                   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,9,24,0) 40%,rgba(13,9,24,.85) 100%)"></div>
                   <span style="position:absolute;top:11px;left:11px;display:inline-flex;align-items:center;gap:6px;background:rgba(13,9,24,.7);backdrop-filter:blur(4px);color:#fff;font-size:10px;font-weight:700;letter-spacing:.05em;padding:5px 9px;border-radius:7px"><span style="position:relative;width:6px;height:6px;flex-shrink:0"><span style="position:absolute;inset:0;border-radius:50%;background:#36C281"></span><span class="se-anim" style="position:absolute;inset:0;border-radius:50%;background:#36C281;animation:sePing 2s ease-out infinite"></span></span>LIVE</span>
                   <span style="position:absolute;bottom:10px;right:11px;display:inline-flex;align-items:center;gap:4px;background:rgba(54,194,129,.95);color:#06281A;font-size:11px;font-weight:800;padding:4px 9px;border-radius:7px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17l6-6 4 4 4-6"/></svg>{{ ps.growth }}</span>
@@ -740,7 +736,7 @@
           <div data-reveal style="max-width:600px;margin-bottom:36px">
             <div style="font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--lav);font-weight:700;margin-bottom:14px">The transformation</div>
             <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2rem,5.5vw,3.5rem);line-height:.95;letter-spacing:-.03em;margin:0 0 12px">The difference a managed account makes.</h2>
-            <p style="font-size:1rem;line-height:1.6;color:#C2C0DE;margin:0">A women's lifestyle brand, before and after we took over. Verified result.</p>
+            <p style="font-size:1rem;line-height:1.6;color:#C2C0DE;margin:0">A women's lifestyle brand, before and after we took over.</p>
           </div>
           <div data-reveal style="display:grid;grid-template-columns:{{ baCols }};gap:12px;align-items:center">
             <div style="background:rgba(255,255,255,.04);border:1px solid rgba(224,133,127,.3);border-radius:20px;padding:clamp(22px,3vw,32px)">
@@ -777,7 +773,7 @@
       <section style="background:#fff;padding:clamp(64px,9vw,120px) 0">
         <div style="max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,60px)">
           <div data-reveal style="max-width:580px;margin-bottom:36px">
-            <div style="font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--purple);font-weight:700;margin-bottom:14px">The difference</div>
+            <div style="font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--purple);font-weight:700;margin-bottom:14px">How we compare</div>
             <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2rem,5.5vw,3.5rem);line-height:.95;letter-spacing:-.03em;margin:0">Shopinecom vs. the typical agency.</h2>
           </div>
           <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(12px,2vw,18px)">
@@ -844,8 +840,8 @@
               </div>
             </div>
             <div style="display:flex;gap:12px;flex-wrap:wrap">
-              <div style="flex:1;min-width:180px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:13px;padding:18px"><div style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--lav);font-weight:600;margin-bottom:8px">Frequency</div><div style="font-size:14.5px;color:#fff;font-weight:500">{{ activeDeliv.frequency }}</div></div>
-              <div style="flex:1;min-width:180px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:13px;padding:18px"><div style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--lav);font-weight:600;margin-bottom:8px">Who owns it</div><div style="font-size:14.5px;color:#fff;font-weight:500">{{ activeDeliv.specialist }}</div></div>
+              <div style="flex:1;min-width:180px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:13px;padding:18px"><div style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#A5A2DC;font-weight:600;margin-bottom:8px">Frequency</div><div style="font-size:14.5px;color:#fff;font-weight:500">{{ activeDeliv.frequency }}</div></div>
+              <div style="flex:1;min-width:180px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:13px;padding:18px"><div style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#A5A2DC;font-weight:600;margin-bottom:8px">Who owns it</div><div style="font-size:14.5px;color:#fff;font-weight:500">{{ activeDeliv.specialist }}</div></div>
             </div>
           </div>
         </div>
@@ -1075,7 +1071,7 @@
             </div>
             <div data-reveal class="se-tilt se-shine" style="flex:1 1 250px;min-width:250px;position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(22px,3vw,30px)"><span style="position:absolute;top:8px;right:16px;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:3.2rem;color:#F1F0F8;line-height:1">06</span>
               <div style="position:relative;width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#1A9455,#0B5B35);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:16px;box-shadow:0 12px 24px -10px rgba(11,91,53,.6)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
-              <h3 style="position:relative;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:clamp(1.05rem,2.4vw,1.2rem);margin:0 0 7px;line-height:1.2;color:var(--ink)">US & EU market knowledge</h3>
+              <h3 style="position:relative;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:clamp(1.05rem,2.4vw,1.2rem);margin:0 0 7px;line-height:1.2;color:var(--ink)">US and EU market knowledge</h3>
               <p style="position:relative;font-size:13.5px;line-height:1.55;color:var(--muted);margin:0">Market-specific expansion across the US, UK and the wider European marketplaces.</p>
             </div>
           </div>
@@ -1291,7 +1287,7 @@
           <div data-reveal>
             <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:7px 16px;font-size:13px;font-weight:600;margin-bottom:22px;color:#E9E8F4"><span style="position:relative;width:7px;height:7px"><span style="position:absolute;inset:0;border-radius:50%;background:#7CF0B6"></span><span class="se-anim" style="position:absolute;inset:0;border-radius:50%;background:#7CF0B6;animation:sePing 2s ease-out infinite"></span></span>Free. No obligation. Real numbers.</div>
             <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.4rem,7vw,4.6rem);line-height:.92;letter-spacing:-.04em;margin:0 0 18px">Your growth analysis,<br/><span style="color:var(--lav)">in 48 hours.</span></h2>
-            <p style="font-size:clamp(1.05rem,2.5vw,1.25rem);line-height:1.55;color:#C2C0DE;margin:0 0 30px;max-width:440px">Get your personalized growth analysis within 48 hours. We review your account, find what is capping revenue, and hand you a prioritised roadmap.</p>
+            <p style="font-size:clamp(1.05rem,2.5vw,1.25rem);line-height:1.55;color:#C2C0DE;margin:0 0 30px;max-width:440px">We review your account, find what is capping revenue, and hand you a prioritised roadmap you can act on straight away.</p>
             <a href="#/contact" onClick="{{ go }}" class="se-shine" style="display:inline-flex;align-items:center;gap:9px;background:#fff;color:var(--ink);font-weight:800;font-size:17px;text-decoration:none;padding:18px 34px;border-radius:16px;box-shadow:0 20px 50px -20px rgba(0,0,0,.5);margin-bottom:24px">Get a Free Audit <svg width="17" height="17" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             <div style="display:flex;flex-wrap:wrap;gap:8px">
               <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);color:#fff;font-size:12.5px;font-weight:600;padding:7px 13px;border-radius:100px"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="#7CF0B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>No lock-in</span>
@@ -1312,7 +1308,7 @@
               <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink)"><span style="flex-shrink:0;width:20px;height:20px;border-radius:6px;background:#FCEDF2;color:#B23A66;display:flex;align-items:center;justify-content:center"><svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M7 12h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>PPC waste <span style="margin-left:auto;font-weight:700;color:#B23A66">High</span></div>
               <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink)"><span style="flex-shrink:0;width:20px;height:20px;border-radius:6px;background:#FCEFD2;color:#906000;display:flex;align-items:center;justify-content:center"><svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M7 12h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Listing quality <span style="margin-left:auto;font-weight:700;color:#906000">Medium</span></div>
               <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink)"><span style="flex-shrink:0;width:20px;height:20px;border-radius:6px;background:#E2F5EA;color:#15724A;display:flex;align-items:center;justify-content:center"><svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Account health <span style="margin-left:auto;font-weight:700;color:#15724A">Good</span></div>
-              <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink)"><span style="flex-shrink:0;width:20px;height:20px;border-radius:6px;background:#FCEDF2;color:#B23A66;display:flex;align-items:center;justify-content:center"><svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M7 12h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Keyword gaps <span style="margin-left:auto;font-weight:700;color:#B23A66">12 found</span></div>
+              <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink)"><span style="flex-shrink:0;width:20px;height:20px;border-radius:6px;background:#FCEDF2;color:#B23A66;display:flex;align-items:center;justify-content:center"><svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M7 12h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Keyword opportunities <span style="margin-left:auto;font-weight:700;color:#B23A66">12 found</span></div>
             </div>
           </div>
         </div>
@@ -1583,7 +1579,7 @@
         <div style="position:absolute;top:-120px;right:-100px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,{{ auto.accentSoft }},transparent 70%);pointer-events:none"></div>
         <div style="position:relative;max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,60px)">
           <div data-reveal style="max-width:640px;margin-bottom:32px">
-            <div style="display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--lav);font-weight:700;margin-bottom:14px"><span style="position:relative;width:8px;height:8px"><span style="position:absolute;inset:0;border-radius:50%;background:#36C281"></span><span class="se-anim" style="position:absolute;inset:0;border-radius:50%;background:#36C281;animation:sePing 2s ease-out infinite"></span></span>Real results, real stories</div>
+            <div style="display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--lav);font-weight:700;margin-bottom:14px"><span style="position:relative;width:8px;height:8px"><span style="position:absolute;inset:0;border-radius:50%;background:#36C281"></span><span class="se-anim" style="position:absolute;inset:0;border-radius:50%;background:#36C281;animation:sePing 2s ease-out infinite"></span></span>Real results, real numbers</div>
             <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:1.02;letter-spacing:-.03em;margin:0">Stores we run. Numbers we <span class="se-gradtext">grow.</span></h2>
           </div>
           <sc-if value="{{ auto.hasProof }}">
@@ -1616,7 +1612,7 @@
               <blockquote style="font-family:'Cabinet Grotesk',sans-serif;font-weight:500;font-size:clamp(1.15rem,2.4vw,1.5rem);line-height:1.4;letter-spacing:-.01em;color:#fff;margin:0">We&#8217;ve helped countless people make money, and you can too. Our results speak for themselves.</blockquote>
             </figure>
             <figure style="margin:0;background:linear-gradient(150deg,{{ auto.accent }},#16112A);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:clamp(24px,3vw,32px);display:flex;flex-direction:column;justify-content:space-between;gap:20px">
-              <blockquote style="font-family:'Cabinet Grotesk',sans-serif;font-weight:500;font-size:clamp(1.15rem,2.4vw,1.5rem);line-height:1.4;letter-spacing:-.01em;color:#fff;margin:0">Join the Shopinecom team today and start earning profits from day one.</blockquote>
+              <blockquote style="font-family:'Cabinet Grotesk',sans-serif;font-weight:500;font-size:clamp(1.15rem,2.4vw,1.5rem);line-height:1.4;letter-spacing:-.01em;color:#fff;margin:0">Partner with Shopinecom today and let our team run the whole operation for you.</blockquote>
               <a href="#/contact" onClick="{{ go }}" style="align-self:flex-start;display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ink);font-weight:700;font-size:14.5px;text-decoration:none;padding:12px 20px;border-radius:11px">Let&#8217;s make money together <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             </figure>
           </div>
@@ -1757,7 +1753,7 @@
           <div data-reveal style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:40px">
             <div style="max-width:560px">
               <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--purple);font-weight:600;margin-bottom:16px">What we manage</div>
-              <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.7rem,3.2vw,2.6rem);line-height:1.1;letter-spacing:-.02em;margin:0 0 12px">Everything this channel needs, handled.</h2>
+              <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.7rem,3.2vw,2.6rem);line-height:1.1;letter-spacing:-.02em;margin:0 0 12px">Everything this service needs, handled.</h2>
               <p style="font-size:1.05rem;line-height:1.6;color:var(--ink-soft);margin:0">One team owns every lever below, so nothing falls between freelancers.</p>
             </div>
             <div style="display:inline-flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 20px;box-shadow:0 8px 22px -16px rgba(22,17,42,.4)">
@@ -2098,7 +2094,7 @@
               <div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14px;color:#fff;line-height:1.15">5 marketplaces</div><div style="font-size:12px;color:#A8A6C4">One accountable team</div></div>
             </div>
           </div>
-          <p style="font-size:12px;color:#8C8AA8;margin-top:18px">Live marketplace accounts we run. Results vary by brand, margins, market and starting position.</p>
+          <p style="font-size:12px;color:#8C8AA8;margin-top:18px">Live Amazon Seller Central accounts we run. Results vary by brand, margins, market and starting position.</p>
         </div>
       </section>
 
@@ -2118,7 +2114,7 @@
           <div data-reveal style="position:relative;background:linear-gradient(180deg,#FBFBFE,#fff);border:1px solid var(--line);border-radius:22px;padding:clamp(18px,3vw,32px);box-shadow:0 24px 50px -30px rgba(22,17,42,.25)">
             <div class="se-chartbadge" style="position:absolute;top:clamp(14px,2.5vw,26px);right:clamp(14px,2.5vw,26px);display:flex;align-items:center;gap:9px;background:var(--ink);border-radius:12px;padding:10px 14px;box-shadow:0 16px 32px -14px rgba(0,0,0,.55);z-index:2">
               <span style="width:28px;height:28px;border-radius:8px;background:{{ activeService.accentSoft }};color:{{ activeService.accentDeep }};display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
-              <span style="line-height:1.1"><span style="display:block;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:14.5px;color:#fff">+416%</span><span style="display:block;font-size:10.5px;color:#A8A6C4;font-weight:600">best account growth</span></span>
+              <span style="line-height:1.1"><span style="display:block;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:14.5px;color:#fff">+416%</span><span style="display:block;font-size:10.5px;color:#A8A6C4;font-weight:600">best account, Amazon US</span></span>
             </div>
             <svg viewBox="0 0 1000 300" style="width:100%;height:auto;display:block">
               <line x1="0" y1="75" x2="1000" y2="75" stroke="rgba(22,17,42,.06)" stroke-width="1"/>
@@ -2260,7 +2256,7 @@
               </div>
             </div>
             <div class="se-float-b" style="position:absolute;bottom:-22px;left:-18px;background:var(--ink-2);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:16px 18px;box-shadow:0 20px 40px -18px rgba(0,0,0,.7)">
-              <div style="font-size:11px;color:var(--lav);font-weight:600;margin-bottom:3px">Average client outcome</div>
+              <div style="font-size:11px;color:var(--lav);font-weight:600;margin-bottom:3px">Verified brand-owner result</div>
               <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:1.4rem;color:#fff;letter-spacing:-.02em">ACoS 60% &#8594; ~20%</div>
             </div>
           </div>
@@ -2373,7 +2369,7 @@
           <div data-reveal style="max-width:720px">
             <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--lav);font-weight:600;margin-bottom:20px">Results</div>
             <h1 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.6rem,6vw,4.6rem);line-height:.95;letter-spacing:-.035em;margin:0 0 18px">Real accounts. Real numbers. Real results.</h1>
-            <p style="font-size:clamp(1.05rem,1.5vw,1.2rem);line-height:1.6;color:#C2C0D4;max-width:600px;margin:0">A library of live results from accounts we manage. Numbers depend on your brand, margins and market, these are ours, not promises.</p>
+            <p style="font-size:clamp(1.05rem,1.5vw,1.2rem);line-height:1.6;color:#C2C0D4;max-width:600px;margin:0">A library of live results from accounts we manage.</p>
           </div>
         </div>
       </section>
@@ -2554,7 +2550,7 @@
             </sc-if>
             <sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
             <form onSubmit="{{ submitForm }}" novalidate="true">
-              <div style="display:inline-flex;align-items:center;gap:7px;background:var(--lav-2);color:var(--purple);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:100px;margin-bottom:14px"><span style="position:relative;width:7px;height:7px"><span style="position:absolute;inset:0;border-radius:50%;background:#15724A"></span><span class="se-anim" style="position:absolute;inset:0;border-radius:50%;background:#15724A;animation:sePing 2s ease-out infinite"></span></span>Free audit</div>
+              <div style="display:inline-flex;align-items:center;gap:7px;background:var(--lav-2);color:var(--purple);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:100px;margin-bottom:14px"><span style="position:relative;width:7px;height:7px"><span style="position:absolute;inset:0;border-radius:50%;background:#15724A"></span><span class="se-anim" style="position:absolute;inset:0;border-radius:50%;background:#15724A;animation:sePing 2s ease-out infinite"></span></span>No obligation</div>
               <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.7rem,3vw,2.1rem);letter-spacing:-.03em;line-height:1.05;margin:0 0 6px">Apply for your free audit</h2>
               <p style="font-size:14px;color:var(--muted);margin:0 0 24px">Takes about 90 seconds. We only book calls we know we can win.</p>
               <div style="display:flex;flex-direction:column;gap:16px">
@@ -2618,10 +2614,11 @@
                     <option value="WhatsApp">WhatsApp</option>
                     <option value="Phone call">Phone call</option>
                   </select>
+                  <span style="display:block;font-size:12.5px;color:var(--muted);margin-top:6px">If you choose WhatsApp or a phone call, please add your number in the box above so we can reach you.</span>
                 </label>
                 <button type="submit" class="se-shine" style="margin-top:6px;width:100%;display:flex;align-items:center;justify-content:center;gap:9px;background:var(--purple);color:#fff;font:inherit;font-weight:700;font-size:16px;border:0;cursor:pointer;padding:16px;border-radius:13px;box-shadow:0 14px 30px -12px rgba(90,86,165,1);transition:transform .2s" style-hover="transform:translateY(-1px)">Get My Free Audit
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-                <p style="font-size:12.5px;color:var(--muted);text-align:center;margin:2px 0 0">We respect your privacy. Your details are used only to prepare and book your audit.</p>
+                <p style="font-size:12.5px;color:var(--muted);text-align:center;margin:2px 0 0">We respect your privacy. Your details are used to prepare and book your audit, and to contact you about our services.</p>
               </div>
             </form>
             </sc-if>
@@ -2670,7 +2667,7 @@
             </div>
             <div>
               <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.3rem;margin:0 0 10px">Results disclaimer</h2>
-              <p style="font-size:1.02rem;line-height:1.65;color:var(--ink-soft);margin:0">All figures shown are real results from live accounts we manage, captured from Seller Central. They are examples, not guarantees. Your results depend on your brand, margins, market, product and starting position. Past performance does not guarantee future results.</p>
+              <p style="font-size:1.02rem;line-height:1.65;color:var(--ink-soft);margin:0">Client results shown on this site are real results from live accounts we manage, captured from Seller Central. Interface panels labelled as concept or report previews are illustrative only. All figures are examples, not guarantees. Your results depend on your brand, margins, market, product and starting position. Past performance does not guarantee future results.</p>
             </div>
           </div>
           <div data-reveal style="margin-top:40px">
@@ -2725,7 +2722,7 @@
             <img src="assets/logo-mark-dark.png" alt="Shopinecom" width="38" height="38" style="border-radius:9px"/>
             <span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:21px;color:#fff">Shopin<span style="color:var(--lav)">ecom</span></span>
           </a>
-          <p style="font-size:14.5px;line-height:1.6;color:#A8A6C4;margin:0 0 18px">The end-to-end growth partner for established eCommerce brands, across every major marketplace.</p>
+          <p style="font-size:14.5px;line-height:1.6;color:#A8A6C4;margin:0 0 18px">The end-to-end growth partner for established eCommerce brands across Amazon, TikTok Shop, Shopify, Walmart and eBay.</p>
           <span style="display:inline-flex;align-items:center;background:#fff;border-radius:10px;padding:8px 12px;margin-bottom:18px"><img src="assets/badges/amazon-verified-partner.webp" alt="Amazon Ads Verified Partner" width="120" height="40" style="height:40px;width:auto;display:block"/></span><br/>
           <a href="#/contact" onClick="{{ go }}" class="se-shine" style="display:inline-flex;align-items:center;gap:8px;background:var(--purple);color:#fff;font-weight:600;font-size:14px;text-decoration:none;padding:12px 20px;border-radius:11px;box-shadow:0 12px 26px -12px rgba(90,86,165,.9)">Get a Free Audit <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
@@ -2753,8 +2750,6 @@
           <div style="display:flex;flex-direction:column;gap:11px">
             <a href="mailto:privatelabel@shopinecom.com" class="se-flink" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">privatelabel@shopinecom.com</a>
             <a href="https://wa.me/16829070853" target="_blank" rel="noopener" class="se-flink" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">WhatsApp: +1 682 907 0853</a>
-            <a href="https://www.linkedin.com/company/shopin-ecom/" target="_blank" rel="noopener" class="se-flink" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">LinkedIn</a>
-            <a href="https://www.facebook.com/shopinecomm" target="_blank" rel="noopener" class="se-flink" style="color:#C2C0D4;text-decoration:none;font-size:14.5px" style-hover="color:#fff">Facebook</a>
           </div>
           <div style="display:flex;gap:10px;margin-top:18px">
             <a href="https://www.linkedin.com/company/shopin-ecom/" target="_blank" rel="noopener" aria-label="LinkedIn" class="se-social" style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:11px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#C2C0D4;transition:all .22s" style-hover="background:var(--purple);color:#fff;border-color:var(--purple);transform:translateY(-2px)"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05C20.2 8.65 21 11 21 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3s-2.3 1.57-2.3 3.2V21H9z"/></svg></a>
@@ -2841,7 +2836,7 @@ class Component extends DCLogic {
 
   componentDidMount() {
     this._onHash = () => {
-      this.setState({ route: this.parse(), menuOpen: false, megaOpen: false, activeSec: '', openFaq: null, capIdx: 0, mobSvcOpen: false });
+      this.setState({ route: this.parse(), menuOpen: false, megaOpen: false, activeSec: '', openFaq: null, capIdx: 0, mobSvcOpen: false, submitted: false, errors: {} });
       try { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); } catch(e){}
       this.setTitle();
     };
@@ -2907,7 +2902,8 @@ class Component extends DCLogic {
   componentDidUpdate(prevProps, prevState) {
     this.syncAvatars();
     this.paintChart();
-    if (prevState && prevState.route !== this.state.route) {
+    if (this._lastRoute !== this.state.route) {
+      this._lastRoute = this.state.route;
       this.setTitle();
       setTimeout(() => { this.initReveal(); this.enhanceInteractions(); }, 30);
     }
@@ -3136,7 +3132,7 @@ class Component extends DCLogic {
   setMkt = (k) => () => this.setState({ mkt: k });
   setCapTab = (k) => () => this.setState({ capTab: k });
   setDeliv = (k) => () => this.setState({ delivKey: k });
-  setTeam = (i) => () => this.setState({ teamRole: i });
+  setTeam = (i) => () => this.setState({ teamRole: this.state.teamRole === i ? -1 : i });
   setOnb = (i) => () => this.setState({ onbStep: i });
   setAudit = (k) => () => this.setState({ auditCat: k });
   setExpandFrom = (k) => () => this.setState({ expandFrom: k });
@@ -3207,13 +3203,13 @@ class Component extends DCLogic {
         accent:'#FF9900', accentSoft:'rgba(255,153,0,.14)', logoKey:'amazon',
         who:['Private-label brands doing $20K+ per month','Brands with rising ACoS and flat profit','Sellers tired of babysitting freelancers','Brands expanding from one ASIN to a catalog'],
         industries:['Home & Kitchen','Health & Wellness','Beauty & Personal Care','Sports & Outdoors','Baby & Kids','Pet Supplies','Electronics','Grocery'],
-        quote:{ text:'Before Shopinecom our ACoS was 60% plus. Now it is stable around 20% and sales have never been better. Their communication and reporting are top notch.', name:'Adrienne', role:'CEO, Women\u2019s Lifestyle Brand', initial:'A', avatar:'https://growth.shopinecom.com/avatars/adrienne.webp' },
+        quote:{ text:'Before Shopinecom our ACoS was 60% plus. Now it’s stable around 20% and sales have never been better. Their communication and reporting are top notch.', name:'Adrienne', role:'CEO, Women\u2019s Lifestyle Brand', initial:'A', avatar:'https://growth.shopinecom.com/avatars/adrienne.webp' },
         outcomes:[{v:'~20%',l:'Stable ACoS, down from 60%+',n:'Verified brand-owner result'},{v:'3x',l:'Revenue without added ad spend',n:'Men\u2019s grooming brand'},{v:'£3.38M',l:'Sales on one managed UK account',n:'Live in Seller Central'}],
         caseSlug:'womens-lifestyle', caseMetric:'~20%', caseLabel:'stable ACoS', caseTitle:'ACoS cut from 60%+ to a stable ~20%',
         eyebrow:'Flagship · Amazon',
         title:'Run your entire Amazon brand as one profit engine.',
         sub:'PPC, listings, creative, SEO, A+ content and account health, owned by one team and pointed at the same number: profitable, defensible growth.',
-        stat:{ value:'ACoS 60% → ~20%', label:'Verified brand-owner result' },
+        stat:{ value:'ACoS 60% → ~20%', label:'Account-wide ad efficiency' },
         pains:[
           'ACoS keeps climbing while margin quietly disappears, and no one can find the wound.',
           'You fund the click, but the listing fumbles the sale. You lose the customer twice.',
@@ -3293,7 +3289,7 @@ class Component extends DCLogic {
           { q:'Do you handle creator outreach for us?', a:'Yes, outreach, affiliate campaign management and collaboration are managed end to end.' },
           { q:'Do you run TikTok Shop ads?', a:'We manage paid amplification alongside organic content and creator activity.' },
           { q:'What\u2019s the commercial model?', a:'A small retainer plus a share of the growth we add. Covered on your call.' },
-          { q:'Which regions?', a:'We work across supported TikTok Shop markets, confirm yours on the audit call.' }
+          { q:'Which regions?', a:'We work across supported TikTok Shop markets. Confirm yours on the audit call.' }
         ]
       },
       'ebay-store-management': {
@@ -3439,7 +3435,7 @@ class Component extends DCLogic {
         services:['PPC management','Listing and SEO optimization','A+ Content and Storefront','Account health and compliance'],
         outcome:{ value:'60% to 20%', label:'ACoS, verified brand-owner result' } },
       { id:'tiktok', name:'TikTok Shop', tag:'Marketplace', slug:'tiktok-shop-management',
-        headline:'Turn attention into orders with creator-led commerce.',
+        headline:'Creator-led commerce that converts views into revenue.',
         challenges:['Views that never become orders','Ad-hoc creator and affiliate outreach','Trends moving faster than your team'],
         services:['Shop growth and advertising','Influencer and affiliate campaigns','Creator outreach','Shop health and compliance'],
         outcome:{ value:'Creator + paid', label:'One conversion system' } },
@@ -3504,7 +3500,7 @@ class Component extends DCLogic {
 
   teamData() {
     return [
-      { name:'Marketplace strategist', focus:'Owns the growth plan', resp:['Sets quarterly strategy and targets','Prioritises the roadmap by margin','Leads your weekly strategy call'] },
+      { name:'Marketplace strategist', focus:'Owns the growth plan', resp:['Sets quarterly strategy and targets','Prioritizes the roadmap by margin','Leads your weekly strategy call'] },
       { name:'PPC specialist', focus:'Runs advertising', resp:['Builds and optimizes campaigns','Manages bids, budgets and negatives','Reports ad efficiency weekly'] },
       { name:'Listing and SEO specialist', focus:'Wins the click', resp:['Optimizes titles, bullets and backend','Maps keywords to demand and margin','Tracks organic rank'] },
       { name:'Creative designer', focus:'Builds what converts', resp:['Directs photography and infographics','Designs A+ Content and storefront','Produces video and brand assets'] },
@@ -3546,7 +3542,7 @@ class Component extends DCLogic {
       { area:'Scope of work', shopin:'Full account: ads, listings, creative, ops, health', typical:'Ads, or listings, in isolation' },
       { area:'Reporting', shopin:'Weekly, tied to profit', typical:'Monthly, vanity metrics' },
       { area:'Strategy calls', shopin:'Standing weekly call', typical:'Occasional or none' },
-      { area:'Commercial model', shopin:'Small retainer plus a share of growth added', typical:'Flat retainer regardless of results' },
+      { area:'Commercial model', shopin:'Small retainer plus a share of the growth we add', typical:'Flat retainer regardless of results' },
       { area:'Account health', shopin:'Monitored daily', typical:'Reactive, after a problem' },
       { area:'Expansion support', shopin:'New marketplaces and US/EU localization', typical:'Not offered' }
     ];
@@ -3584,7 +3580,7 @@ class Component extends DCLogic {
         badge:'Done-for-you Walmart wholesale',
         heroTitle:'Make money with Walmart automation.',
         heroSub:'Walmart is one of the world\u2019s largest and fastest-growing marketplaces. With Shopinecom\u2019s Walmart Automation you build a fully automated wholesale business and earn consistent profits, while our expert team runs the entire operation for you.',
-        stats:[{v:'15 to 55%',l:'Expected ROI range'},{v:'$5,000',l:'Minimum monthly investment'},{v:'WFS + FBM',l:'Fulfilment model'},{v:'100%',l:'Done for you'}],
+        stats:[{v:'15 to 55%',l:'Expected ROI range'},{v:'$5,000',l:'Minimum monthly investment'},{v:'WFS + FBM',l:'Fulfilment model'},{v:'Zero',l:'Daily workload for you'}],
         overviewTitle:'A complete, done-for-you Walmart automation service',
         overviewBody:'Shopinecom runs a full wholesale operation through WFS (Walmart Fulfillment Services) and FBM (Fulfilled by Merchant). You never touch the daily tasks; our automation system runs your store end to end.',
         included:[
@@ -3603,11 +3599,11 @@ class Component extends DCLogic {
         investCovers:['Wholesale inventory','WFS shipment prep and Walmart fulfilment','FBM stock management','Store setup and automation infrastructure'],
         investNote:'No hidden charges. No extra fees.',
         roiValue:'15 to 55%', roiBody:'Returns depend on product selection, inventory volume and market demand. We automate the selection of high-selling, proven products and blend WFS and FBM to maximize profit and minimize risk.',
-        security:['All sales revenue goes directly into your Walmart seller account','You retain 100% control of all funds','We never ask for debit or credit card details','We never request sensitive banking information','We assist with account setup if you don\u2019t have one','We only require limited access for automation and store management'],
+        security:['All sales revenue goes directly into your Walmart seller account','We never ask for debit or credit card details','We never request sensitive banking information','We assist with account setup if you don\u2019t have one','We only require limited access for automation and store management'],
         securityNote:'Your funds remain fully under your control at all times.',
         roleTitle:'What you need to do',
         role:['Provide Walmart seller account access','Maintain inventory capital for restocking','Pay supplier invoices on time','Stay in communication with our team'],
-        roleNote:'We automate and manage 100% of operations. You simply monitor performance and profits.',
+        roleNote:'Beyond those items, we automate and manage the operation end to end. You monitor performance and profits.',
         reports:[
           {t:'Inventory breakdown report', items:['Products purchased','Units sold','Remaining inventory (WFS and FBM)','Low-stock alerts','Supplier costs','Profit margins per SKU']},
           {t:'Profit and loss report', items:['Total revenue','Walmart fees and fulfilment costs','Inventory and shipping expenses','Operating expenses','Net profit overview']}
@@ -3650,7 +3646,7 @@ class Component extends DCLogic {
         investMin:'$3,000', investUnit:'minimum investment',
         investCovers:['Wholesale inventory sourcing','Warehouse storage and handling','Order fulfilment and logistics','Store management and reporting'],
         investNote:'No management fees. Only profit sharing.',
-        roiValue:'20 to 45%', roiBody:'Profit starts from the very first sale, sometimes higher than the range, with access to strong wholesale and distribution networks and a proven system behind every store.',
+        roiValue:'20 to 45%', roiBody:'Profit starts from the very first sale, and returns sometimes run higher than this range. You get access to strong wholesale and distribution networks and a proven system behind every store.',
         reports:[
           {t:'Inventory breakdown', desc:'A clear, automated view of what was purchased, sold and what remains in stock.'},
           {t:'Monthly profit and loss', desc:'Revenue, fees, costs and net profit, documented and shared every month.'}
@@ -3660,7 +3656,7 @@ class Component extends DCLogic {
           {t:'End-to-end management',d:'Sourcing, logistics, orders and reporting, handled.'},
           {t:'Exceptional customer service',d:'Support at every step of the journey.'},
           {t:'Top distribution partners',d:'Reliable supply from strong partnerships.'},
-          {t:'No fees, only profit sharing',d:'You pay only when you make a profit.'},
+          {t:'No management fees',d:'We are paid out of the profit we generate, never a flat monthly charge.'},
           {t:'Transparent reporting',d:'Inventory and monthly profit and loss, always visible.'}
         ],
         proofImgs:[
@@ -3936,13 +3932,13 @@ class Component extends DCLogic {
       capCols: this.state.isMobile ? '1fr' : '0.82fr 1.18fr', capPreviewDisplay: this.state.isMobile ? 'none' : 'flex',
       svcCaps: activeService ? activeService.manageList.map((m, i) => { const active = i === Math.min(this.state.capIdx || 0, activeService.manageList.length - 1); return { ...m, active, onSelect: this.setCap(i), rowBg: active ? activeService.accentDeep : '#fff', rowFg: active ? '#fff' : 'var(--ink)', rowBorder: active ? activeService.accentDeep : 'var(--line)', rowIcoBg: active ? 'rgba(255,255,255,.2)' : activeService.accentSoft, rowIcoFg: active ? '#fff' : activeService.accent, rowNumFg: active ? 'rgba(255,255,255,.9)' : 'var(--muted)', desc: mDescOf(m.label), mobileOpen: active && this.state.isMobile }; }) : [],
       svcCapActive: activeService ? (function () { const list = activeService.manageList; const idx = Math.min(this.state.capIdx || 0, list.length - 1); const m = list[idx] || list[0]; return m ? { ...m, desc: mDescOf(m.label), total: list.length, pos: (idx + 1 < 10 ? '0' : '') + (idx + 1) } : null; }).call(this) : null,
-      svcCases: activeService ? cases.filter(c => c.slug !== (details[r.slug] || {}).caseSlug).slice(0, 3).map(c => ({ slug: c.slug, metric: c.metric, metricLabel: c.metricLabel, brand: c.brand, title: c.title, cat: c.cat, market: c.market })) : [],
+      svcCases: activeService ? cases.filter(c => c.slug === (details[r.slug] || {}).caseSlug).concat(cases.filter(c => c.slug !== (details[r.slug] || {}).caseSlug)).slice(0, 3).map(c => ({ slug: c.slug, metric: c.metric, metricLabel: c.metricLabel, brand: c.brand, title: c.title, cat: c.cat, market: c.market })) : [],
       svcOthers: (r.name === 'service') ? (() => { const M = {
         'amazon-account-management': { n: 'Amazon', g: 'linear-gradient(140deg,#FF9900,#FF7A00)', t: 'Full account management', w: 'a', sh: 'rgba(255,153,0,.55)' },
         'walmart-seller-management': { n: 'Walmart', g: 'linear-gradient(140deg,#0071CE,#004B97)', t: 'Done-for-you automation', w: 'W', sh: 'rgba(0,113,206,.55)' },
         'tiktok-shop-management': { n: 'TikTok Shop', g: 'linear-gradient(140deg,#2B2B33,#0F0F14)', t: 'Shop and content engine', w: 'T', sh: 'rgba(254,44,85,.4)' },
         'ebay-store-management': { n: 'eBay', g: 'linear-gradient(140deg,#E53238,#B71C1C)', t: 'Wholesale store growth', w: 'e', sh: 'rgba(229,50,56,.5)' },
-        'global-expansion': { n: 'International Expansion', g: 'linear-gradient(140deg,#1A9455,#0B5B35)', t: 'US, UK and EU launch', w: 'G', sh: 'rgba(26,148,85,.5)' } };
+        'global-expansion': { n: 'International Expansion', g: 'linear-gradient(140deg,#1A9455,#0B5B35)', t: 'US, UK and EU launch', w: 'I', sh: 'rgba(26,148,85,.5)' } };
         return Object.keys(M).filter(k => k !== r.slug).map(k => ({ slug: k, ...M[k] })); })() : [],
       resources: this.resourceData(),
       openFaq: this.state.openFaq,
@@ -3962,7 +3958,7 @@ class Component extends DCLogic {
       aboutTeam: [
         { name:'Marketplace strategist', focus:'Owns your growth plan and quarterly targets.', grad:'linear-gradient(135deg,#5A56A5,#3A3680)', icon:'M8 8a4 4 0 1 0 8 0a4 4 0 1 0-8 0M5 21c0-4 3.5-6 7-6s7 2 7 6' },
         { name:'PPC specialist', focus:'Runs advertising against margin, not vanity ROAS.', grad:'linear-gradient(135deg,#2A6FDB,#5BA8F5)', icon:'M3 3v18h18M7 14l3-4 3 3 5-7' },
-        { name:'Listing & SEO specialist', focus:'Wins the click and the rank on every term that pays.', grad:'linear-gradient(135deg,#15724A,#3FBD86)', icon:'M4 11a7 7 0 1 0 14 0a7 7 0 1 0-14 0M21 21l-4.3-4.3' },
+        { name:'Listing and SEO specialist', focus:'Wins the click and the rank on every term that pays.', grad:'linear-gradient(135deg,#15724A,#3FBD86)', icon:'M4 11a7 7 0 1 0 14 0a7 7 0 1 0-14 0M21 21l-4.3-4.3' },
         { name:'Creative designer', focus:'Builds A+ Content, storefronts and video that convert.', grad:'linear-gradient(135deg,#B23A66,#8B4A9C)', icon:'M3 4h18v14H3zM3 9h18M8 14h5' },
         { name:'Account-health specialist', focus:'Protects the account and the Buy Box, daily.', grad:'linear-gradient(135deg,#906000,#F5B73C)', icon:'M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5zM9 12l2 2 4-4' },
         { name:'Reporting analyst', focus:'Turns the numbers into decisions you can see.', grad:'linear-gradient(135deg,#6E6AC0,#4A4690)', icon:'M3 3v18h18M7 11h3v6h-3zM12 7h3v10h-3z' }
@@ -4035,7 +4031,7 @@ class Component extends DCLogic {
         { title:'Proactive competitor analysis', desc:'We watch the shelf so you keep winning slots, not losing them.', grad:'linear-gradient(135deg,#15724A,#3FBD86)', icon:'<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>' },
         { title:'Transparent reporting', desc:'Daily, weekly and monthly reporting tied to profit, never vanity metrics.', grad:'linear-gradient(135deg,#906000,#F5B73C)', icon:'<path d="M3 3v18h18"/><rect x="7" y="11" width="3" height="6"/><rect x="13" y="7" width="3" height="10"/>' },
         { title:'Aligned commercial model', desc:'A small retainer plus a share of the growth we add. Ask for terms.', grad:'linear-gradient(135deg,#B23A66,#E483A5)', icon:'<path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>' },
-        { title:'US & EU market knowledge', desc:'Deep expertise across the US, UK and European Amazon marketplaces.', grad:'linear-gradient(135deg,#5A56A5,#8B88C9)', icon:'<path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>' }
+        { title:'US and EU market knowledge', desc:'Deep expertise across the US, UK and European Amazon marketplaces.', grad:'linear-gradient(135deg,#5A56A5,#8B88C9)', icon:'<path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>' }
       ],
       testimonials: this.renderTestimonials(),
       proofShots: [
