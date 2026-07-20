@@ -18,7 +18,7 @@
   body{margin:0;background:#fff;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
   ::selection{background:#5A56A5;color:#fff}
   @keyframes seFadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-  @keyframes seMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @keyframes seMarquee{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 5px))}}
   @keyframes seFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
   @keyframes seSpinSlow{to{transform:rotate(360deg)}}
   @keyframes sePing{0%{transform:scale(1);opacity:.7}80%,100%{transform:scale(2.6);opacity:0}}
@@ -183,13 +183,13 @@
   .se-social:hover{background:rgba(255,255,255,.16)!important;border-color:rgba(255,255,255,.34)!important;color:#fff!important;transform:translateY(-2px)}
   @media (prefers-reduced-motion: reduce){.se-accordion-body{animation:none!important}.se-cap-row:active,.se-vid:hover,.se-vid:hover .se-vid-img{transform:none!important}}
   @media (max-width:640px){.se-announce-sub{display:none}.se-subnav-cta{display:none!important}}
-  @media (max-width:640px){.se-proofvids{justify-content:center}.se-chartbadge{top:auto!important;bottom:10px!important;right:10px!important}}
+  @media (max-width:640px){.se-proofvids{justify-content:center}.se-chartbadge{position:static!important;top:auto!important;right:auto!important;left:auto!important;bottom:auto!important;width:fit-content;margin:0 0 12px!important}}
   @media (max-width:640px){.se-scroll-fade{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 44px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 44px),transparent);padding-right:44px;scrollbar-width:none}}
-  @media (max-width:900px){select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%236B6880' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")!important;background-repeat:no-repeat!important;background-position:right 14px center!important;padding-right:42px!important}}
+  select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%236B6880' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")!important;background-repeat:no-repeat!important;background-position:right 14px center!important;padding-right:42px!important}
   @media (max-width:900px){.se-social{width:44px!important;height:44px!important}}
   @media (max-width:560px){.se-hero-4>a{width:100%;justify-content:center}.se-hero-divider{display:none}.se-hero-2{font-size:clamp(1.9rem,8.5vw,2.6rem)!important}}
   @media (max-width:900px){.se-ps-arrow2{left:50%!important;top:-18px!important;transform:translateX(-50%) rotate(90deg)!important}.se-ps-sol{border-left:none!important;border-top:1px solid var(--line)!important}.se-float-b{left:0!important}}
-  @media (max-width:900px){.se-subnav-link{padding:14px 13px!important}.se-flink{padding:10px 0;display:inline-block}.se-alink{display:inline-block;padding:11px 0;margin:-7px 0}}
+  @media (max-width:900px){.se-subnav-link{padding:14px 13px!important}.se-flink{padding:12px 0;display:inline-block}.se-alink{display:inline-block;padding:11px 0;margin:-7px 0}}
   @media (max-width:900px){.se-tap-row>button{min-height:44px}.se-chip{min-height:44px}}
   :root{--ink:#16112A;--ink-2:#1F1838;--purple:#5A56A5;--purple-d:#4A4690;--lav:#8B88C9;--lav-2:#E9E8F4;--mist:#F2F3F7;--paper:#FFFFFF;--line:#E7E6F0;--muted:#6B6880;--ink-soft:#3A3650;--amber:#F5A623}
 </style>
@@ -200,7 +200,7 @@
 <div ref="{{ setRoot }}" style="--ink:#16112A;--ink-2:#1F1838;--purple:#5A56A5;--purple-d:#4A4690;--lav:#8B88C9;--lav-2:#E9E8F4;--mist:#F2F3F7;--paper:#FFFFFF;--line:#E7E6F0;--muted:#6B6880;--ink-soft:#3A3650;--amber:#F5A623;font-family:'Outfit',system-ui,sans-serif;color:var(--ink);background:#fff;overflow-x:clip;font-size:17px;line-height:1.65">
 
   <!-- scroll progress -->
-  <div style="position:fixed;top:0;left:0;right:0;height:3px;z-index:80;pointer-events:none"><div ref="{{ setProgress }}" style="height:100%;background:linear-gradient(90deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);transform:scaleX(0);transform-origin:0 50%;transition:transform .1s linear"></div></div>
+  <div style="position:fixed;top:0;left:0;right:0;height:3px;z-index:65;pointer-events:none"><div ref="{{ setProgress }}" style="height:100%;background:linear-gradient(90deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);transform:scaleX(0);transform-origin:0 50%;transition:transform .1s linear"></div></div>
 
   <!-- ===== ANNOUNCEMENT BAR ===== -->
   <div style="background:linear-gradient(90deg,#16112A,#1F1838,#16112A);color:#fff;font-size:13.5px;position:relative;z-index:61">
@@ -217,13 +217,13 @@
   <header style="position:sticky;top:0;z-index:60;background:{{ headerBg }};backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid {{ headerBorder }};transition:background .3s,border-color .3s" onMouseLeave="{{ closeMega }}">
     <div style="max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,48px);height:74px;display:flex;align-items:center;gap:28px">
       <a href="#/" onClick="{{ go }}" style="display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0">
-        <span style="display:inline-flex;padding:2px;border-radius:11px;background:linear-gradient(135deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)"><img src="assets/logo-mark-purple.png" alt="Shopinecom" width="36" height="36" style="display:block;border-radius:9px;border:2px solid #fff"/></span>
+        <span style="display:inline-flex;padding:2px;border-radius:11px;background:linear-gradient(135deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)"><img src="assets/logo-mark-purple.png" alt="" width="36" height="36" style="display:block;border-radius:9px;border:2px solid #fff"/></span>
         <span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--purple)">Shopin<span style="color:{{ wordmarkInk }}">ecom</span></span>
       </a>
 
       <nav style="display:{{ navDisplay }};align-items:center;gap:4px;margin-left:8px">
         <div style="position:relative" onMouseEnter="{{ openMega }}">
-          <button onClick="{{ toggleMega }}" style="font:inherit;font-weight:500;font-size:15.5px;color:{{ navColor }};background:none;border:0;cursor:pointer;padding:10px 14px;border-radius:9px;display:flex;align-items:center;gap:6px">Services
+          <button onClick="{{ toggleMega }}" aria-haspopup="true" aria-expanded="{{ megaOpen }}" style="font:inherit;font-weight:500;font-size:15.5px;color:{{ navColor }};background:none;border:0;cursor:pointer;padding:10px 14px;border-radius:9px;display:flex;align-items:center;gap:6px">Services
             <svg width="11" height="11" viewBox="0 0 12 12" fill="none" style="transition:transform .25s;transform:rotate({{ megaArrow }})"><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
         </div>
@@ -348,12 +348,12 @@
           <img src="assets/logo-mark-dark.png" alt="" width="36" height="36" style="border-radius:9px"/>
           <span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:21px;color:#fff">Shopin<span style="color:var(--lav)">ecom</span></span>
         </a>
-        <button onClick="{{ toggleMenu }}" aria-label="Close" style="margin-left:auto;background:none;border:0;color:#fff;cursor:pointer;padding:8px">
+        <button onClick="{{ toggleMenu }}" aria-label="Close" style="margin-left:auto;display:flex;align-items:center;justify-content:center;background:none;border:0;color:#fff;cursor:pointer;padding:8px;min-width:44px;min-height:44px">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         </button>
       </div>
       <nav style="display:flex;flex-direction:column;gap:2px;margin-top:28px">
-        <button onClick="{{ toggleMobSvc }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font:inherit;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:30px;color:#fff;background:none;border:0;cursor:pointer;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);text-align:left;width:100%">Services
+        <button onClick="{{ toggleMobSvc }}" aria-expanded="{{ mobSvcOpen }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font:inherit;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:30px;color:#fff;background:none;border:0;cursor:pointer;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);text-align:left;width:100%">Services
           <span style="flex-shrink:0;width:34px;height:34px;border-radius:50%;background:rgba(139,136,201,.18);display:flex;align-items:center;justify-content:center;transition:transform .3s;transform:rotate({{ mobSvcRot }})"><svg width="15" height="15" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></span>
         </button>
         <sc-if value="{{ mobSvcOpen }}">
@@ -371,7 +371,7 @@
               <span style="flex:1"><span style="display:block;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:16px;color:#fff">Walmart</span><span style="display:block;font-size:12.5px;color:var(--lav)">Approval to advertising</span></span>
             </a>
             <a href="#/services/ebay-store-management" onClick="{{ go }}" style="display:flex;align-items:center;gap:12px;text-decoration:none;padding:9px 10px;border-radius:12px;background:rgba(255,255,255,.04)">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;background:#fff;border-radius:10px;padding:6px;flex-shrink:0"><svg viewBox="0 0 50 24" style="width:100%;height:auto"><text x="25" y="19" font-family="Arial,sans-serif" font-weight="800" font-style="italic" font-size="20" text-anchor="middle"><tspan fill="#E53238">e</tspan><tspan fill="#0064D2">b</tspan><tspan fill="#F5AF02">a</tspan><tspan fill="#86B817">y</tspan></text></svg></span>
+              <span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;background:#fff;border-radius:10px;padding:6px;flex-shrink:0"><svg aria-hidden="true" focusable="false" viewBox="0 0 50 24" style="width:100%;height:auto"><text x="25" y="19" font-family="Arial,sans-serif" font-weight="800" font-style="italic" font-size="20" text-anchor="middle"><tspan fill="#E53238">e</tspan><tspan fill="#0064D2">b</tspan><tspan fill="#F5AF02">a</tspan><tspan fill="#86B817">y</tspan></text></svg></span>
               <span style="flex:1"><span style="display:block;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:16px;color:#fff">eBay</span><span style="display:block;font-size:12.5px;color:var(--lav)">Store, listings and promotions</span></span>
             </a>
             <a href="#/services/global-expansion" onClick="{{ go }}" style="display:flex;align-items:center;gap:12px;text-decoration:none;padding:9px 10px;border-radius:12px;background:rgba(255,255,255,.04)">
@@ -416,7 +416,7 @@
           <!-- LEFT: text -->
           <div>
             <div class="se-hero-1" style="display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:100px;padding:8px 20px 8px 8px;margin-bottom:26px;box-shadow:0 8px 26px -12px rgba(255,153,0,.5)">
-              <span style="display:inline-flex;align-items:center;background:#fff;border-radius:100px;padding:6px 13px;box-shadow:0 2px 8px -2px rgba(0,0,0,.3)"><img src="assets/badges/amazon-verified-partner.webp" alt="Amazon Ads Verified Partner" style="height:40px;width:auto;display:block"/></span>
+              <span style="display:inline-flex;align-items:center;background:#fff;border-radius:100px;padding:6px 13px;box-shadow:0 2px 8px -2px rgba(0,0,0,.3)"><img src="assets/badges/amazon-verified-partner.webp" alt="" width="120" height="40" style="height:40px;width:auto;display:block"/></span>
               <span style="display:flex;flex-direction:column;line-height:1.15"><span style="font-size:13.5px;font-weight:700;color:#fff">Amazon Ads Verified Partner</span><span style="display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:500;color:#D9D7EC"><span style="color:var(--amber)">&#9733;</span>4.8 client rating</span></span>
             </div>
             <h1 class="se-hero-2" style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.6rem,5.4vw,4.5rem);line-height:1.02;letter-spacing:-.025em;margin:0 0 22px">Marketplace growth,<br/><span class="se-gradtext">managed end to end.</span></h1>
@@ -469,7 +469,7 @@
         <div style="position:relative;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)">
           <div class="se-marquee" style="display:flex;gap:10px;width:max-content;animation:seMarquee 36s linear infinite">
             <sc-for list="{{ clientLogoImgs }}" as="c" hint-placeholder-count="10">
-              <span style="display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;height:58px;width:154px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:0 18px"><img src="{{ c }}" alt="Client logo" loading="lazy" width="118" height="34" style="max-width:118px;max-height:34px;object-fit:contain;display:block"/></span>
+              <span style="display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;height:58px;width:154px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:0 18px"><img src="{{ c }}" alt="" loading="lazy" width="118" height="34" style="max-width:118px;max-height:34px;object-fit:contain;display:block"/></span>
             </sc-for>
             <sc-for list="{{ clientLogoImgs }}" as="c" hint-placeholder-count="10">
               <span aria-hidden="true" style="display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;height:58px;width:154px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:0 18px"><img src="{{ c }}" alt="" loading="lazy" width="118" height="34" style="max-width:118px;max-height:34px;object-fit:contain;display:block"/></span>
@@ -486,7 +486,7 @@
             <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.7rem,4.5vw,2.8rem);line-height:1;letter-spacing:-.025em;margin:0">Proof, not promises.</h2>
             <div style="width:120px;height:4px;border-radius:3px;margin:16px auto 0;background:linear-gradient(95deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);background-size:200% 100%;animation:seGradShift 5s ease infinite"></div>
           </div>
-          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(10px,1.5vw,16px)">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:clamp(10px,1.5vw,16px)">
             <!-- $25M+ -->
             <div data-reveal class="se-tilt se-shine se-metric-glow" style="position:relative;overflow:hidden;background:linear-gradient(165deg,#EEFBF3,#fff);border:1px solid #DDEFE4;border-radius:24px;padding:clamp(22px,3.5vw,34px)">
               <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:clamp(16px,2.5vw,24px)">
@@ -573,7 +573,7 @@
             <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:clamp(24px,3.5vw,40px)">
               <div style="display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);font-size:12px;font-weight:700;letter-spacing:.04em;padding:5px 14px 5px 5px;border-radius:100px;margin-bottom:18px;color:#fff"><span style="width:8px;height:8px;border-radius:50%;background:var(--lav)"></span>{{ activeMkt.name }}</div>
               <h3 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.3rem,3.5vw,2rem);line-height:1.1;letter-spacing:-.02em;margin:0 0 22px">{{ activeMkt.headline }}</h3>
-              <div style="margin-bottom:24px">
+              <div>
               <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:14px;margin-bottom:22px">
                 <div style="background:rgba(224,133,127,.08);border:1px solid rgba(224,133,127,.2);border-radius:14px;padding:clamp(16px,2.5vw,20px)">
                   <div style="display:inline-flex;align-items:center;gap:7px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#F0A6A0;font-weight:700;margin-bottom:14px"><span style="width:18px;height:18px;border-radius:6px;background:rgba(224,133,127,.18);display:flex;align-items:center;justify-content:center"><svg width="10" height="10" viewBox="0 0 14 14" fill="none"><path d="M3 3l8 8M11 3l-8 8" stroke="#F0A6A0" stroke-width="2" stroke-linecap="round"/></svg></span>Common challenges</div>
@@ -641,8 +641,8 @@
         <div style="max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,60px)">
           <div data-reveal style="background:var(--ink);border-radius:22px;overflow:hidden;color:#fff;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));align-items:stretch">
             <div style="position:relative;min-height:200px;max-height:340px;overflow:hidden">
-              <img src="assets/proof/seller-central-3-38m.webp" alt="Amazon Seller Central showing GBP 3.38M ordered product sales across 104,863 orders" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block"/>
-              <div style="position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,rgba(22,17,42,.4) 60%,transparent 100%)"></div>
+              <img src="assets/proof/seller-central-3-38m.webp" alt="Amazon Seller Central showing £3.38M ordered product sales across 104,863 orders" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block"/>
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,17,42,0) 40%,rgba(22,17,42,.55) 100%)"></div>
               <span style="position:absolute;top:14px;left:14px;display:inline-flex;align-items:center;gap:7px;background:rgba(22,17,42,.88);color:#fff;font-size:11px;font-weight:700;letter-spacing:.04em;padding:6px 11px;border-radius:8px"><span style="position:relative;width:7px;height:7px;flex-shrink:0"><span style="position:absolute;inset:0;border-radius:50%;background:#36C281"></span><span class="se-anim" style="position:absolute;inset:0;border-radius:50%;background:#36C281;animation:sePing 2s ease-out infinite"></span></span>LIVE · Amazon UK</span>
             </div>
             <div style="padding:clamp(22px,3vw,36px);display:flex;flex-direction:column;justify-content:center">
@@ -660,7 +660,7 @@
                 <div style="position:absolute;top:-40px;right:-40px;width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.1)"></div>
                 <div style="position:relative;padding:clamp(22px,3vw,28px);display:flex;flex-direction:column;height:100%;color:#fff">
                   <div style="display:flex;gap:7px;margin-bottom:auto">
-                    <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:5px 10px 5px 6px;border-radius:100px"><span style="display:inline-flex;width:16px;height:13px;background:#fff;border-radius:3px;align-items:center;justify-content:center"><svg viewBox="0 0 50 30" style="width:90%;height:auto"><path d="M7 19c7 4 23 4.5 31 0" stroke="#FF9900" stroke-width="3.6" fill="none" stroke-linecap="round"/><path d="M35 15l4.5 1.3-1.3 4.6" stroke="#FF9900" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="24" y="13" font-family="Arial,sans-serif" font-weight="800" font-size="14" fill="#232F3E" text-anchor="middle">a</text></svg></span>{{ c.market }}</span>
+                    <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(0,0,0,.22);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:5px 10px 5px 6px;border-radius:100px"><span style="display:inline-flex;width:16px;height:13px;background:#fff;border-radius:3px;align-items:center;justify-content:center"><svg viewBox="0 0 50 30" style="width:90%;height:auto"><path d="M7 19c7 4 23 4.5 31 0" stroke="#FF9900" stroke-width="3.6" fill="none" stroke-linecap="round"/><path d="M35 15l4.5 1.3-1.3 4.6" stroke="#FF9900" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="24" y="13" font-family="Arial,sans-serif" font-weight="800" font-size="14" fill="#232F3E" text-anchor="middle">a</text></svg></span>{{ c.market }}</span>
                     <span style="display:inline-flex;align-items:center;background:rgba(0,0,0,.16);border:1px solid rgba(255,255,255,.14);color:#fff;font-size:10.5px;font-weight:600;padding:5px 11px;border-radius:100px">{{ c.cat }}</span>
                   </div>
                   <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.6rem,9vw,3.6rem);line-height:.9;letter-spacing:-.03em;margin:18px 0 6px">{{ c.metric }}</div>
@@ -687,7 +687,7 @@
           <div data-reveal style="margin-bottom:12px"><p style="font-size:13px;color:var(--purple);margin:0;display:inline-flex;align-items:center;gap:7px;font-weight:600"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 3v7m0 0L5 7m3 3l3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Tap an area to see the work and a sample report</p></div>
           <div data-reveal class="se-tap-row" style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px">
             <sc-for list="{{ capTabs }}" as="t" hint-placeholder-count="6">
-              <button onClick="{{ t.set }}" style="font:inherit;font-weight:600;font-size:13px;cursor:pointer;padding:8px 15px;border-radius:100px;border:1px solid {{ t.tBorder }};background:{{ t.tBg }};color:{{ t.tColor }};transition:all .2s;box-shadow:{{ t.tShadow }}">{{ t.label }}</button>
+              <button onClick="{{ t.set }}" aria-pressed="{{ t.active }}" style="font:inherit;font-weight:600;font-size:13px;cursor:pointer;padding:8px 15px;border-radius:100px;border:1px solid {{ t.tBorder }};background:{{ t.tBg }};color:{{ t.tColor }};transition:all .2s;box-shadow:{{ t.tShadow }}">{{ t.label }}</button>
             </sc-for>
           </div>
           <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(330px,100%),1fr));gap:clamp(16px,2.5vw,32px);align-items:center">
@@ -785,12 +785,12 @@
             <div class="se-shine" style="position:relative;background:var(--ink);border-radius:24px;padding:clamp(24px,3.5vw,36px);overflow:hidden;box-shadow:0 30px 70px -40px rgba(90,86,165,.9);border:1px solid rgba(139,136,201,.5)">
               <div style="position:absolute;top:14px;right:14px;display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#6E6AC0,#4A4690);color:#fff;font-size:10px;font-weight:800;letter-spacing:.05em;padding:5px 11px;border-radius:100px;box-shadow:0 8px 18px -8px rgba(90,86,165,.9)"><svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>RECOMMENDED</div>
               <div style="position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(90,86,165,.5),transparent 70%);pointer-events:none"></div>
-              <div style="position:relative">
+              <div style="position:relative;padding-top:24px">
                 <div style="display:flex;align-items:center;gap:11px;margin-bottom:8px">
                   <img src="assets/logo-mark-purple.png" width="34" height="34" alt="" style="border-radius:9px"/>
                   <span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:1.4rem;color:#fff">Shopinecom</span>
                 </div>
-                <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(90,86,165,.3);color:var(--lav);font-size:11px;font-weight:700;letter-spacing:.04em;padding:5px 11px;border-radius:100px;margin-bottom:22px">YOUR GROWTH PARTNER</div>
+                <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(90,86,165,.3);color:var(--lav-2);font-size:11px;font-weight:700;letter-spacing:.04em;padding:5px 11px;border-radius:100px;margin-bottom:22px">YOUR GROWTH PARTNER</div>
                 <div style="display:flex;flex-direction:column;gap:14px">
                   <sc-for list="{{ comparison }}" as="row" hint-placeholder-count="7">
                     <div style="display:flex;gap:12px;align-items:flex-start;border-top:1px solid rgba(255,255,255,.08);padding-top:14px">
@@ -934,7 +934,7 @@
             <div style="position:absolute;top:-50px;right:-30px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,153,0,.25),transparent 70%);pointer-events:none"></div>
             <div style="position:relative;display:flex;align-items:center;gap:12px;margin-bottom:16px">
               <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;background:#fff;border-radius:11px;padding:8px 14px;height:44px"><svg viewBox="0 0 100 34" style="height:26px;width:auto"><text x="50" y="22" font-family="Arial,sans-serif" font-weight="800" font-size="24" fill="#232F3E" text-anchor="middle" letter-spacing="-.5">amazon</text><path d="M24 28c10 4 42 4 52 0" stroke="#FF9900" stroke-width="2.8" fill="none" stroke-linecap="round"/><path d="M72 25l4 1.2-1.2 4.2" stroke="#FF9900" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              <span style="font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--lav);background:rgba(139,136,201,.2);padding:5px 11px;border-radius:6px">Flagship</span>
+              <span style="font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#C2C0DE;background:rgba(139,136,201,.2);padding:5px 11px;border-radius:6px">Flagship</span>
             </div>
             <h3 style="position:relative;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.5rem,4.5vw,2.4rem);letter-spacing:-.025em;margin:0 0 10px">Amazon Account Management</h3>
             <p style="position:relative;font-size:14.5px;line-height:1.6;color:#C2C0D4;margin:0;max-width:520px">PPC, listings, A+ content, account health and brand protection, run for sustainable, profitable growth.</p>
@@ -1256,7 +1256,7 @@
             <div class="se-tilt" style="grid-column:span 1;background:linear-gradient(150deg,rgba(90,86,165,.3),rgba(255,255,255,.04));border:1px solid rgba(139,136,201,.4);border-radius:18px;padding:clamp(18px,3vw,24px)">
               <img src="https://flagcdn.com/w160/gb.png" alt="United Kingdom flag" loading="lazy" width="52" height="35" style="width:52px;height:35px;object-fit:cover;border-radius:7px;box-shadow:0 4px 12px -4px rgba(0,0,0,.5);margin-bottom:14px;display:block"/>
               <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.05rem;color:#fff">United Kingdom</div>
-              <div style="font-size:12px;color:var(--lav);margin-top:4px;font-weight:600">Flagship market</div>
+              <div style="font-size:12px;color:#B7B4E6;margin-top:4px;font-weight:600">Flagship market</div>
               <div style="display:flex;gap:6px;margin-top:8px"><span style="display:inline-flex;align-items:center;justify-content:center;height:22px;background:#fff;border-radius:5px;padding:0 7px"><svg viewBox="0 0 50 30" style="height:13px;width:auto"><text x="25" y="13" font-family="Arial,sans-serif" font-weight="800" font-size="13" fill="#232F3E" text-anchor="middle">amazon</text><path d="M12 19c7 3 26 3 38 0" stroke="#FF9900" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg></span><span style="display:inline-flex;align-items:center;justify-content:center;height:22px;background:#95BF47;border-radius:5px;padding:0 6px"><svg viewBox="0 0 30 32" style="height:14px;width:auto"><path d="M19 8l2.6.6L25 30 8 32 5 11l4-1.5z" fill="#fff"/><text x="14.5" y="25" font-family="Arial" font-weight="800" font-size="12" fill="#95BF47" text-anchor="middle">S</text></svg></span></div>
             </div>
             <div class="se-tilt" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:clamp(18px,3vw,24px)">
@@ -1428,7 +1428,7 @@
                 </div>
               </sc-for>
             </div>
-            <div data-reveal style="margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:linear-gradient(135deg,{{ auto.accent }},{{ auto.accent2 }});border-radius:18px;padding:22px 26px;position:relative;overflow:hidden">
+            <div data-reveal style="margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:linear-gradient(135deg,{{ auto.accent }},{{ auto.accentDeep }});border-radius:18px;padding:22px 26px;position:relative;overflow:hidden">
               <span style="position:absolute;top:-40px;right:30px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 70%);pointer-events:none"></span>
               <div style="position:relative;display:flex;align-items:center;gap:15px">
                 <span style="flex-shrink:0;width:46px;height:46px;border-radius:13px;background:rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;color:#fff"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span>
@@ -1591,7 +1591,7 @@
             <sc-for list="{{ auto.proofImgs }}" as="pi">
               <div class="se-tilt" style="background:linear-gradient(180deg,#221B36,#15101f);border:1px solid rgba(255,255,255,.1);border-radius:18px;overflow:hidden;box-shadow:0 24px 54px -30px rgba(0,0,0,.8)">
                 <div style="position:relative;aspect-ratio:{{ pi.ratio }};overflow:hidden;background:#0a0716">
-                  <sc-if value="{{ pi.src }}"><img data-src="{{ pi.src }}" alt="Sales insight: {{ pi.v }}" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block"/></sc-if>
+                  <sc-if value="{{ pi.src }}"><img data-src="{{ pi.src }}" alt="Seller dashboard screenshot: {{ pi.v }} {{ pi.l }}" style="width:100%;height:100%;object-fit:contain;object-position:top;display:block"/></sc-if>
                   <span style="position:absolute;top:11px;left:11px;display:inline-flex;align-items:center;gap:6px;background:rgba(13,9,24,.72);backdrop-filter:blur(4px);color:#fff;font-size:10px;font-weight:700;letter-spacing:.05em;padding:5px 9px;border-radius:7px"><span style="position:relative;width:6px;height:6px"><span style="position:absolute;inset:0;border-radius:50%;background:#36C281"></span></span>LIVE</span>
                 </div>
                 <div style="padding:16px 18px 18px">
@@ -1606,7 +1606,7 @@
           <div data-reveal class="se-proofvids" style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:26px">
             <sc-for list="{{ auto.proofVideoList }}" as="pv">
               <div class="se-vid" style="flex:1 1 200px;max-width:{{ pv.vmax }};border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:#0a0716">
-                <sc-if value="{{ pv.src }}"><video data-src="{{ pv.src }}" controls playsinline preload="metadata" style="width:100%;display:block;background:#0a0716"></video></sc-if>
+                <sc-if value="{{ pv.src }}"><video data-src="{{ pv.src }}" controls playsinline preload="metadata" aria-label="Sales proof video" style="width:100%;display:block;background:#0a0716"></video></sc-if>
               </div>
             </sc-for>
           </div>
@@ -1647,7 +1647,7 @@
         <div style="position:absolute;bottom:-160px;left:-100px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(90,86,165,.5),transparent 70%);opacity:.4;animation:seFloatY 11s ease-in-out infinite;pointer-events:none"></div>
         <div style="position:relative;max-width:1100px;margin:0 auto;padding:0 clamp(20px,4vw,48px);display:grid;grid-template-columns:{{ detailCols }};gap:clamp(36px,5vw,64px);align-items:center">
           <div data-reveal>
-            <a href="#/services" onClick="{{ go }}" style="display:inline-flex;align-items:center;gap:7px;color:var(--lav);text-decoration:none;font-size:13.5px;font-weight:600;margin-bottom:24px" style-hover="color:#fff">
+            <a href="#/services" onClick="{{ go }}" class="se-alink" style="display:inline-flex;align-items:center;gap:7px;color:var(--lav);text-decoration:none;font-size:13.5px;font-weight:600;margin-bottom:24px" style-hover="color:#fff">
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M13 8H4m0 0l3.5 3.5M4 8l3.5-3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>All services</a>
             <div style="display:inline-flex;align-items:center;gap:11px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:7px 18px 7px 8px;margin-bottom:24px;backdrop-filter:blur(8px)">
               <sc-if value="{{ activeService.isAmz }}"><span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;background:linear-gradient(140deg,#FF9900,#FF7A00);border-radius:10px;padding:7px;box-shadow:0 8px 18px -8px rgba(255,153,0,.8)"><svg viewBox="0 0 50 30" style="width:100%;height:auto"><path d="M7 19c7 4 23 4.5 31 0" stroke="#fff" stroke-width="3.6" fill="none" stroke-linecap="round"/><path d="M35 15l4.5 1.3-1.3 4.6" stroke="#fff" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="24" y="13" font-family="Arial,sans-serif" font-weight="800" font-size="14" fill="#fff" text-anchor="middle">a</text></svg></span></sc-if>
@@ -1735,7 +1735,7 @@
         <div style="position:absolute;inset:0;opacity:.5;background-image:radial-gradient(rgba(255,255,255,.11) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent)"></div>
         <div style="position:relative;max-width:1100px;margin:0 auto;padding:0 clamp(20px,4vw,48px)">
           <div data-reveal style="display:flex;align-items:center;gap:12px;margin-bottom:30px">
-            <span style="display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:{{ activeService.accent2 }};font-weight:700"><span style="width:7px;height:7px;border-radius:50%;background:{{ activeService.accent2 }};box-shadow:0 0 0 4px {{ activeService.accent2 }}33"></span>What good looks like</span>
+            <h2 style="display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:{{ activeService.accent2 }};font-weight:700;margin:0"><span style="width:7px;height:7px;border-radius:50%;background:{{ activeService.accent2 }};box-shadow:0 0 0 4px {{ activeService.accent2 }}33"></span>What good looks like</h2>
             <span style="flex:1;height:1px;background:linear-gradient(90deg,rgba(255,255,255,.2),transparent)"></span>
           </div>
           <div class="se-fill-grid">
@@ -1961,7 +1961,7 @@
       <section style="background:var(--mist);padding:clamp(60px,8vw,100px) 0">
         <div style="max-width:920px;margin:0 auto;padding:0 clamp(20px,4vw,48px)">
           <figure data-reveal="scale" class="se-tilt" style="margin:0;background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(28px,4.5vw,48px);position:relative;overflow:hidden;box-shadow:0 30px 70px -40px rgba(22,17,42,.4)">
-            <div style="position:absolute;top:18px;right:34px;font-family:'Cabinet Grotesk',sans-serif;font-size:8rem;line-height:1;color:{{ activeService.accentSoft }};pointer-events:none">"</div>
+            <div aria-hidden="true" style="position:absolute;top:18px;right:34px;font-family:'Cabinet Grotesk',sans-serif;font-size:8rem;line-height:1;color:{{ activeService.accentSoft }};pointer-events:none">"</div>
             <div style="position:relative;display:flex;gap:3px;color:var(--amber);margin-bottom:20px">
               <svg width="19" height="19" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg width="19" height="19" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg width="19" height="19" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg width="19" height="19" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg width="19" height="19" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
             </div>
@@ -2063,7 +2063,7 @@
             </div>
             <a href="#/case-studies" onClick="{{ go }}" style="display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:600;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,.22);padding:12px 20px;border-radius:12px" style-hover="background:rgba(255,255,255,.08)">All case studies <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
-          <div style="display:flex;gap:clamp(12px,1.5vw,16px);overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 10px;-webkit-overflow-scrolling:touch;scrollbar-width:none">
+          <div tabindex="0" role="group" aria-label="Verified account screenshots" style="display:flex;gap:clamp(12px,1.5vw,16px);overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 10px;-webkit-overflow-scrolling:touch;scrollbar-width:none">
             <sc-for list="{{ proofShots }}" as="ps" hint-placeholder-count="6">
               <div class="se-tilt" style="flex:0 0 auto;width:min(260px,78vw);scroll-snap-align:start;background:linear-gradient(180deg,#221B36,#15101f);border:1px solid rgba(255,255,255,.1);border-radius:18px;overflow:hidden;box-shadow:0 24px 54px -30px rgba(0,0,0,.8)">
                 <div style="aspect-ratio:4/3;position:relative;background:#0a0716;overflow:hidden">
@@ -2151,7 +2151,7 @@
               <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--purple);font-weight:600;margin-bottom:14px">Case studies</div>
               <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.7rem,3.4vw,2.7rem);line-height:1.08;letter-spacing:-.02em;margin:0">Results from accounts we run.</h2>
             </div>
-            <a href="#/case-studies" onClick="{{ go }}" style="display:inline-flex;align-items:center;gap:8px;color:var(--purple);font-weight:700;font-size:15px;text-decoration:none;padding-bottom:4px" style-hover="gap:12px">All case studies <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="#/case-studies" onClick="{{ go }}" style="display:inline-flex;align-items:center;gap:8px;color:var(--purple);font-weight:700;font-size:15px;text-decoration:none;padding:10px 2px;min-height:44px" style-hover="gap:12px">All case studies <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:clamp(14px,2vw,20px)">
             <sc-for list="{{ svcCases }}" as="c" hint-placeholder-count="3">
@@ -2181,7 +2181,7 @@
           <div style="display:flex;flex-direction:column;gap:12px">
             <sc-for list="{{ serviceFaqs }}" as="f" hint-placeholder-count="4">
               <div class="se-gradtop" style="border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff">
-                <button onClick="{{ f.toggle }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:0;cursor:pointer;padding:20px 22px;text-align:left;font:inherit">
+                <button onClick="{{ f.toggle }}" aria-expanded="{{ f.open }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:0;cursor:pointer;padding:20px 22px;text-align:left;font:inherit">
                   <span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.05rem;color:var(--ink)">{{ f.q }}</span>
                   <span style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--mist);display:flex;align-items:center;justify-content:center;color:var(--purple);transition:transform .25s;transform:rotate({{ f.rot }})">
                     <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
@@ -2399,7 +2399,7 @@
                   </div>
                 </div>
                 <div style="padding:26px 28px;display:flex;flex-direction:column;flex:1">
-                  <h3 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.2rem;line-height:1.25;margin:0 0 10px;letter-spacing:-.01em">{{ c.title }}</h3>
+                  <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.2rem;line-height:1.25;margin:0 0 10px;letter-spacing:-.01em">{{ c.title }}</h2>
                   <p style="font-size:14.5px;line-height:1.55;color:var(--muted);margin:0 0 18px;flex:1">{{ c.sub }}</p>
                   <span style="display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;color:var(--ink);align-self:flex-start;background:var(--mist);border:1px solid var(--line);padding:8px 8px 8px 15px;border-radius:100px">Read the story <span style="display:inline-flex;width:24px;height:24px;border-radius:50%;background:var(--purple);color:#fff;align-items:center;justify-content:center"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
                 </div>
@@ -2418,7 +2418,7 @@
       <section style="background:var(--ink);color:#fff;padding:clamp(60px,8vw,96px) 0 clamp(48px,6vw,72px);position:relative;overflow:hidden">
         <div style="position:absolute;top:-120px;right:-120px;width:440px;height:440px;border-radius:46% 54% 60% 40%/52% 44% 56% 48%;background:radial-gradient(circle,#322C5C,transparent 70%);opacity:.7"></div>
         <div style="position:relative;max-width:920px;margin:0 auto;padding:0 clamp(20px,4vw,48px)">
-          <a href="#/case-studies" onClick="{{ go }}" data-reveal style="display:inline-flex;align-items:center;gap:7px;color:var(--lav);text-decoration:none;font-size:14px;font-weight:500;margin-bottom:24px">
+          <a href="#/case-studies" onClick="{{ go }}" data-reveal style="display:inline-flex;align-items:center;gap:7px;color:var(--lav);text-decoration:none;font-size:14px;font-weight:500;min-height:44px;padding:4px 2px;margin-bottom:14px">
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M13 8H4m0 0l3.5 3.5M4 8l3.5-3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>All case studies</a>
           <div data-reveal style="display:flex;gap:8px;margin-bottom:20px">
             <span style="background:rgba(90,86,165,.4);color:#D9D7EC;font-size:11px;font-weight:700;letter-spacing:.05em;padding:5px 11px;border-radius:6px">{{ activeCase.market }}</span>
@@ -2502,9 +2502,9 @@
               </div>
               <div style="padding:24px 26px;display:flex;flex-direction:column;flex:1">
                 <div style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);margin-bottom:10px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>{{ rs.read }} read</div>
-                <h3 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.2rem;line-height:1.25;margin:0 0 10px;letter-spacing:-.01em">{{ rs.title }}</h3>
+                <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.2rem;line-height:1.25;margin:0 0 10px;letter-spacing:-.01em">{{ rs.title }}</h2>
                 <p style="font-size:14.5px;line-height:1.55;color:var(--muted);margin:0 0 16px;flex:1">{{ rs.desc }}</p>
-                <a href="#/contact" onClick="{{ go }}" style="display:inline-flex;align-items:center;gap:7px;font-weight:600;font-size:14px;color:var(--purple);text-decoration:none">Request the guide
+                <a href="#/contact" onClick="{{ go }}" style="display:inline-flex;align-items:center;gap:7px;min-height:44px;font-weight:600;font-size:14px;color:var(--purple);text-decoration:none">Request the guide
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
               </div>
             </article>
@@ -2635,7 +2635,7 @@
           <div style="display:flex;flex-direction:column;gap:12px">
             <sc-for list="{{ contactFaqs }}" as="f" hint-placeholder-count="4">
               <div class="se-gradtop" style="border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff">
-                <button onClick="{{ f.toggle }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:0;cursor:pointer;padding:20px 22px;text-align:left;font:inherit">
+                <button onClick="{{ f.toggle }}" aria-expanded="{{ f.open }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:0;cursor:pointer;padding:20px 22px;text-align:left;font:inherit">
                   <span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.05rem;color:var(--ink)">{{ f.q }}</span>
                   <span style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--mist);display:flex;align-items:center;justify-content:center;color:var(--purple);transition:transform .25s;transform:rotate({{ f.rot }})">
                     <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
@@ -2674,7 +2674,7 @@
             </div>
           </div>
           <div data-reveal style="margin-top:40px">
-            <a href="#/contact" onClick="{{ go }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--purple);text-decoration:none">Questions? Contact us
+            <a href="#/contact" onClick="{{ go }}" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 0;font-weight:600;color:var(--purple);text-decoration:none">Questions? Contact us
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
@@ -2688,10 +2688,10 @@
   <div style="position:fixed;right:clamp(16px,3vw,26px);bottom:{{ waBottom }};z-index:55;display:flex;flex-direction:column;align-items:flex-end;gap:14px;transition:bottom .25s">
     <sc-if value="{{ waOpen }}">
       <div style="width:min(320px,calc(100vw - 32px));background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 30px 70px -24px rgba(22,17,42,.5);border:1px solid var(--line);animation:seFadeUp .28s cubic-bezier(.16,1,.3,1) both">
-        <div style="background:linear-gradient(135deg,#15724A,#25D366);padding:18px 20px;display:flex;align-items:center;gap:12px;position:relative">
+        <div style="background:linear-gradient(135deg,#0E4F33,#15724A);padding:18px 20px;display:flex;align-items:center;gap:12px;position:relative">
           <span style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2 1.3 2.3 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.7-.1 1.2z"/></svg></span>
           <div style="flex:1;min-width:0"><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15px;color:#fff">Chat with Shopinecom</div><div style="font-size:12px;color:rgba(255,255,255,.85);display:inline-flex;align-items:center;gap:6px"><span style="width:7px;height:7px;border-radius:50%;background:#B9F6CA"></span>Typically replies within an hour</div></div>
-          <button onClick="{{ toggleWa }}" aria-label="Close chat" style="background:rgba(255,255,255,.18);border:0;color:#fff;cursor:pointer;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+          <button onClick="{{ toggleWa }}" aria-label="Close chat" style="background:rgba(255,255,255,.18);border:0;color:#fff;cursor:pointer;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
         </div>
         <div style="padding:20px">
           <div style="background:var(--mist);border-radius:4px 16px 16px 16px;padding:13px 15px;font-size:14px;line-height:1.5;color:var(--ink-soft);margin-bottom:16px">Hi there 👋 Tell us your brand and marketplace, and we'll come back with where your fastest growth wins are.</div>
@@ -2712,7 +2712,7 @@
     <div style="height:3px;background:linear-gradient(90deg,#FF9900,#0071CE,#FE2C55,#95BF47,#FEEE00,#5A56A5);background-size:200% 100%;animation:seGradShift 8s ease infinite"></div>
     <div style="max-width:1280px;margin:0 auto;padding:clamp(40px,5vw,64px) clamp(20px,4vw,48px) 0">
       <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;justify-content:center;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:40px">
-        <span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8C8AA8;font-weight:600">Marketplaces we run</span>
+        <span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8C8AA8;font-weight:600">Marketplaces we run</span><span style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Amazon, TikTok Shop, Shopify, Walmart, eBay</span>
         <span style="display:inline-flex;align-items:center;justify-content:center;height:34px;width:50px;background:rgba(255,255,255,.94);border-radius:8px;padding:7px"><svg viewBox="0 0 50 30" style="width:100%;height:auto"><path d="M7 19c7 4 23 4.5 31 0" stroke="#FF9900" stroke-width="3.4" fill="none" stroke-linecap="round"/><path d="M35 15l4.5 1.3-1.3 4.6" stroke="#FF9900" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="24" y="13" font-family="Arial,sans-serif" font-weight="800" font-size="14" fill="#232F3E" text-anchor="middle">a</text></svg></span>
         <span style="display:inline-flex;align-items:center;justify-content:center;height:34px;width:42px;background:#111;border-radius:8px;padding:8px"><svg viewBox="0 0 32 34" style="width:100%;height:100%"><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#25F4EE" transform="translate(-1.3,-1.3)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#FE2C55" transform="translate(1.3,1.3)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#fff"/></svg></span>
         <span style="display:inline-flex;align-items:center;justify-content:center;height:34px;width:42px;background:#95BF47;border-radius:8px;padding:7px"><svg viewBox="0 0 30 32" style="width:100%;height:100%"><path d="M19 8l2.6.6L25 30 8 32 5 11l4-1.5z" fill="#fff"/><text x="14.5" y="25" font-family="Arial" font-weight="800" font-size="12" fill="#95BF47" text-anchor="middle">S</text></svg></span>
@@ -2768,9 +2768,7 @@
       <div style="display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between;padding-top:24px">
         <span style="font-size:13px;color:#8C8AA8">© 2026 Shopinecom. All rights reserved.</span>
         <div style="display:flex;flex-wrap:wrap;gap:18px">
-          <a href="#/privacy" onClick="{{ go }}" class="se-flink" style="font-size:13px;color:#8C8AA8;text-decoration:none" style-hover="color:#fff">Privacy Policy</a>
-          <a href="#/privacy" onClick="{{ go }}" class="se-flink" style="font-size:13px;color:#8C8AA8;text-decoration:none" style-hover="color:#fff">Terms</a>
-          <a href="#/privacy" onClick="{{ go }}" class="se-flink" style="font-size:13px;color:#8C8AA8;text-decoration:none" style-hover="color:#fff">Results Disclaimer</a>
+          <a href="#/privacy" onClick="{{ go }}" class="se-flink" style="font-size:13px;color:#8C8AA8;text-decoration:none" style-hover="color:#fff">Privacy, Terms &amp; Results Disclaimer</a>
         </div>
       </div>
     </div>
@@ -2843,7 +2841,7 @@ class Component extends DCLogic {
 
   componentDidMount() {
     this._onHash = () => {
-      this.setState({ route: this.parse(), menuOpen: false, megaOpen: false, activeSec: '', openFaq: null });
+      this.setState({ route: this.parse(), menuOpen: false, megaOpen: false, activeSec: '', openFaq: null, capIdx: 0, mobSvcOpen: false });
       try { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); } catch(e){}
       this.setTitle();
     };
@@ -3867,7 +3865,7 @@ class Component extends DCLogic {
         return { ...c, linePath: line, areaPath: area, lastX: last[0], lastY: last[1] };
       })(),
       delivs: this.deliverablesData().map(d => ({ ...d, active: this.state.delivKey === d.key, set: this.setDeliv(d.key),
-        dBg: this.state.delivKey === d.key ? 'var(--purple)' : 'var(--mist)', dColor: this.state.delivKey === d.key ? '#fff' : 'var(--ink-soft)', dShadow: this.state.delivKey === d.key ? '0 10px 22px -10px rgba(90,86,165,.8)' : 'none' })),
+        dBg: this.state.delivKey === d.key ? '#fff' : 'rgba(255,255,255,.06)', dColor: this.state.delivKey === d.key ? 'var(--ink)' : '#fff', dShadow: this.state.delivKey === d.key ? '0 10px 22px -10px rgba(90,86,165,.8)' : 'none' })),
       activeDeliv: this.deliverablesData().find(d => d.key === this.state.delivKey) || this.deliverablesData()[0],
       teamList: this.teamData().map((t, i) => ({ ...t, idx:i, active: this.state.teamRole === i, set: this.setTeam(i), open: this.state.teamRole === i, rot: this.state.teamRole === i ? '45deg' : '0deg',
         tBg: this.state.teamRole === i ? 'var(--ink-2)' : 'rgba(255,255,255,.04)', tBorder: this.state.teamRole === i ? 'rgba(139,136,201,.5)' : 'rgba(255,255,255,.1)', grad: ['linear-gradient(135deg,#5A56A5,#8B88C9)','linear-gradient(135deg,#2A6FDB,#5BA8F5)','linear-gradient(135deg,#15724A,#3FBD86)','linear-gradient(135deg,#B23A66,#E483A5)','linear-gradient(135deg,#906000,#F5B73C)','linear-gradient(135deg,#0B5B35,#1A9455)'][i] })),
@@ -3878,7 +3876,7 @@ class Component extends DCLogic {
       onbList: this.onboardingData().map((o, i) => ({ ...o, idx:i, active: this.state.onbStep === i, set: this.setOnb(i),
         oBg: this.state.onbStep === i ? 'var(--purple)' : '#fff', oColor: this.state.onbStep === i ? '#fff' : 'var(--muted)', oBorder: this.state.onbStep === i ? 'var(--purple)' : 'var(--line)' })),
       activeOnb: this.onboardingData()[this.state.onbStep] || this.onboardingData()[0],
-      onbProgress: ((this.state.onbStep) / (this.onboardingData().length - 1) * 100) + '%',
+      onbProgress: (((this.state.onbStep + 0.5) / this.onboardingData().length) * 100) + '%',
       auditList: this.auditDataList().map(a => ({ ...a, active: this.state.auditCat === a.key, set: this.setAudit(a.key),
         aBg: this.state.auditCat === a.key ? 'var(--ink)' : 'var(--mist)', aColor: this.state.auditCat === a.key ? '#fff' : 'var(--ink-soft)' })),
       activeAudit: this.auditDataList().find(a => a.key === this.state.auditCat) || this.auditDataList()[0],
@@ -3896,7 +3894,7 @@ class Component extends DCLogic {
             cardBorder: on ? 'rgba(139,136,201,.6)' : 'rgba(255,255,255,.1)',
             badge: on ? 'Selling here' : 'Ready to launch',
             badgeBg: on ? 'rgba(124,240,182,.18)' : 'rgba(139,136,201,.2)',
-            badgeColor: on ? '#7CF0B6' : 'var(--lav)',
+            badgeColor: on ? '#7CF0B6' : '#C2C0DE',
             dim: on ? '1' : '.92'
           };
         });
@@ -3921,7 +3919,7 @@ class Component extends DCLogic {
       imgFallback: (e) => { const i = e.currentTarget; if (i.naturalWidth && i.naturalWidth <= 120) { i.style.display = 'none'; } },
       svcVideos: this.videoData().map(v => ({ ...v, initial:(v.name||'?').trim().charAt(0).toUpperCase(), thumb:'https://i.ytimg.com/vi/'+v.id+'/hqdefault.jpg', watch:'https://www.youtube.com/watch?v='+v.id })),
       activeT: (() => { const t = this.renderTestimonials()[this.state.tIdx] || this.renderTestimonials()[0]; return t; })(),
-      tThumbs: this.renderTestimonials().map((t, i) => ({ ...t, idx:i, set: this.setT(i), ring: this.state.tIdx === i ? 'var(--purple)' : 'transparent', dim: this.state.tIdx === i ? '1' : '.5' })),
+      tThumbs: this.renderTestimonials().map((t, i) => ({ ...t, idx:i, set: this.setT(i), ring: this.state.tIdx === i ? 'var(--lav)' : 'transparent', dim: this.state.tIdx === i ? '1' : '.5' })),
       tPrev: this.tPrev, tNext: this.tNext,
       baVal: this.state.baVal, baValPct: this.state.baVal + '%', baClip: 'inset(0 ' + (100 - this.state.baVal) + '% 0 0)', startBA: this.startBA,
       baCols: this.state.isMobile ? '1fr' : '1fr auto 1fr',
@@ -3929,7 +3927,7 @@ class Component extends DCLogic {
       heroMove: this.heroMove, setHeroLayer: this.setHeroLayer,
       stickyCtaDisplay: (this.state.isMobile && r.name !== 'contact') ? 'block' : 'none',
       waBottom: (this.state.isMobile && r.name !== 'contact') ? 'calc(88px + env(safe-area-inset-bottom))' : 'clamp(16px,3vw,26px)',
-      footerPad: (this.state.isMobile && r.name !== 'contact') ? 'calc(104px + env(safe-area-inset-bottom))' : '32px',
+      footerPad: (this.state.isMobile && r.name !== 'contact') ? 'calc(164px + env(safe-area-inset-bottom))' : '104px',
       setMkt: this.setMkt,
       caseFilters: ['All','Amazon','Amazon UK','Amazon US'].map(f => ({ label:f, active: this.state.filter === f, set: this.setFilter(f), chipBg: this.state.filter === f ? 'var(--ink)' : '#fff', chipColor: this.state.filter === f ? '#fff' : 'var(--ink-soft)', chipBorder: this.state.filter === f ? 'var(--ink)' : 'var(--line)' })),
       filteredCases: (this.state.filter === 'All') ? cases : cases.filter(c => c.market === this.state.filter),
