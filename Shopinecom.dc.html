@@ -159,6 +159,13 @@
   .se-ps-arrow{transition:transform .35s cubic-bezier(.34,1.56,.64,1),opacity .3s;opacity:.5}
   #svc-faqs>div>div>div{transition:border-color .25s ease,box-shadow .25s ease}
   #svc-faqs>div>div>div:hover{border-color:var(--lav)!important;box-shadow:0 12px 28px -20px rgba(90,86,165,.5)}
+  .se-gradtop{position:relative}
+  .se-gradtop::before{content:"";position:absolute;top:0;left:16px;right:16px;height:2.5px;border-radius:0 0 4px 4px;background:linear-gradient(90deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);background-size:200% 100%;animation:seGradShift 9s ease infinite;opacity:.9;z-index:1;pointer-events:none}
+  .se-cardglow{transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s,border-color .3s}
+  .se-cardglow:hover{border-color:rgba(90,86,165,.4)!important;box-shadow:0 24px 48px -22px rgba(90,86,165,.4)!important;transform:translateY(-4px)}
+  .se-glass{backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:border-color .3s,transform .35s cubic-bezier(.16,1,.3,1)}
+  .se-glass:hover{border-color:rgba(139,136,201,.5)!important}
+  @media (prefers-reduced-motion: reduce){.se-gradtop::before{animation:none!important}.se-cardglow:hover{transform:none!important}}
   @media (prefers-reduced-motion: reduce){.se-card-hover:hover,.se-tilt:hover,.se-fill-grid>*:hover{transform:none!important}.se-particle,.se-ring-spin{animation:none!important}.se-metric-glow::after{animation:none!important}.se-grid-anim>*{animation:none!important;opacity:1!important}}
   .se-cap-row:active{transform:scale(.98)}
   @media (prefers-reduced-motion: reduce){.se-accordion-body{animation:none!important}.se-cap-row:active,.se-vid:hover,.se-vid:hover .se-vid-img{transform:none!important}}
@@ -523,7 +530,7 @@
           </div>
           <div class="se-fill-grid se-grid-anim">
             <!-- AMAZON -->
-            <a href="#/services/amazon-account-management" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt" style="display:flex;flex-direction:column;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px -12px rgba(22,17,42,.25)">
+            <a href="#/services/amazon-account-management" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt se-gradtop" style="display:flex;flex-direction:column;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px -12px rgba(22,17,42,.25)">
               <div style="position:relative;height:clamp(108px,20vw,140px);background:linear-gradient(135deg,#FF9900,#FF6A00);display:flex;align-items:center;justify-content:center;overflow:hidden">
                 <div style="position:absolute;top:-30px;right:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.14)"></div>
                 <span class="se-logo-chip" style="position:relative;display:inline-flex;flex-direction:column;align-items:center;gap:4px"><svg width="118" height="40" viewBox="0 0 118 40"><text x="59" y="26" font-family="Arial,sans-serif" font-weight="800" font-size="30" fill="#fff" text-anchor="middle" letter-spacing="-1">amazon</text><path d="M30 32c12 5 46 5 58 0" stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round"/><path d="M84 28l5.5 1.6-1.6 5.6" stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -536,7 +543,7 @@
               </div>
             </a>
             <!-- TIKTOK -->
-            <a href="#/services/tiktok-shop-management" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt" style="display:flex;flex-direction:column;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px -12px rgba(22,17,42,.25)">
+            <a href="#/services/tiktok-shop-management" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt se-gradtop" style="display:flex;flex-direction:column;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px -12px rgba(22,17,42,.25)">
               <div style="position:relative;height:clamp(108px,20vw,140px);background:linear-gradient(135deg,#111,#000);display:flex;align-items:center;justify-content:center;gap:10px;overflow:hidden">
                 <div style="position:absolute;top:-30px;right:-20px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,rgba(254,44,85,.45),transparent 70%)"></div>
                 <div style="position:absolute;bottom:-30px;left:-20px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,rgba(37,244,238,.4),transparent 70%)"></div>
@@ -550,7 +557,7 @@
               </div>
             </a>
             <!-- SHOPIFY -->
-            <a href="#/services/global-expansion" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt" style="display:flex;flex-direction:column;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px -12px rgba(22,17,42,.25)">
+            <a href="#/services/global-expansion" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt se-gradtop" style="display:flex;flex-direction:column;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px -12px rgba(22,17,42,.25)">
               <div style="position:relative;height:clamp(108px,20vw,140px);background:linear-gradient(135deg,#95BF47,#5E8E3E);display:flex;align-items:center;justify-content:center;gap:10px;overflow:hidden">
                 <div style="position:absolute;top:-30px;left:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.12)"></div>
                 <span class="se-logo-chip" style="position:relative;display:inline-flex;align-items:center;gap:9px"><svg width="30" height="34" viewBox="0 0 30 34"><path d="M19 8l2.6.6L25 31 8 33 5 11l4-1.5z" fill="#fff"/><text x="14.5" y="26" font-family="Arial" font-weight="800" font-size="12" fill="#5E8E3E" text-anchor="middle">S</text></svg><span style="font-family:Arial,sans-serif;font-weight:800;font-size:25px;color:#fff;letter-spacing:-.5px">Shopify</span></span>
@@ -563,7 +570,7 @@
               </div>
             </a>
             <!-- WALMART -->
-            <a href="#/services/walmart-seller-management" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt" style="display:flex;flex-direction:column;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px -12px rgba(22,17,42,.25)">
+            <a href="#/services/walmart-seller-management" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt se-gradtop" style="display:flex;flex-direction:column;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px -12px rgba(22,17,42,.25)">
               <div style="position:relative;height:clamp(108px,20vw,140px);background:linear-gradient(135deg,#0071CE,#004B97);display:flex;align-items:center;justify-content:center;gap:10px;overflow:hidden">
                 <div style="position:absolute;bottom:-30px;left:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.1)"></div>
                 <span class="se-logo-chip" style="position:relative;display:inline-flex;align-items:center;gap:9px"><svg width="34" height="34" viewBox="0 0 32 32"><g stroke="#FFC220" stroke-width="3.6" stroke-linecap="round"><line x1="16" y1="3" x2="16" y2="11"/><line x1="16" y1="21" x2="16" y2="29"/><line x1="4.8" y1="9.5" x2="11.6" y2="13.5"/><line x1="20.4" y1="18.5" x2="27.2" y2="22.5"/><line x1="4.8" y1="22.5" x2="11.6" y2="18.5"/><line x1="20.4" y1="13.5" x2="27.2" y2="9.5"/></g></svg><span style="font-family:Arial,sans-serif;font-weight:800;font-size:26px;color:#fff;letter-spacing:-.5px">Walmart</span></span>
@@ -576,7 +583,7 @@
               </div>
             </a>
             <!-- EBAY -->
-            <a href="#/services/ebay-store-management" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt" style="display:flex;flex-direction:column;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px -12px rgba(22,17,42,.25)">
+            <a href="#/services/ebay-store-management" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt se-gradtop" style="display:flex;flex-direction:column;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px -12px rgba(22,17,42,.25)">
               <div style="position:relative;height:clamp(108px,20vw,140px);background:linear-gradient(135deg,#F7F8FB,#E9ECF3);display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--line)">
                 <span class="se-logo-chip" style="position:relative"><svg width="118" height="48" viewBox="0 0 118 48"><text x="59" y="38" font-family="Arial,sans-serif" font-weight="800" font-style="italic" font-size="42" text-anchor="middle"><tspan fill="#E53238">e</tspan><tspan fill="#0064D2">b</tspan><tspan fill="#F5AF02">a</tspan><tspan fill="#86B817">y</tspan></text></svg></span>
                 <span style="position:absolute;top:12px;left:14px;background:rgba(22,17,42,.1);color:var(--ink);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:6px">Marketplace</span>
@@ -588,7 +595,7 @@
               </div>
             </a>
             <!-- US & EU -->
-            <a href="#/services/global-expansion" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt" style="display:flex;flex-direction:column;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px -12px rgba(22,17,42,.25)">
+            <a href="#/services/global-expansion" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt se-gradtop" style="display:flex;flex-direction:column;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px -12px rgba(22,17,42,.25)">
               <div style="position:relative;height:clamp(108px,20vw,140px);background:linear-gradient(135deg,#1A9455,#0B5B35);display:flex;align-items:center;justify-content:center;gap:10px;overflow:hidden">
                 <div style="position:absolute;bottom:-30px;right:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.12)"></div>
                 <span class="se-logo-chip" style="position:relative;display:inline-flex;align-items:center;gap:10px"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:23px;color:#fff;letter-spacing:-.5px">International Expansion</span></span>
@@ -933,7 +940,7 @@
           </div>
           <div style="display:flex;gap:clamp(10px,1.5vw,16px);overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none">
             <sc-for list="{{ videoList }}" as="v">
-              <a href="{{ v.watch }}" target="_blank" rel="noopener" data-reveal class="se-card-hover se-tilt" style="flex:0 0 auto;width:min(280px,78vw);scroll-snap-align:start;display:block;text-decoration:none;border-radius:20px;overflow:hidden;background:var(--ink);box-shadow:0 14px 40px -22px rgba(22,17,42,.5)">
+              <a href="{{ v.watch }}" target="_blank" rel="noopener" data-reveal class="se-card-hover se-tilt se-gradtop" style="flex:0 0 auto;width:min(280px,78vw);scroll-snap-align:start;display:block;text-decoration:none;border-radius:20px;overflow:hidden;background:var(--ink);box-shadow:0 14px 40px -22px rgba(22,17,42,.5)">
                 <div style="position:relative;aspect-ratio:16/10;background:var(--ink);overflow:hidden">
                   <sc-if value="{{ v.thumb }}"><img src="{{ v.thumb }}" alt="Video review from {{ v.name }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"/></sc-if>
                   <span style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,17,42,.05) 40%,rgba(13,9,24,.92) 100%)"></span>
@@ -1513,7 +1520,7 @@
             </div>
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:14px">
               <sc-for list="{{ auto.includedList }}" as="it" hint-placeholder-count="6">
-                <div data-reveal="zoom" style="position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 18px 20px;box-shadow:0 6px 20px -16px rgba(22,17,42,.5);transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-4px);box-shadow:0 18px 36px -18px rgba(22,17,42,.55)">
+                <div data-reveal="zoom" class="se-gradtop" style="position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 18px 20px;overflow:hidden;box-shadow:0 6px 20px -16px rgba(22,17,42,.5);transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-4px);box-shadow:0 18px 36px -18px rgba(22,17,42,.55)">
                   <span style="position:absolute;top:15px;right:17px;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:.82rem;color:{{ auto.accent }};opacity:.38;letter-spacing:.02em">{{ it.n }}</span>
                   <span style="display:flex;width:46px;height:46px;border-radius:13px;background:linear-gradient(140deg,{{ auto.accent }},{{ auto.accent2 }});align-items:center;justify-content:center;color:#fff;box-shadow:0 12px 24px -14px {{ auto.accent }};margin-bottom:14px">{{ it.icoEl }}</span>
                   <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3">{{ it.t }}</div>
@@ -1560,7 +1567,7 @@
 
       <!-- security -->
       <sc-if value="{{ auto.hasSecurity }}">
-      <section style="background:var(--mist);padding:clamp(60px,8vw,104px) 0">
+      <section style="background-color:var(--mist);background-image:radial-gradient(circle at 108% -60px,{{ auto.accentSoft }},transparent 50%),radial-gradient(rgba(90,86,165,.05) 1px,transparent 1px);background-size:auto,22px 22px;padding:clamp(60px,8vw,104px) 0">
         <div style="max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,60px)">
           <div data-reveal style="max-width:640px;margin-bottom:36px">
             <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:{{ auto.accentDeep }};font-weight:700;margin-bottom:14px">Your security and control</div>
@@ -1590,7 +1597,7 @@
           </div>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px">
             <sc-for list="{{ auto.reportList }}" as="rp" hint-placeholder-count="2">
-              <div data-reveal class="se-tilt" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:clamp(24px,3vw,32px)">
+              <div data-reveal class="se-tilt se-glass" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:clamp(24px,3vw,32px)">
                 <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
                   <span style="flex-shrink:0;width:44px;height:44px;border-radius:12px;background:{{ auto.accent }};background-image:linear-gradient(140deg,rgba(255,255,255,.3),transparent);color:#fff;display:flex;align-items:center;justify-content:center"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-4 3 3 5-7"/></svg></span>
                   <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:#fff">{{ rp.t }}</div>
@@ -1610,7 +1617,7 @@
       </section>
 
       <!-- pillars: why partner -->
-      <section style="background:#fff;padding:clamp(60px,8vw,104px) 0">
+      <section style="background-color:#fff;background-image:radial-gradient(circle at -40px 15%,{{ auto.accentSoft }},transparent 45%);padding:clamp(60px,8vw,104px) 0">
         <div style="max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,60px)">
           <div data-reveal style="max-width:640px;margin-bottom:36px">
             <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:{{ auto.accentDeep }};font-weight:700;margin-bottom:14px">Why partner with Shopin Ecom</div>
@@ -1618,7 +1625,7 @@
           </div>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px">
             <sc-for list="{{ auto.pillars }}" as="p" hint-placeholder-count="6">
-              <div data-reveal class="se-tilt" style="background:linear-gradient(170deg,#fff,var(--mist));border:1px solid var(--line);border-radius:18px;padding:clamp(22px,3vw,28px)">
+              <div data-reveal class="se-tilt se-gradtop se-cardglow" style="background:linear-gradient(170deg,#fff,var(--mist));border:1px solid var(--line);border-radius:18px;padding:clamp(22px,3vw,28px);overflow:hidden">
                 <span style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:{{ auto.accentSoft }};color:{{ auto.accent }};margin-bottom:16px"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7L9 18l-5-5"/></svg></span>
                 <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.15rem;color:var(--ink);margin-bottom:8px">{{ p.t }}</div>
                 <div style="font-size:14.5px;line-height:1.55;color:var(--muted)">{{ p.d }}</div>
@@ -1630,7 +1637,7 @@
 
       <!-- growth -->
       <sc-if value="{{ auto.hasGrowth }}">
-      <section style="background:var(--mist);padding:clamp(60px,8vw,104px) 0">
+      <section style="background-color:var(--mist);background-image:radial-gradient(circle at 108% -60px,{{ auto.accentSoft }},transparent 50%),radial-gradient(rgba(90,86,165,.05) 1px,transparent 1px);background-size:auto,22px 22px;padding:clamp(60px,8vw,104px) 0">
         <div style="max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,60px)">
           <div data-reveal style="max-width:640px;margin-bottom:36px">
             <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:{{ auto.accentDeep }};font-weight:700;margin-bottom:14px">Long-term growth vision</div>
@@ -1731,7 +1738,7 @@
             <h1 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.4rem,5.5vw,4.2rem);line-height:.98;letter-spacing:-.035em;margin:0 0 20px">{{ activeService.title }}</h1>
             <p style="font-size:clamp(1.05rem,1.5vw,1.2rem);line-height:1.6;color:#C2C0D4;max-width:560px;margin:0 0 30px">{{ activeService.sub }}</p>
             <div style="display:flex;flex-wrap:wrap;gap:13px;margin-bottom:26px">
-              <a href="#/contact" onClick="{{ go }}" class="se-shine se-press" style="display:inline-flex;align-items:center;gap:9px;background:var(--purple);color:#fff;font-weight:700;font-size:16px;text-decoration:none;padding:15px 28px;border-radius:13px;box-shadow:0 14px 34px -12px rgba(90,86,165,1)">Get a Free Audit
+              <a href="#/contact" onClick="{{ go }}" class="se-shine se-press" style="display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,#6E6AC0,#4A4690);color:#fff;font-weight:700;font-size:16px;text-decoration:none;padding:15px 28px;border-radius:13px;box-shadow:0 14px 34px -12px rgba(90,86,165,1)">Get a Free Audit
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
               <a href="#/case-studies" onClick="{{ go }}" style="display:inline-flex;align-items:center;gap:9px;background:transparent;color:#fff;font-weight:600;font-size:16px;text-decoration:none;padding:15px 24px;border-radius:13px;border:1px solid rgba(255,255,255,.22)" style-hover="background:rgba(255,255,255,.08)">See the results</a>
             </div>
@@ -1974,21 +1981,21 @@
             <p style="font-size:1.05rem;line-height:1.6;color:#C2C0DE;margin:0">No vague onboarding. Here's exactly what happens once we start.</p>
           </div>
           <div style="position:relative;display:flex;flex-direction:column;gap:14px">
-            <div data-reveal="left" class="se-tilt" style="display:flex;flex-wrap:wrap;gap:clamp(14px,2.5vw,28px);align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:clamp(22px,3vw,32px)">
+            <div data-reveal="left" class="se-tilt se-glass" style="display:flex;flex-wrap:wrap;gap:clamp(14px,2.5vw,28px);align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:clamp(22px,3vw,32px)">
               <div style="flex:0 0 auto;display:flex;align-items:center;gap:14px;min-width:180px">
                 <span style="flex-shrink:0;width:54px;height:54px;border-radius:15px;background:linear-gradient(140deg,{{ activeService.accent }},rgba(0,0,0,.25));display:flex;align-items:center;justify-content:center;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:1.3rem;color:#fff;box-shadow:0 12px 26px -12px rgba(0,0,0,.6)">01</span>
                 <div><div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--lav);font-weight:700">Days 1 to 14</div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:#fff">Onboard &amp; audit</div></div>
               </div>
               <p style="flex:1;min-width:240px;font-size:14.5px;line-height:1.55;color:#C2C0DE;margin:0">Full account access, a deep teardown of ads, listings and health, and a prioritised list of the fastest, most profitable wins.</p>
             </div>
-            <div data-reveal="right" class="se-tilt" style="display:flex;flex-wrap:wrap;gap:clamp(14px,2.5vw,28px);align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:clamp(22px,3vw,32px)">
+            <div data-reveal="right" class="se-tilt se-glass" style="display:flex;flex-wrap:wrap;gap:clamp(14px,2.5vw,28px);align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:clamp(22px,3vw,32px)">
               <div style="flex:0 0 auto;display:flex;align-items:center;gap:14px;min-width:180px">
                 <span style="flex-shrink:0;width:54px;height:54px;border-radius:15px;background:linear-gradient(140deg,{{ activeService.accent }},rgba(0,0,0,.25));display:flex;align-items:center;justify-content:center;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:1.3rem;color:#fff;box-shadow:0 12px 26px -12px rgba(0,0,0,.6)">02</span>
                 <div><div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--lav);font-weight:700">Days 15 to 45</div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:#fff">Rebuild &amp; launch</div></div>
               </div>
               <p style="flex:1;min-width:240px;font-size:14.5px;line-height:1.55;color:#C2C0DE;margin:0">Campaigns restructured around margin, listings and creative rebuilt to convert, and the new strategy goes live with weekly reporting.</p>
             </div>
-            <div data-reveal class="se-tilt" style="display:flex;flex-wrap:wrap;gap:clamp(14px,2.5vw,28px);align-items:center;background:linear-gradient(135deg,rgba(90,86,165,.35),rgba(255,255,255,.05));border:1px solid rgba(139,136,201,.4);border-radius:20px;padding:clamp(22px,3vw,32px)">
+            <div data-reveal class="se-tilt se-glass" style="display:flex;flex-wrap:wrap;gap:clamp(14px,2.5vw,28px);align-items:center;background:linear-gradient(135deg,rgba(90,86,165,.35),rgba(255,255,255,.05));border:1px solid rgba(139,136,201,.4);border-radius:20px;padding:clamp(22px,3vw,32px)">
               <div style="flex:0 0 auto;display:flex;align-items:center;gap:14px;min-width:180px">
                 <span style="flex-shrink:0;width:54px;height:54px;border-radius:15px;background:linear-gradient(140deg,#7CF0B6,#15724A);display:flex;align-items:center;justify-content:center;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:1.3rem;color:#06281A;box-shadow:0 12px 26px -12px rgba(31,138,91,.7)">03</span>
                 <div><div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7CF0B6;font-weight:700">Days 46 to 90</div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:#fff">Optimize &amp; scale</div></div>
@@ -2215,7 +2222,7 @@
       </section>
 
       <!-- related case studies -->
-      <section style="background:var(--mist);padding:clamp(60px,8vw,104px) 0">
+      <section style="background-color:var(--mist);background-image:radial-gradient(circle at -60px 30%,{{ activeService.accentSoft }},transparent 50%),radial-gradient(rgba(90,86,165,.05) 1px,transparent 1px);background-size:auto,22px 22px;padding:clamp(60px,8vw,104px) 0">
         <div style="max-width:1100px;margin:0 auto;padding:0 clamp(20px,4vw,48px)">
           <div data-reveal style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:34px">
             <div style="max-width:560px">
@@ -2245,13 +2252,13 @@
       </section>
 
       <!-- FAQs -->
-      <section id="svc-faqs" style="background:#fff;padding:clamp(60px,8vw,104px) 0 clamp(60px,8vw,104px);scroll-margin-top:130px">
+      <section id="svc-faqs" style="background-color:#fff;background-image:radial-gradient(circle at 105% 10%,{{ activeService.accentSoft }},transparent 45%);padding:clamp(60px,8vw,104px) 0 clamp(60px,8vw,104px);scroll-margin-top:130px">
         <div style="max-width:840px;margin:0 auto;padding:0 clamp(20px,4vw,48px)">
           <div data-reveal style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--purple);font-weight:600;margin-bottom:16px">FAQs</div>
           <h2 data-reveal style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.7rem,3.2vw,2.6rem);line-height:1.1;letter-spacing:-.02em;margin:0 0 32px">Questions, answered.</h2>
           <div style="display:flex;flex-direction:column;gap:12px">
             <sc-for list="{{ serviceFaqs }}" as="f" hint-placeholder-count="4">
-              <div style="border:1px solid var(--line);border-radius:14px;overflow:hidden">
+              <div class="se-gradtop" style="border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff">
                 <button onClick="{{ f.toggle }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:0;cursor:pointer;padding:20px 22px;text-align:left;font:inherit">
                   <span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.05rem;color:var(--ink)">{{ f.q }}</span>
                   <span style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--mist);display:flex;align-items:center;justify-content:center;color:var(--purple);transition:transform .25s;transform:rotate({{ f.rot }})">
@@ -2469,7 +2476,7 @@
           </div>
           <div style="display:grid;grid-template-columns:{{ caseCols }};gap:18px">
             <sc-for list="{{ filteredCases }}" as="c" hint-placeholder-count="6">
-              <a href="#/case/{{ c.slug }}" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt" style="display:flex;flex-direction:column;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 4px 18px -12px rgba(22,17,42,.2)">
+              <a href="#/case/{{ c.slug }}" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt se-gradtop" style="display:flex;flex-direction:column;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 4px 18px -12px rgba(22,17,42,.2)">
                 <div style="background:var(--ink);color:#fff;padding:28px 26px;position:relative;overflow:hidden">
                   <div style="position:absolute;top:-40px;right:-40px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(90,86,165,.55),transparent 70%)"></div>
                   <div style="position:relative">
@@ -2717,7 +2724,7 @@
           <h2 data-reveal style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.7rem,3.2vw,2.6rem);line-height:1.1;letter-spacing:-.02em;margin:0 0 32px">Common questions.</h2>
           <div style="display:flex;flex-direction:column;gap:12px">
             <sc-for list="{{ contactFaqs }}" as="f" hint-placeholder-count="4">
-              <div style="border:1px solid var(--line);border-radius:14px;overflow:hidden">
+              <div class="se-gradtop" style="border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff">
                 <button onClick="{{ f.toggle }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:0;cursor:pointer;padding:20px 22px;text-align:left;font:inherit">
                   <span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.05rem;color:var(--ink)">{{ f.q }}</span>
                   <span style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--mist);display:flex;align-items:center;justify-content:center;color:var(--purple);transition:transform .25s;transform:rotate({{ f.rot }})">
