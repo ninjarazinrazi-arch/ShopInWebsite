@@ -173,6 +173,14 @@
   .se-expcard:active{transform:scale(.985)}
   .se-expcard:focus-visible{outline:2px solid var(--lav);outline-offset:3px}
   @media (max-width:900px){.se-expcard{min-height:44px}}
+  /* style-hover and style-focus attributes are not implemented by the runtime (it strips them),
+     so every hover and focus affordance that relied on them silently did nothing. Real CSS below. */
+  :where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:3px solid #8B88C9!important;outline-offset:2px!important}
+  input:focus,select:focus,textarea:focus{border-color:var(--purple)!important}
+  .se-flink{transition:color .2s}
+  .se-flink:hover{color:#fff!important}
+  .se-social{transition:background .2s,border-color .2s,color .2s,transform .2s}
+  .se-social:hover{background:rgba(255,255,255,.16)!important;border-color:rgba(255,255,255,.34)!important;color:#fff!important;transform:translateY(-2px)}
   @media (prefers-reduced-motion: reduce){.se-accordion-body{animation:none!important}.se-cap-row:active,.se-vid:hover,.se-vid:hover .se-vid-img{transform:none!important}}
   @media (max-width:640px){.se-announce-sub{display:none}.se-subnav-cta{display:none!important}}
   @media (max-width:640px){.se-proofvids{justify-content:center}.se-chartbadge{top:auto!important;bottom:10px!important;right:10px!important}}
@@ -1469,7 +1477,7 @@
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px;margin-bottom:26px">
             <sc-for list="{{ auto.security }}" as="p" hint-placeholder-count="6">
               <div data-reveal class="se-tilt" style="display:flex;gap:13px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px">
-                <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:{{ auto.accentSoft }};color:{{ auto.accent }};display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></span>
+                <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:{{ auto.accentSoft }};color:{{ auto.accentDeep }};display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></span>
                 <span style="font-size:14.5px;line-height:1.5;color:var(--ink);font-weight:500">{{ p }}</span>
               </div>
             </sc-for>
@@ -1490,7 +1498,7 @@
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px;margin-bottom:26px">
             <sc-for list="{{ auto.role }}" as="rl" hint-placeholder-count="4">
               <div data-reveal class="se-tilt" style="display:flex;gap:13px;align-items:flex-start;background:var(--mist);border:1px solid var(--line);border-radius:16px;padding:20px">
-                <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:{{ auto.accentSoft }};color:{{ auto.accent }};display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7L9 18l-5-5"/></svg></span>
+                <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:{{ auto.accentSoft }};color:{{ auto.accentDeep }};display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7L9 18l-5-5"/></svg></span>
                 <span style="font-size:14.5px;line-height:1.5;color:var(--ink);font-weight:500">{{ rl }}</span>
               </div>
             </sc-for>
@@ -1540,7 +1548,7 @@
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px">
             <sc-for list="{{ auto.pillars }}" as="p" hint-placeholder-count="6">
               <div data-reveal class="se-tilt se-gradtop se-cardglow" style="background:linear-gradient(170deg,#fff,var(--mist));border:1px solid var(--line);border-radius:18px;padding:clamp(22px,3vw,28px);overflow:hidden">
-                <span style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:{{ auto.accentSoft }};color:{{ auto.accent }};margin-bottom:16px"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7L9 18l-5-5"/></svg></span>
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:{{ auto.accentSoft }};color:{{ auto.accentDeep }};margin-bottom:16px"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7L9 18l-5-5"/></svg></span>
                 <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.15rem;color:var(--ink);margin-bottom:8px">{{ p.t }}</div>
                 <div style="font-size:14.5px;line-height:1.55;color:var(--muted)">{{ p.d }}</div>
               </div>
@@ -1560,7 +1568,7 @@
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:14px;margin-bottom:24px">
             <sc-for list="{{ auto.growth }}" as="g" hint-placeholder-count="3">
               <div data-reveal class="se-tilt" style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;gap:13px;align-items:flex-start">
-                <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:{{ auto.accentSoft }};color:{{ auto.accent }};display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-8M14 7h7v7"/></svg></span>
+                <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:{{ auto.accentSoft }};color:{{ auto.accentDeep }};display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-8M14 7h7v7"/></svg></span>
                 <span style="font-size:15px;line-height:1.5;color:var(--ink);font-weight:500">{{ g }}</span>
               </div>
             </sc-for>
@@ -1667,17 +1675,17 @@
               <div style="height:5px;background:linear-gradient(90deg,{{ activeService.accent }},var(--purple))"></div>
               <div style="padding:26px clamp(22px,3vw,30px) 48px">
                 <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:22px">
-                  <span style="display:inline-flex;align-items:center;gap:10px"><span style="width:40px;height:40px;border-radius:12px;background:{{ activeService.accentSoft }};display:flex;align-items:center;justify-content:center;color:{{ activeService.accent }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-4 3 3 5-7"/></svg></span><span><span style="display:block;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14px;color:var(--ink);line-height:1.1;white-space:nowrap">Managed account</span><span style="display:block;font-size:11.5px;color:var(--muted);margin-top:2px">Live snapshot</span></span></span>
+                  <span style="display:inline-flex;align-items:center;gap:10px"><span style="width:40px;height:40px;border-radius:12px;background:{{ activeService.accentSoft }};display:flex;align-items:center;justify-content:center;color:{{ activeService.accentDeep }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-4 3 3 5-7"/></svg></span><span><span style="display:block;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14px;color:var(--ink);line-height:1.1;white-space:nowrap">Managed account</span><span style="display:block;font-size:11.5px;color:var(--muted);margin-top:2px">Live snapshot</span></span></span>
                   <span style="display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:800;letter-spacing:.05em;color:#15724A;background:rgba(54,194,129,.12);padding:5px 10px;border-radius:100px"><span style="position:relative;width:6px;height:6px"><span style="position:absolute;inset:0;border-radius:50%;background:#36C281"></span><span class="se-anim" style="position:absolute;inset:0;border-radius:50%;background:#36C281;animation:sePing 2s ease-out infinite"></span></span>LIVE</span>
                 </div>
                 <div style="font-size:12.5px;color:var(--muted);margin-bottom:8px">{{ activeService.stat.label }}</div>
                 <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.9rem,3.1vw,2.5rem);letter-spacing:-.03em;line-height:1.02;color:var(--ink);margin-bottom:16px">{{ activeService.stat.value }}</div>
-                <svg viewBox="0 0 300 60" preserveAspectRatio="none" style="width:100%;height:52px;display:block"><path d="M0 52 L40 45 L80 47 L120 34 L160 37 L200 22 L240 16 L300 5 L300 60 L0 60 Z" fill="{{ activeService.accent }}" fill-opacity="0.1"/><path d="M0 52 L40 45 L80 47 L120 34 L160 37 L200 22 L240 16 L300 5" fill="none" stroke="{{ activeService.accent }}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="300" cy="5" r="4" fill="{{ activeService.accent }}"/></svg>
+                <svg viewBox="0 0 300 60" preserveAspectRatio="none" style="width:100%;height:52px;display:block"><path d="M0 52 L40 45 L80 47 L120 34 L160 37 L200 22 L240 16 L300 5 L300 60 L0 60 Z" fill="{{ activeService.accent }}" fill-opacity="0.1"/><path d="M0 52 L40 45 L80 47 L120 34 L160 37 L200 22 L240 16 L300 5" fill="none" stroke="{{ activeService.accentDeep }}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="300" cy="5" r="4" fill="{{ activeService.accent }}"/></svg>
                 <div style="height:1px;background:var(--line);margin:22px 0 18px"></div>
                 <div style="font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--purple);font-weight:700;margin-bottom:12px">Included in this service</div>
                 <div style="display:flex;flex-wrap:wrap;gap:7px">
                   <sc-for list="{{ activeService.menu }}" as="m" hint-placeholder-count="5">
-                    <span class="se-chiphover" style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink-soft);background:var(--mist);border:1px solid var(--line);padding:7px 12px;border-radius:100px"><svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="{{ activeService.accent }}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>{{ m }}</span>
+                    <span class="se-chiphover" style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink-soft);background:var(--mist);border:1px solid var(--line);padding:7px 12px;border-radius:100px"><svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="{{ activeService.accentDeep }}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>{{ m }}</span>
                   </sc-for>
                 </div>
               </div>
@@ -1821,7 +1829,7 @@
             <div style="display:flex;flex-direction:column;gap:9px">
               <sc-for list="{{ activeService.who }}" as="w" hint-placeholder-count="4">
                 <div class="se-tilt" style="display:flex;align-items:center;gap:12px;background:var(--mist);border:1px solid var(--line);border-radius:13px;padding:13px 16px">
-                  <span style="flex-shrink:0;width:30px;height:30px;border-radius:9px;background:{{ activeService.accentSoft }};display:flex;align-items:center;justify-content:center"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="{{ activeService.accent }}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7L9 18l-5-5"/></svg></span>
+                  <span style="flex-shrink:0;width:30px;height:30px;border-radius:9px;background:{{ activeService.accentSoft }};display:flex;align-items:center;justify-content:center"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="{{ activeService.accentDeep }}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7L9 18l-5-5"/></svg></span>
                   <span style="font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.35">{{ w }}</span>
                 </div>
               </sc-for>
@@ -2109,7 +2117,7 @@
           </div>
           <div data-reveal style="position:relative;background:linear-gradient(180deg,#FBFBFE,#fff);border:1px solid var(--line);border-radius:22px;padding:clamp(18px,3vw,32px);box-shadow:0 24px 50px -30px rgba(22,17,42,.25)">
             <div class="se-chartbadge" style="position:absolute;top:clamp(14px,2.5vw,26px);right:clamp(14px,2.5vw,26px);display:flex;align-items:center;gap:9px;background:var(--ink);border-radius:12px;padding:10px 14px;box-shadow:0 16px 32px -14px rgba(0,0,0,.55);z-index:2">
-              <span style="width:28px;height:28px;border-radius:8px;background:{{ activeService.accentSoft }};color:{{ activeService.accent }};display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+              <span style="width:28px;height:28px;border-radius:8px;background:{{ activeService.accentSoft }};color:{{ activeService.accentDeep }};display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
               <span style="line-height:1.1"><span style="display:block;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:14.5px;color:#fff">+416%</span><span style="display:block;font-size:10.5px;color:#A8A6C4;font-weight:600">best account growth</span></span>
             </div>
             <svg viewBox="0 0 1000 300" style="width:100%;height:auto;display:block">
@@ -2118,17 +2126,17 @@
               <line x1="0" y1="225" x2="1000" y2="225" stroke="rgba(22,17,42,.06)" stroke-width="1"/>
               <path d="M0 262 C 300 252, 700 242, 1000 228" fill="none" stroke="rgba(22,17,42,.28)" stroke-width="2.5" stroke-dasharray="7 9" stroke-linecap="round"/>
               <path d="M0 260 C 150 250, 230 236, 330 208 C 440 178, 530 168, 650 118 C 770 72, 880 52, 1000 24 L 1000 300 L 0 300 Z" fill="{{ activeService.accent }}" fill-opacity="0.07"/>
-              <path d="M0 260 C 150 250, 230 236, 330 208 C 440 178, 530 168, 650 118 C 770 72, 880 52, 1000 24" fill="none" stroke="{{ activeService.accent }}" stroke-width="3.6" stroke-linecap="round" stroke-dasharray="1600" stroke-dashoffset="1600" style="animation:seDraw 2.4s cubic-bezier(.5,0,.2,1) .4s forwards"/>
-              <circle cx="95" cy="252" r="7" fill="#fff" stroke="{{ activeService.accent }}" stroke-width="4"/>
-              <circle cx="380" cy="193" r="7" fill="#fff" stroke="{{ activeService.accent }}" stroke-width="4"/>
-              <circle cx="650" cy="118" r="7" fill="#fff" stroke="{{ activeService.accent }}" stroke-width="4"/>
+              <path d="M0 260 C 150 250, 230 236, 330 208 C 440 178, 530 168, 650 118 C 770 72, 880 52, 1000 24" fill="none" stroke="{{ activeService.accentDeep }}" stroke-width="3.6" stroke-linecap="round" stroke-dasharray="1600" stroke-dashoffset="1600" style="animation:seDraw 2.4s cubic-bezier(.5,0,.2,1) .4s forwards"/>
+              <circle cx="95" cy="252" r="7" fill="#fff" stroke="{{ activeService.accentDeep }}" stroke-width="4"/>
+              <circle cx="380" cy="193" r="7" fill="#fff" stroke="{{ activeService.accentDeep }}" stroke-width="4"/>
+              <circle cx="650" cy="118" r="7" fill="#fff" stroke="{{ activeService.accentDeep }}" stroke-width="4"/>
               <circle cx="905" cy="46" r="9" fill="{{ activeService.accent }}" stroke="#fff" stroke-width="4"/>
             </svg>
             <div style="height:1px;background:var(--line);margin:clamp(14px,2.5vw,22px) 0"></div>
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:clamp(12px,2vw,20px)">
-              <div style="display:flex;flex-direction:column;gap:6px"><span style="display:inline-flex;align-items:center;gap:8px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:12px;color:{{ activeService.accent }};background:{{ activeService.accentSoft }};border-radius:100px;padding:3px 10px;white-space:nowrap">DAYS 0 TO 30</span></span><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:var(--ink)">Audit and foundations</span><span style="font-size:13px;line-height:1.5;color:var(--muted)">Deep audit, quick wins shipped, tracking wired to profit.</span></div>
-              <div style="display:flex;flex-direction:column;gap:6px"><span style="display:inline-flex;align-items:center;gap:8px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:12px;color:{{ activeService.accent }};background:{{ activeService.accentSoft }};border-radius:100px;padding:3px 10px;white-space:nowrap">DAYS 31 TO 60</span></span><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:var(--ink)">Relaunch and rebuild</span><span style="font-size:13px;line-height:1.5;color:var(--muted)">Listings, ads and pricing rebuilt around what converts.</span></div>
-              <div style="display:flex;flex-direction:column;gap:6px"><span style="display:inline-flex;align-items:center;gap:8px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:12px;color:{{ activeService.accent }};background:{{ activeService.accentSoft }};border-radius:100px;padding:3px 10px;white-space:nowrap">DAYS 61 TO 90</span></span><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:var(--ink)">Scale what works</span><span style="font-size:13px;line-height:1.5;color:var(--muted)">Budget concentrates on winners; losers get cut fast.</span></div>
+              <div style="display:flex;flex-direction:column;gap:6px"><span style="display:inline-flex;align-items:center;gap:8px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:12px;color:{{ activeService.accentDeep }};background:{{ activeService.accentSoft }};border-radius:100px;padding:3px 10px;white-space:nowrap">DAYS 0 TO 30</span></span><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:var(--ink)">Audit and foundations</span><span style="font-size:13px;line-height:1.5;color:var(--muted)">Deep audit, quick wins shipped, tracking wired to profit.</span></div>
+              <div style="display:flex;flex-direction:column;gap:6px"><span style="display:inline-flex;align-items:center;gap:8px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:12px;color:{{ activeService.accentDeep }};background:{{ activeService.accentSoft }};border-radius:100px;padding:3px 10px;white-space:nowrap">DAYS 31 TO 60</span></span><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:var(--ink)">Relaunch and rebuild</span><span style="font-size:13px;line-height:1.5;color:var(--muted)">Listings, ads and pricing rebuilt around what converts.</span></div>
+              <div style="display:flex;flex-direction:column;gap:6px"><span style="display:inline-flex;align-items:center;gap:8px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:12px;color:{{ activeService.accentDeep }};background:{{ activeService.accentSoft }};border-radius:100px;padding:3px 10px;white-space:nowrap">DAYS 61 TO 90</span></span><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:var(--ink)">Scale what works</span><span style="font-size:13px;line-height:1.5;color:var(--muted)">Budget concentrates on winners; losers get cut fast.</span></div>
               <div style="display:flex;flex-direction:column;gap:6px"><span style="display:inline-flex;align-items:center;gap:8px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:12px;color:#fff;background:{{ activeService.accentDeep }};border-radius:100px;padding:3px 10px;white-space:nowrap">MONTH 6 PLUS</span></span><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:var(--ink)">Compounding growth</span><span style="font-size:13px;line-height:1.5;color:var(--muted)">Rank, reviews and repeat purchase stack on each other.</span></div>
             </div>
           </div>
@@ -2687,7 +2695,7 @@
         </div>
         <div style="padding:20px">
           <div style="background:var(--mist);border-radius:4px 16px 16px 16px;padding:13px 15px;font-size:14px;line-height:1.5;color:var(--ink-soft);margin-bottom:16px">Hi there 👋 Tell us your brand and marketplace, and we'll come back with where your fastest growth wins are.</div>
-          <a href="https://wa.me/16829070853?text=Hi%20Shopinecom%2C%20I%27d%20like%20a%20free%20marketplace%20audit." target="_blank" rel="noopener" class="se-press" style="display:flex;align-items:center;justify-content:center;gap:9px;background:#25D366;color:#fff;font-weight:700;font-size:15px;text-decoration:none;padding:14px;border-radius:13px;box-shadow:0 12px 24px -10px rgba(37,211,102,.7)">Start chat on WhatsApp <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="https://wa.me/16829070853?text=Hi%20Shopinecom%2C%20I%27d%20like%20a%20free%20marketplace%20audit." target="_blank" rel="noopener" class="se-press" style="display:flex;align-items:center;justify-content:center;gap:9px;background:#15724A;color:#fff;font-weight:700;font-size:15px;text-decoration:none;padding:14px;border-radius:13px;box-shadow:0 12px 24px -10px rgba(37,211,102,.7)">Start chat on WhatsApp <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <div style="text-align:center;margin-top:12px;font-size:12px;color:var(--muted)">or email <a href="mailto:privatelabel@shopinecom.com" style="color:var(--purple);font-weight:600;text-decoration:none">privatelabel@shopinecom.com</a></div>
         </div>
       </div>
