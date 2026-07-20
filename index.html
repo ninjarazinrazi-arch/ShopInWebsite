@@ -168,6 +168,11 @@
   @media (prefers-reduced-motion: reduce){.se-gradtop::before{animation:none!important}.se-cardglow:hover{transform:none!important}}
   @media (prefers-reduced-motion: reduce){.se-card-hover:hover,.se-tilt:hover,.se-fill-grid>*:hover{transform:none!important}.se-particle,.se-ring-spin{animation:none!important}.se-metric-glow::after{animation:none!important}.se-grid-anim>*{animation:none!important;opacity:1!important}}
   .se-cap-row:active{transform:scale(.98)}
+  .se-expcard{-webkit-tap-highlight-color:transparent}
+  .se-expcard:hover{border-color:rgba(139,136,201,.55)!important;transform:translateY(-3px)}
+  .se-expcard:active{transform:scale(.985)}
+  .se-expcard:focus-visible{outline:2px solid var(--lav);outline-offset:3px}
+  @media (max-width:900px){.se-expcard{min-height:44px}}
   @media (prefers-reduced-motion: reduce){.se-accordion-body{animation:none!important}.se-cap-row:active,.se-vid:hover,.se-vid:hover .se-vid-img{transform:none!important}}
   @media (max-width:640px){.se-announce-sub{display:none}.se-subnav-cta{display:none!important}}
   @media (max-width:640px){.se-proofvids{justify-content:center}.se-chartbadge{top:auto!important;bottom:10px!important;right:10px!important}}
@@ -194,7 +199,7 @@
     <div style="max-width:1280px;margin:0 auto;padding:9px clamp(20px,4vw,48px);display:flex;align-items:center;justify-content:center;gap:12px;text-align:center;flex-wrap:wrap">
       <span style="display:inline-flex;align-items:center;gap:8px;color:#D9D7EC">
         <span style="position:relative;width:8px;height:8px;flex-shrink:0"><span style="position:absolute;inset:0;border-radius:50%;background:#36C281"></span><span style="position:absolute;inset:0;border-radius:50%;background:#36C281;animation:sePing 2.2s ease-out infinite"></span></span>
-        Amazon Ads Verified Partner.<span class="se-announce-sub"> Full-service marketplace management across 6 platforms.</span>
+        Amazon Ads Verified Partner.<span class="se-announce-sub"> Full-service marketplace management across 5 marketplaces.</span>
       </span>
       <a href="#/contact" onClick="{{ go }}" style="color:#fff;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);white-space:nowrap" class="se-alink">Get a free audit</a>
     </div>
@@ -407,7 +412,7 @@
               <span style="display:flex;flex-direction:column;line-height:1.15"><span style="font-size:13.5px;font-weight:700;color:#fff">Amazon Ads Verified Partner</span><span style="display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:500;color:#D9D7EC"><span style="color:var(--amber)">&#9733;</span>4.8 client rating</span></span>
             </div>
             <h1 class="se-hero-2" style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.6rem,5.4vw,4.5rem);line-height:1.02;letter-spacing:-.025em;margin:0 0 22px">Marketplace growth,<br/><span class="se-gradtext">managed end to end.</span></h1>
-            <p class="se-hero-3" style="font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.6;color:#C2C0DE;max-width:540px;margin:0 0 32px">We run your listings, advertising, account health and marketplace operations as one coordinated growth system, across Amazon, TikTok Shop, Shopify and every major marketplace in the US, Europe and beyond.</p>
+            <p class="se-hero-3" style="font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.6;color:#C2C0DE;max-width:540px;margin:0 0 32px">We run your listings, advertising, account health and marketplace operations as one coordinated growth system, across Amazon, TikTok Shop, Shopify and every major marketplace in the US, UK and Europe.</p>
             <div class="se-hero-4" style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px">
               <a href="#/contact" onClick="{{ go }}" class="se-sweep se-press" style="display:inline-flex;align-items:center;gap:9px;background:var(--purple);color:#fff;font-weight:700;font-size:16px;text-decoration:none;padding:15px 26px;border-radius:13px;box-shadow:0 14px 34px -12px rgba(90,86,165,1)">Get a Free Audit <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
               <a href="#/case-studies" onClick="{{ go }}" style="display:inline-flex;align-items:center;gap:9px;background:transparent;color:#fff;font-weight:600;font-size:16px;text-decoration:none;padding:15px 24px;border-radius:13px;border:1px solid rgba(255,255,255,.22)">View Results</a>
@@ -417,7 +422,7 @@
               <div class="se-hero-divider" style="width:1px;background:rgba(255,255,255,.12)"></div>
               <div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:2rem;line-height:1;letter-spacing:-.02em">$25M+</div><div style="font-size:13px;color:#A8A6C4;margin-top:6px">across accounts we run</div></div>
               <div class="se-hero-divider" style="width:1px;background:rgba(255,255,255,.12)"></div>
-              <div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:2rem;line-height:1;letter-spacing:-.02em">6</div><div style="font-size:13px;color:#A8A6C4;margin-top:6px">marketplaces, one team</div></div>
+              <div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:2rem;line-height:1;letter-spacing:-.02em">5</div><div style="font-size:13px;color:#A8A6C4;margin-top:6px">marketplaces, one team</div></div>
             </div>
             <div class="se-hero-5" style="display:flex;flex-wrap:wrap;gap:8px">
               <span class="se-logo-chip" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:#fff;font-size:12.5px;font-weight:600;padding:5px 12px 5px 5px;border-radius:100px"><span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#fff;border-radius:50%;padding:5px"><svg viewBox="0 0 50 30" style="width:100%;height:auto"><path d="M7 19c7 4 23 4.5 31 0" stroke="#FF9900" stroke-width="3.2" fill="none" stroke-linecap="round"/><path d="M35 15l4.5 1.3-1.3 4.6" stroke="#FF9900" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="24" y="12.5" font-family="Arial,sans-serif" font-weight="800" font-size="13" fill="#232F3E" text-anchor="middle">a</text></svg></span>Amazon</span>
@@ -497,7 +502,7 @@
               <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:clamp(16px,2.5vw,24px)">
                 <span style="width:48px;height:48px;border-radius:15px;background:linear-gradient(140deg,#3A86E0,#1F5BB5);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 24px -10px rgba(42,111,219,.8)"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></span>
               </div>
-              <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.3rem,7.5vw,4rem);line-height:.84;letter-spacing:-.04em;color:var(--ink)"><span data-count="6">6</span></div>
+              <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.3rem,7.5vw,4rem);line-height:.84;letter-spacing:-.04em;color:var(--ink)"><span data-count="5">5</span></div>
               <div style="font-size:13px;line-height:1.4;color:var(--ink-soft);margin:12px 0 14px;font-weight:500">Major marketplaces under one team</div><div style="margin-top:14px;padding-top:14px;border-top:1px solid rgba(22,17,42,.08);display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;color:var(--muted)"><span style="display:inline-flex;width:16px;height:16px;border-radius:5px;background:#E2F5EA;color:#15724A;align-items:center;justify-content:center"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>One accountable team</div>
               <div style="display:flex;flex-wrap:wrap;gap:6px">
                 <span class="se-chiphover" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:28px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:5px;box-shadow:0 3px 8px -4px rgba(22,17,42,.2)"><svg viewBox="0 0 50 30" style="width:100%;height:auto"><path d="M7 19c7 4 23 4.5 31 0" stroke="#FF9900" stroke-width="3.4" fill="none" stroke-linecap="round"/><path d="M35 15l4.5 1.3-1.3 4.6" stroke="#FF9900" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="24" y="13" font-family="Arial,sans-serif" font-weight="800" font-size="14" fill="#232F3E" text-anchor="middle">a</text></svg></span>
@@ -505,7 +510,7 @@
                 <span class="se-chiphover" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:28px;background:#111;border:1px solid #111;border-radius:8px;padding:6px;box-shadow:0 3px 8px -4px rgba(22,17,42,.2)"><svg viewBox="0 0 32 34" style="width:100%;height:100%"><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#25F4EE" transform="translate(-1.2,-1.2)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#FE2C55" transform="translate(1.2,1.2)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#fff"/></svg></span>
                 <span class="se-chiphover" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:28px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:4px;box-shadow:0 3px 8px -4px rgba(22,17,42,.2)"><svg viewBox="0 0 50 24" style="width:100%;height:auto"><text x="25" y="19" font-family="Arial,sans-serif" font-weight="800" font-style="italic" font-size="20" text-anchor="middle"><tspan fill="#E53238">e</tspan><tspan fill="#0064D2">b</tspan><tspan fill="#F5AF02">a</tspan><tspan fill="#86B817">y</tspan></text></svg></span>
                 <span class="se-chiphover" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:28px;background:#95BF47;border:1px solid #95BF47;border-radius:8px;padding:5px;box-shadow:0 3px 8px -4px rgba(22,17,42,.2)"><svg viewBox="0 0 30 32" style="width:100%;height:100%"><path d="M19 8l2.6.6L25 30 8 32 5 11l4-1.5z" fill="#fff"/><text x="14.5" y="25" font-family="Arial" font-weight="800" font-size="12" fill="#95BF47" text-anchor="middle">S</text></svg></span>
-                <span class="se-chiphover" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:28px;background:linear-gradient(140deg,#1A9455,#0B5B35);border:1px solid #0B5B35;border-radius:8px;box-shadow:0 3px 8px -4px rgba(22,17,42,.2);color:#fff"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></span>
+                
               </div>
             </div>
             <!-- 4.8 rating -->
@@ -517,96 +522,6 @@
               <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.3rem,7.5vw,4rem);line-height:.84;letter-spacing:-.04em;color:var(--ink)"><span data-count="4.8" data-dec="1">4.8</span></div>
               <div style="font-size:13px;line-height:1.4;color:var(--ink-soft);margin-top:12px;font-weight:500">Rating from verified brand owners</div><div style="margin-top:14px;padding-top:14px;border-top:1px solid rgba(22,17,42,.08);display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;color:var(--muted)"><span style="display:inline-flex;width:16px;height:16px;border-radius:5px;background:#E2F5EA;color:#15724A;align-items:center;justify-content:center"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Real brand owners</div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ██ MARKETPLACE CARDS ██ -->
-      <section style="background:var(--mist);padding:clamp(64px,9vw,120px) 0">
-        <div style="max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,60px)">
-          <div data-reveal style="margin-bottom:36px">
-            <div style="font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--purple);font-weight:700;margin-bottom:14px">Where we operate</div>
-            <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.2rem,6vw,4rem);line-height:.95;letter-spacing:-.03em;margin:0">Six channels.<br/><span style="color:var(--purple)">One obsession.</span></h2>
-          </div>
-          <div class="se-fill-grid se-grid-anim">
-            <!-- AMAZON -->
-            <a href="#/services/amazon-account-management" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt se-gradtop" style="display:flex;flex-direction:column;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px -12px rgba(22,17,42,.25)">
-              <div style="position:relative;height:clamp(108px,20vw,140px);background:linear-gradient(135deg,#FF9900,#FF6A00);display:flex;align-items:center;justify-content:center;overflow:hidden">
-                <div style="position:absolute;top:-30px;right:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.14)"></div>
-                <span class="se-logo-chip" style="position:relative;display:inline-flex;flex-direction:column;align-items:center;gap:4px"><svg width="118" height="40" viewBox="0 0 118 40"><text x="59" y="26" font-family="Arial,sans-serif" font-weight="800" font-size="30" fill="#fff" text-anchor="middle" letter-spacing="-1">amazon</text><path d="M30 32c12 5 46 5 58 0" stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round"/><path d="M84 28l5.5 1.6-1.6 5.6" stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                <span style="position:absolute;top:12px;left:14px;background:rgba(0,0,0,.18);color:#fff;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:6px">Flagship</span>
-              </div>
-              <div style="padding:clamp(16px,2.5vw,22px);flex:1;display:flex;flex-direction:column">
-                <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:clamp(1rem,2.6vw,1.2rem);color:var(--ink);margin-bottom:5px">Amazon Account Management</div>
-                <div style="font-size:12.5px;line-height:1.5;color:var(--muted);margin-bottom:14px;flex:1">PPC, listings, A+ content and account health, run for profitable growth.</div>
-                <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--purple)">Explore <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              </div>
-            </a>
-            <!-- TIKTOK -->
-            <a href="#/services/tiktok-shop-management" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt se-gradtop" style="display:flex;flex-direction:column;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px -12px rgba(22,17,42,.25)">
-              <div style="position:relative;height:clamp(108px,20vw,140px);background:linear-gradient(135deg,#111,#000);display:flex;align-items:center;justify-content:center;gap:10px;overflow:hidden">
-                <div style="position:absolute;top:-30px;right:-20px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,rgba(254,44,85,.45),transparent 70%)"></div>
-                <div style="position:absolute;bottom:-30px;left:-20px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,rgba(37,244,238,.4),transparent 70%)"></div>
-                <span class="se-logo-chip" style="position:relative;display:inline-flex;align-items:center;gap:8px"><svg width="32" height="34" viewBox="0 0 32 34"><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#25F4EE" transform="translate(-1.4,-1.4)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#FE2C55" transform="translate(1.4,1.4)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#fff"/></svg><span style="font-family:Arial,sans-serif;font-weight:800;font-size:23px;color:#fff;letter-spacing:-.5px">TikTok Shop</span></span>
-                <span style="position:absolute;top:12px;left:14px;background:rgba(255,255,255,.16);color:#fff;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:6px">Marketplace</span>
-              </div>
-              <div style="padding:clamp(16px,2.5vw,22px);flex:1;display:flex;flex-direction:column">
-                <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:clamp(1rem,2.6vw,1.2rem);color:var(--ink);margin-bottom:5px">TikTok Shop Management</div>
-                <div style="font-size:12.5px;line-height:1.5;color:var(--muted);margin-bottom:14px;flex:1">Turn attention into orders with creator-led commerce.</div>
-                <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--purple)">Explore <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              </div>
-            </a>
-            <!-- SHOPIFY -->
-            <a href="#/services/global-expansion" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt se-gradtop" style="display:flex;flex-direction:column;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px -12px rgba(22,17,42,.25)">
-              <div style="position:relative;height:clamp(108px,20vw,140px);background:linear-gradient(135deg,#95BF47,#5E8E3E);display:flex;align-items:center;justify-content:center;gap:10px;overflow:hidden">
-                <div style="position:absolute;top:-30px;left:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.12)"></div>
-                <span class="se-logo-chip" style="position:relative;display:inline-flex;align-items:center;gap:9px"><svg width="30" height="34" viewBox="0 0 30 34"><path d="M19 8l2.6.6L25 31 8 33 5 11l4-1.5z" fill="#fff"/><text x="14.5" y="26" font-family="Arial" font-weight="800" font-size="12" fill="#5E8E3E" text-anchor="middle">S</text></svg><span style="font-family:Arial,sans-serif;font-weight:800;font-size:25px;color:#fff;letter-spacing:-.5px">Shopify</span></span>
-                <span style="position:absolute;top:12px;left:14px;background:rgba(0,0,0,.16);color:#fff;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:6px">Owned</span>
-              </div>
-              <div style="padding:clamp(16px,2.5vw,22px);flex:1;display:flex;flex-direction:column">
-                <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:clamp(1rem,2.6vw,1.2rem);color:var(--ink);margin-bottom:5px">Shopify Store Management</div>
-                <div style="font-size:12.5px;line-height:1.5;color:var(--muted);margin-bottom:14px;flex:1">Your owned channel, tuned to convert and retain.</div>
-                <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--purple)">Explore <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              </div>
-            </a>
-            <!-- WALMART -->
-            <a href="#/services/walmart-seller-management" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt se-gradtop" style="display:flex;flex-direction:column;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px -12px rgba(22,17,42,.25)">
-              <div style="position:relative;height:clamp(108px,20vw,140px);background:linear-gradient(135deg,#0071CE,#004B97);display:flex;align-items:center;justify-content:center;gap:10px;overflow:hidden">
-                <div style="position:absolute;bottom:-30px;left:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.1)"></div>
-                <span class="se-logo-chip" style="position:relative;display:inline-flex;align-items:center;gap:9px"><svg width="34" height="34" viewBox="0 0 32 32"><g stroke="#FFC220" stroke-width="3.6" stroke-linecap="round"><line x1="16" y1="3" x2="16" y2="11"/><line x1="16" y1="21" x2="16" y2="29"/><line x1="4.8" y1="9.5" x2="11.6" y2="13.5"/><line x1="20.4" y1="18.5" x2="27.2" y2="22.5"/><line x1="4.8" y1="22.5" x2="11.6" y2="18.5"/><line x1="20.4" y1="13.5" x2="27.2" y2="9.5"/></g></svg><span style="font-family:Arial,sans-serif;font-weight:800;font-size:26px;color:#fff;letter-spacing:-.5px">Walmart</span></span>
-                <span style="position:absolute;top:12px;left:14px;background:rgba(0,0,0,.18);color:#fff;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:6px">Marketplace</span>
-              </div>
-              <div style="padding:clamp(16px,2.5vw,22px);flex:1;display:flex;flex-direction:column">
-                <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:clamp(1rem,2.6vw,1.2rem);color:var(--ink);margin-bottom:5px">Walmart Seller Management</div>
-                <div style="font-size:12.5px;line-height:1.5;color:var(--muted);margin-bottom:14px;flex:1">From account approval to advertising, managed end to end.</div>
-                <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--purple)">Explore <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              </div>
-            </a>
-            <!-- EBAY -->
-            <a href="#/services/ebay-store-management" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt se-gradtop" style="display:flex;flex-direction:column;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px -12px rgba(22,17,42,.25)">
-              <div style="position:relative;height:clamp(108px,20vw,140px);background:linear-gradient(135deg,#F7F8FB,#E9ECF3);display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--line)">
-                <span class="se-logo-chip" style="position:relative"><svg width="118" height="48" viewBox="0 0 118 48"><text x="59" y="38" font-family="Arial,sans-serif" font-weight="800" font-style="italic" font-size="42" text-anchor="middle"><tspan fill="#E53238">e</tspan><tspan fill="#0064D2">b</tspan><tspan fill="#F5AF02">a</tspan><tspan fill="#86B817">y</tspan></text></svg></span>
-                <span style="position:absolute;top:12px;left:14px;background:rgba(22,17,42,.1);color:var(--ink);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:6px">Marketplace</span>
-              </div>
-              <div style="padding:clamp(16px,2.5vw,22px);flex:1;display:flex;flex-direction:column">
-                <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:clamp(1rem,2.6vw,1.2rem);color:var(--ink);margin-bottom:5px">eBay Store Management</div>
-                <div style="font-size:12.5px;line-height:1.5;color:var(--muted);margin-bottom:14px;flex:1">Storefront, listings and promotions, compounding quietly.</div>
-                <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--purple)">Explore <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              </div>
-            </a>
-            <!-- US & EU -->
-            <a href="#/services/global-expansion" onClick="{{ go }}" data-reveal class="se-card-hover se-tilt se-gradtop" style="display:flex;flex-direction:column;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px -12px rgba(22,17,42,.25)">
-              <div style="position:relative;height:clamp(108px,20vw,140px);background:linear-gradient(135deg,#1A9455,#0B5B35);display:flex;align-items:center;justify-content:center;gap:10px;overflow:hidden">
-                <div style="position:absolute;bottom:-30px;right:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.12)"></div>
-                <span class="se-logo-chip" style="position:relative;display:inline-flex;align-items:center;gap:10px"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:23px;color:#fff;letter-spacing:-.5px">International Expansion</span></span>
-                <span style="position:absolute;top:12px;left:14px;background:rgba(0,0,0,.18);color:#fff;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:6px">Region</span>
-              </div>
-              <div style="padding:clamp(16px,2.5vw,22px);flex:1;display:flex;flex-direction:column">
-                <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:clamp(1rem,2.6vw,1.2rem);color:var(--ink);margin-bottom:5px">International Expansion</div>
-                <div style="font-size:12.5px;line-height:1.5;color:var(--muted);margin-bottom:14px;flex:1">Launch and scale across the US, UK and Europe.</div>
-                <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--purple)">Explore <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              </div>
-            </a>
           </div>
         </div>
       </section>
@@ -643,7 +558,7 @@
               </button>
               <button onClick="{{ mtabs.gcc.set }}" style="flex-shrink:0;display:inline-flex;align-items:center;gap:9px;font:inherit;cursor:pointer;background:{{ mtabs.gcc.bg }};color:{{ mtabs.gcc.color }};border:1px solid {{ mtabs.gcc.border }};padding:10px 16px 10px 10px;border-radius:12px;transition:all .25s">
                 <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:#fff;border-radius:8px;flex-shrink:0;color:#0B5B35"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></span>
-                <span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15px;white-space:nowrap">US &amp; EU</span>
+                <span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15px;white-space:nowrap">US and EU</span>
               </button>
             </div>
             <!-- panel -->
@@ -718,7 +633,7 @@
         <div style="max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,60px)">
           <div data-reveal style="background:var(--ink);border-radius:22px;overflow:hidden;color:#fff;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));align-items:stretch">
             <div style="position:relative;min-height:200px;max-height:340px;overflow:hidden">
-              <img src="assets/proof/seller-central-1-14m.webp" alt="Amazon Seller Central sales dashboard" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block"/>
+              <img src="assets/proof/seller-central-3-38m.webp" alt="Amazon Seller Central showing GBP 3.38M ordered product sales across 104,863 orders" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block"/>
               <div style="position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,rgba(22,17,42,.4) 60%,transparent 100%)"></div>
               <span style="position:absolute;top:14px;left:14px;display:inline-flex;align-items:center;gap:7px;background:rgba(22,17,42,.88);color:#fff;font-size:11px;font-weight:700;letter-spacing:.04em;padding:6px 11px;border-radius:8px"><span style="position:relative;width:7px;height:7px;flex-shrink:0"><span style="position:absolute;inset:0;border-radius:50%;background:#36C281"></span><span class="se-anim" style="position:absolute;inset:0;border-radius:50%;background:#36C281;animation:sePing 2s ease-out infinite"></span></span>LIVE · Amazon UK</span>
             </div>
@@ -1059,62 +974,41 @@
             <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2rem,5.5vw,3.6rem);line-height:.95;letter-spacing:-.03em;margin:0 0 14px">Winning on one channel?<br/><span style="color:var(--lav)">We launch you on the next.</span></h2>
             <p style="font-size:clamp(1rem,2.5vw,1.2rem);line-height:1.6;color:#C2C0DE;margin:0;max-width:600px">We take what already sells, your listings, creative, pricing and ad strategy, and rebuild it for each new marketplace. Same brand, more shelves, one team running it all.</p>
           </div>
-          <!-- selector -->
-          <div data-reveal style="margin-bottom:14px"><p style="font-size:13px;color:var(--lav);margin:0;display:inline-flex;align-items:center;gap:7px;font-weight:600"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 3v7m0 0L5 7m3 3l3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>I already sell on</p></div>
-          <div data-reveal class="se-tap-row se-scroll-fade" style="display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-bottom:26px">
-            <button onClick="{{ exF.amazon.set }}" style="flex-shrink:0;display:inline-flex;align-items:center;gap:9px;font:inherit;cursor:pointer;background:{{ exF.amazon.chipBg }};color:{{ exF.amazon.chipColor }};border:1px solid {{ exF.amazon.chipBorder }};padding:10px 16px 10px 10px;border-radius:12px;transition:all .25s">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:#fff;border-radius:8px;padding:5px"><svg viewBox="0 0 50 30" style="width:100%;height:auto"><path d="M7 19c7 4 23 4.5 31 0" stroke="#FF9900" stroke-width="3.4" fill="none" stroke-linecap="round"/><path d="M35 15l4.5 1.3-1.3 4.6" stroke="#FF9900" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="24" y="13" font-family="Arial,sans-serif" font-weight="800" font-size="14" fill="#232F3E" text-anchor="middle">a</text></svg></span>
-              <span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;white-space:nowrap">Amazon</span>
-            </button>
-            <button onClick="{{ exF.tiktok.set }}" style="flex-shrink:0;display:inline-flex;align-items:center;gap:9px;font:inherit;cursor:pointer;background:{{ exF.tiktok.chipBg }};color:{{ exF.tiktok.chipColor }};border:1px solid {{ exF.tiktok.chipBorder }};padding:10px 16px 10px 10px;border-radius:12px;transition:all .25s">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:#fff;border-radius:8px;padding:5px"><svg viewBox="0 0 32 34" style="width:100%;height:100%"><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#25F4EE" transform="translate(-1.3,-1.3)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#FE2C55" transform="translate(1.3,1.3)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#111"/></svg></span>
-              <span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;white-space:nowrap">TikTok Shop</span>
-            </button>
-            <button onClick="{{ exF.shopify.set }}" style="flex-shrink:0;display:inline-flex;align-items:center;gap:9px;font:inherit;cursor:pointer;background:{{ exF.shopify.chipBg }};color:{{ exF.shopify.chipColor }};border:1px solid {{ exF.shopify.chipBorder }};padding:10px 16px 10px 10px;border-radius:12px;transition:all .25s">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:#95BF47;border-radius:8px;padding:5px"><svg viewBox="0 0 30 32" style="width:100%;height:100%"><path d="M19 8l2.6.6L25 30 8 32 5 11l4-1.5z" fill="#fff"/><text x="14.5" y="25" font-family="Arial" font-weight="800" font-size="12" fill="#95BF47" text-anchor="middle">S</text></svg></span>
-              <span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;white-space:nowrap">Shopify</span>
-            </button>
-            <button onClick="{{ exF.walmart.set }}" style="flex-shrink:0;display:inline-flex;align-items:center;gap:9px;font:inherit;cursor:pointer;background:{{ exF.walmart.chipBg }};color:{{ exF.walmart.chipColor }};border:1px solid {{ exF.walmart.chipBorder }};padding:10px 16px 10px 10px;border-radius:12px;transition:all .25s">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:#fff;border-radius:8px;padding:5px"><svg viewBox="0 0 32 32" style="width:100%;height:100%"><g stroke="#0071CE" stroke-width="3.6" stroke-linecap="round"><line x1="16" y1="3" x2="16" y2="11"/><line x1="16" y1="21" x2="16" y2="29"/><line x1="4.8" y1="9.5" x2="11.6" y2="13.5"/><line x1="20.4" y1="18.5" x2="27.2" y2="22.5"/><line x1="4.8" y1="22.5" x2="11.6" y2="18.5"/><line x1="20.4" y1="13.5" x2="27.2" y2="9.5"/></g></svg></span>
-              <span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;white-space:nowrap">Walmart</span>
-            </button>
-            <button onClick="{{ exF.ebay.set }}" style="flex-shrink:0;display:inline-flex;align-items:center;gap:9px;font:inherit;cursor:pointer;background:{{ exF.ebay.chipBg }};color:{{ exF.ebay.chipColor }};border:1px solid {{ exF.ebay.chipBorder }};padding:10px 16px 10px 10px;border-radius:12px;transition:all .25s">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:#fff;border-radius:8px;padding:4px"><svg viewBox="0 0 50 24" style="width:100%;height:auto"><text x="25" y="19" font-family="Arial,sans-serif" font-weight="800" font-style="italic" font-size="20" text-anchor="middle"><tspan fill="#E53238">e</tspan><tspan fill="#0064D2">b</tspan><tspan fill="#F5AF02">a</tspan><tspan fill="#86B817">y</tspan></text></svg></span>
-              <span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;white-space:nowrap">eBay</span>
-            </button>
-          </div>
+          <!-- selector: the destination cards below double as the picker (no duplicate chip row) -->
+          <div data-reveal style="margin-bottom:16px"><p style="font-size:13px;color:var(--lav);margin:0;display:inline-flex;align-items:center;gap:7px;font-weight:600"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 3v7m0 0L5 7m3 3l3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Tap the marketplace you already sell on</p></div>
           <!-- expansion map -->
           <div data-reveal style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:clamp(20px,3.5vw,36px)">
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;flex-wrap:wrap">
               <span style="font-size:13px;color:#A8A6C4">You sell on <strong style="color:#fff;font-weight:700">{{ exFromName }}</strong>. Here's where we take you next:</span>
             </div>
             <div class="se-fill-grid se-grid-anim">
-              <div class="se-tilt" style="display:{{ exF.amazon.show }};background:{{ exF.amazon.cardBg }};border:1px solid {{ exF.amazon.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.amazon.dim }};transition:all .3s">
+              <button onClick="{{ exF.amazon.set }}" class="se-tilt se-expcard" style="display:block;width:100%;text-align:left;font:inherit;cursor:pointer;background:{{ exF.amazon.cardBg }};border:1px solid {{ exF.amazon.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.amazon.dim }};transition:all .3s">
                 <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:32px;background:#fff;border-radius:9px;padding:6px;margin-bottom:12px"><svg viewBox="0 0 50 30" style="width:100%;height:auto"><path d="M7 19c7 4 23 4.5 31 0" stroke="#FF9900" stroke-width="3.4" fill="none" stroke-linecap="round"/><path d="M35 15l4.5 1.3-1.3 4.6" stroke="#FF9900" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="24" y="13" font-family="Arial,sans-serif" font-weight="800" font-size="14" fill="#232F3E" text-anchor="middle">a</text></svg></span>
                 <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:#fff;margin-bottom:8px">Amazon</div>
                 <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:{{ exF.amazon.badgeColor }};background:{{ exF.amazon.badgeBg }};padding:4px 9px;border-radius:6px">{{ exF.amazon.badge }}</span>
-              </div>
-              <div class="se-tilt" style="display:{{ exF.walmart.show }};background:{{ exF.walmart.cardBg }};border:1px solid {{ exF.walmart.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.walmart.dim }};transition:all .3s">
+              </button>
+              <button onClick="{{ exF.walmart.set }}" class="se-tilt se-expcard" style="display:block;width:100%;text-align:left;font:inherit;cursor:pointer;background:{{ exF.walmart.cardBg }};border:1px solid {{ exF.walmart.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.walmart.dim }};transition:all .3s">
                 <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:32px;background:#fff;border-radius:9px;padding:6px;margin-bottom:12px"><svg viewBox="0 0 32 32" style="width:100%;height:100%"><g stroke="#0071CE" stroke-width="3.6" stroke-linecap="round"><line x1="16" y1="3" x2="16" y2="11"/><line x1="16" y1="21" x2="16" y2="29"/><line x1="4.8" y1="9.5" x2="11.6" y2="13.5"/><line x1="20.4" y1="18.5" x2="27.2" y2="22.5"/><line x1="4.8" y1="22.5" x2="11.6" y2="18.5"/><line x1="20.4" y1="13.5" x2="27.2" y2="9.5"/></g></svg></span>
                 <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:#fff;margin-bottom:8px">Walmart</div>
                 <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:{{ exF.walmart.badgeColor }};background:{{ exF.walmart.badgeBg }};padding:4px 9px;border-radius:6px">{{ exF.walmart.badge }}</span>
-              </div>
-              <div class="se-tilt" style="display:{{ exF.tiktok.show }};background:{{ exF.tiktok.cardBg }};border:1px solid {{ exF.tiktok.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.tiktok.dim }};transition:all .3s">
+              </button>
+              <button onClick="{{ exF.tiktok.set }}" class="se-tilt se-expcard" style="display:block;width:100%;text-align:left;font:inherit;cursor:pointer;background:{{ exF.tiktok.cardBg }};border:1px solid {{ exF.tiktok.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.tiktok.dim }};transition:all .3s">
                 <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:32px;background:#111;border-radius:9px;padding:7px;margin-bottom:12px"><svg viewBox="0 0 32 34" style="width:100%;height:100%"><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#25F4EE" transform="translate(-1.2,-1.2)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#FE2C55" transform="translate(1.2,1.2)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#fff"/></svg></span>
                 <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:#fff;margin-bottom:8px">TikTok Shop</div>
                 <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:{{ exF.tiktok.badgeColor }};background:{{ exF.tiktok.badgeBg }};padding:4px 9px;border-radius:6px">{{ exF.tiktok.badge }}</span>
-              </div>
-              <div class="se-tilt" style="display:{{ exF.ebay.show }};background:{{ exF.ebay.cardBg }};border:1px solid {{ exF.ebay.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.ebay.dim }};transition:all .3s">
+              </button>
+              <button onClick="{{ exF.ebay.set }}" class="se-tilt se-expcard" style="display:block;width:100%;text-align:left;font:inherit;cursor:pointer;background:{{ exF.ebay.cardBg }};border:1px solid {{ exF.ebay.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.ebay.dim }};transition:all .3s">
                 <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:32px;background:#fff;border-radius:9px;padding:5px;margin-bottom:12px"><svg viewBox="0 0 50 24" style="width:100%;height:auto"><text x="25" y="19" font-family="Arial,sans-serif" font-weight="800" font-style="italic" font-size="20" text-anchor="middle"><tspan fill="#E53238">e</tspan><tspan fill="#0064D2">b</tspan><tspan fill="#F5AF02">a</tspan><tspan fill="#86B817">y</tspan></text></svg></span>
                 <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:#fff;margin-bottom:8px">eBay</div>
                 <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:{{ exF.ebay.badgeColor }};background:{{ exF.ebay.badgeBg }};padding:4px 9px;border-radius:6px">{{ exF.ebay.badge }}</span>
-              </div>
-              <div class="se-tilt" style="display:{{ exF.shopify.show }};background:{{ exF.shopify.cardBg }};border:1px solid {{ exF.shopify.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.shopify.dim }};transition:all .3s">
+              </button>
+              <button onClick="{{ exF.shopify.set }}" class="se-tilt se-expcard" style="display:block;width:100%;text-align:left;font:inherit;cursor:pointer;background:{{ exF.shopify.cardBg }};border:1px solid {{ exF.shopify.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.shopify.dim }};transition:all .3s">
                 <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:32px;background:#95BF47;border-radius:9px;padding:6px;margin-bottom:12px"><svg viewBox="0 0 30 32" style="width:100%;height:100%"><path d="M19 8l2.6.6L25 30 8 32 5 11l4-1.5z" fill="#fff"/><text x="14.5" y="25" font-family="Arial" font-weight="800" font-size="12" fill="#95BF47" text-anchor="middle">S</text></svg></span>
                 <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:#fff;margin-bottom:8px">Shopify</div>
                 <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:{{ exF.shopify.badgeColor }};background:{{ exF.shopify.badgeBg }};padding:4px 9px;border-radius:6px">{{ exF.shopify.badge }}</span>
-              </div>
-              <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:24px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1)">
+              </button>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:24px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1)">
               <div style="display:flex;flex-wrap:wrap;gap:18px">
                 <div style="display:flex;align-items:center;gap:9px"><span style="width:34px;height:34px;border-radius:10px;background:rgba(124,240,182,.15);color:#7CF0B6;display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7L9 18l-5-5"/></svg></span><span style="font-size:13px;color:#C2C0DE;max-width:160px;line-height:1.35">Listings, creative and ads rebuilt per channel</span></div>
                 <div style="display:flex;align-items:center;gap:9px"><span style="width:34px;height:34px;border-radius:10px;background:rgba(139,136,201,.2);color:var(--lav);display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/></svg></span><span style="font-size:13px;color:#C2C0DE;max-width:160px;line-height:1.35">Account health watched from day one</span></div>
@@ -1122,7 +1016,6 @@
               <a href="#/contact" onClick="{{ go }}" class="se-shine" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ink);font-weight:700;font-size:15px;text-decoration:none;padding:14px 24px;border-radius:13px">Plan my expansion <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             </div>
           </div>
-        </div>
         </div>
       </section>
 
@@ -1137,7 +1030,7 @@
           <div style="display:flex;flex-wrap:wrap;gap:clamp(10px,1.5vw,14px)">
             <!-- featured all-in-one -->
             <div data-reveal class="se-shine" style="flex:1 1 100%;position:relative;overflow:hidden;background:var(--ink);color:#fff;border-radius:24px;padding:clamp(24px,4vw,40px);display:flex;flex-wrap:wrap;align-items:center;gap:clamp(20px,3vw,40px);justify-content:space-between">
-              <div style="position:absolute;top:-60px;right:-40px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(90,86,165,.4),transparent 70%);pointer-events:none"></div>
+              <div style="position:absolute;top:-60px;right:-40px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(90,86,165,.4),transparent 70%);pointer-events:none"></div><span style="position:absolute;top:10px;right:18px;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:3.2rem;color:rgba(255,255,255,.09);line-height:1;pointer-events:none">01</span>
               <div style="position:relative;max-width:480px">
                 <div style="width:52px;height:52px;border-radius:15px;background:linear-gradient(135deg,#6E6AC0,#4A4690);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:18px;box-shadow:0 14px 28px -10px rgba(90,86,165,.9)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></div>
                 <h3 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.4rem,3.5vw,2.1rem);letter-spacing:-.02em;margin:0 0 10px">All-in-one marketplace expertise</h3>
@@ -1149,7 +1042,7 @@
                 <span class="se-chiphover" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:36px;background:#111;border-radius:10px;padding:8px"><svg viewBox="0 0 32 34" style="width:100%;height:100%"><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#25F4EE" transform="translate(-1.2,-1.2)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#FE2C55" transform="translate(1.2,1.2)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#fff"/></svg></span>
                 <span class="se-chiphover" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:36px;background:#fff;border-radius:10px;padding:6px"><svg viewBox="0 0 50 24" style="width:100%;height:auto"><text x="25" y="19" font-family="Arial,sans-serif" font-weight="800" font-style="italic" font-size="20" text-anchor="middle"><tspan fill="#E53238">e</tspan><tspan fill="#0064D2">b</tspan><tspan fill="#F5AF02">a</tspan><tspan fill="#86B817">y</tspan></text></svg></span>
                 <span class="se-chiphover" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:36px;background:#95BF47;border-radius:10px;padding:7px"><svg viewBox="0 0 30 32" style="width:100%;height:100%"><path d="M19 8l2.6.6L25 30 8 32 5 11l4-1.5z" fill="#fff"/><text x="14.5" y="25" font-family="Arial" font-weight="800" font-size="12" fill="#95BF47" text-anchor="middle">S</text></svg></span>
-                <span class="se-chiphover" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:36px;background:#111;border-radius:10px;padding:7px"><svg viewBox="0 0 32 34" style="width:100%;height:100%"><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#25F4EE" transform="translate(-1.2,-1.2)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#FE2C55" transform="translate(1.2,1.2)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#fff"/></svg></span>
+                
               </div>
             </div>
             <div data-reveal class="se-tilt se-shine" style="flex:1 1 250px;min-width:250px;position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(22px,3vw,30px)"><span style="position:absolute;top:8px;right:16px;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:3.2rem;color:#F1F0F8;line-height:1">02</span>
@@ -1586,6 +1479,27 @@
       </section>
       </sc-if>
 
+      <!-- your part -->
+      <sc-if value="{{ auto.hasRole }}">
+      <section style="background-color:#fff;background-image:radial-gradient(circle at -60px 8%,{{ auto.accentSoft }},transparent 46%);padding:clamp(60px,8vw,104px) 0">
+        <div style="max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,60px)">
+          <div data-reveal style="max-width:640px;margin-bottom:36px">
+            <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:{{ auto.accentDeep }};font-weight:700;margin-bottom:14px">Your part</div>
+            <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.06;letter-spacing:-.025em;margin:0">{{ auto.roleTitle }}</h2>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px;margin-bottom:26px">
+            <sc-for list="{{ auto.role }}" as="rl" hint-placeholder-count="4">
+              <div data-reveal class="se-tilt" style="display:flex;gap:13px;align-items:flex-start;background:var(--mist);border:1px solid var(--line);border-radius:16px;padding:20px">
+                <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:{{ auto.accentSoft }};color:{{ auto.accent }};display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7L9 18l-5-5"/></svg></span>
+                <span style="font-size:14.5px;line-height:1.5;color:var(--ink);font-weight:500">{{ rl }}</span>
+              </div>
+            </sc-for>
+          </div>
+          <div data-reveal style="display:flex;align-items:flex-start;gap:11px;background:var(--mist);border:1px solid var(--line);border-radius:18px;padding:16px 22px;font-size:14.5px;line-height:1.55;color:var(--ink);max-width:660px"><span style="flex-shrink:0;width:9px;height:9px;border-radius:50%;background:{{ auto.accent }};margin-top:7px"></span>{{ auto.roleNote }}</div>
+        </div>
+      </section>
+      </sc-if>
+
       <!-- reporting -->
       <section style="background:var(--ink);color:#fff;padding:clamp(60px,8vw,104px) 0;position:relative;overflow:hidden">
         <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.045) 1px,transparent 1px);background-size:26px 26px;opacity:.6;pointer-events:none"></div>
@@ -1620,7 +1534,7 @@
       <section style="background-color:#fff;background-image:radial-gradient(circle at -40px 15%,{{ auto.accentSoft }},transparent 45%);padding:clamp(60px,8vw,104px) 0">
         <div style="max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,60px)">
           <div data-reveal style="max-width:640px;margin-bottom:36px">
-            <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:{{ auto.accentDeep }};font-weight:700;margin-bottom:14px">Why partner with Shopin Ecom</div>
+            <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:{{ auto.accentDeep }};font-weight:700;margin-bottom:14px">Why partner with Shopinecom</div>
             <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.06;letter-spacing:-.025em;margin:0">A fully managed business, run by professionals.</h2>
           </div>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px">
@@ -1668,7 +1582,7 @@
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px;margin-bottom:18px">
             <sc-for list="{{ auto.proofImgs }}" as="pi">
               <div class="se-tilt" style="background:linear-gradient(180deg,#221B36,#15101f);border:1px solid rgba(255,255,255,.1);border-radius:18px;overflow:hidden;box-shadow:0 24px 54px -30px rgba(0,0,0,.8)">
-                <div style="position:relative;height:clamp(150px,17vw,200px);overflow:hidden;background:#0a0716">
+                <div style="position:relative;aspect-ratio:{{ pi.ratio }};overflow:hidden;background:#0a0716">
                   <sc-if value="{{ pi.src }}"><img data-src="{{ pi.src }}" alt="Sales insight: {{ pi.v }}" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block"/></sc-if>
                   <span style="position:absolute;top:11px;left:11px;display:inline-flex;align-items:center;gap:6px;background:rgba(13,9,24,.72);backdrop-filter:blur(4px);color:#fff;font-size:10px;font-weight:700;letter-spacing:.05em;padding:5px 9px;border-radius:7px"><span style="position:relative;width:6px;height:6px"><span style="position:absolute;inset:0;border-radius:50%;background:#36C281"></span></span>LIVE</span>
                 </div>
@@ -1694,7 +1608,7 @@
               <blockquote style="font-family:'Cabinet Grotesk',sans-serif;font-weight:500;font-size:clamp(1.15rem,2.4vw,1.5rem);line-height:1.4;letter-spacing:-.01em;color:#fff;margin:0">We&#8217;ve helped countless people make money, and you can too. Our results speak for themselves.</blockquote>
             </figure>
             <figure style="margin:0;background:linear-gradient(150deg,{{ auto.accent }},#16112A);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:clamp(24px,3vw,32px);display:flex;flex-direction:column;justify-content:space-between;gap:20px">
-              <blockquote style="font-family:'Cabinet Grotesk',sans-serif;font-weight:500;font-size:clamp(1.15rem,2.4vw,1.5rem);line-height:1.4;letter-spacing:-.01em;color:#fff;margin:0">Join the Shopin Ecom team today and start earning profits from day one.</blockquote>
+              <blockquote style="font-family:'Cabinet Grotesk',sans-serif;font-weight:500;font-size:clamp(1.15rem,2.4vw,1.5rem);line-height:1.4;letter-spacing:-.01em;color:#fff;margin:0">Join the Shopinecom team today and start earning profits from day one.</blockquote>
               <a href="#/contact" onClick="{{ go }}" style="align-self:flex-start;display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ink);font-weight:700;font-size:14.5px;text-decoration:none;padding:12px 20px;border-radius:11px">Let&#8217;s make money together <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             </figure>
           </div>
@@ -2173,10 +2087,10 @@
             </div>
             <div style="flex:1;min-width:150px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:16px 18px;display:flex;align-items:center;gap:12px">
               <span style="flex-shrink:0;width:38px;height:38px;border-radius:11px;background:rgba(139,136,201,.2);color:var(--lav);display:flex;align-items:center;justify-content:center"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></span>
-              <div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14px;color:#fff;line-height:1.15">6 marketplaces</div><div style="font-size:12px;color:#A8A6C4">One accountable team</div></div>
+              <div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14px;color:#fff;line-height:1.15">5 marketplaces</div><div style="font-size:12px;color:#A8A6C4">One accountable team</div></div>
             </div>
           </div>
-          <p style="font-size:12px;color:#8C8AA8;margin-top:18px">Live Seller Central accounts we run. Results vary by brand, margins, market and starting position.</p>
+          <p style="font-size:12px;color:#8C8AA8;margin-top:18px">Live marketplace accounts we run. Results vary by brand, margins, market and starting position.</p>
         </div>
       </section>
 
@@ -2314,7 +2228,7 @@
       <section style="background:var(--ink);color:#fff;padding:clamp(64px,9vw,112px) 0 clamp(56px,7vw,88px);position:relative;overflow:hidden">
         <div data-parallax="0.05" style="position:absolute;top:-140px;right:-120px;width:520px;height:520px;border-radius:46% 54% 60% 40%/52% 44% 56% 48%;background:radial-gradient(circle at 40% 35%,#6E6AC0,#3A3680);opacity:.45;filter:blur(6px);animation:seFloatY 13s ease-in-out infinite"></div>
         <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:26px 26px;opacity:.5;pointer-events:none"></div>
-        <div style="position:relative;max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,48px);display:grid;grid-template-columns:{{ whyCols }};gap:clamp(36px,5vw,64px);align-items:center">
+        <div style="position:relative;max-width:1100px;margin:0 auto;padding:0 clamp(20px,4vw,48px);display:grid;grid-template-columns:{{ whyCols }};gap:clamp(36px,5vw,64px);align-items:center">
           <div data-reveal>
             <div style="display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:100px;padding:7px 16px;font-size:12.5px;font-weight:600;margin-bottom:24px;color:#D9D7EC"><span style="position:relative;width:7px;height:7px"><span style="position:absolute;inset:0;border-radius:50%;background:#7CF0B6"></span><span class="se-anim" style="position:absolute;inset:0;border-radius:50%;background:#7CF0B6;animation:sePing 2s ease-out infinite"></span></span>An extension of your team</div>
             <h1 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.4rem,5.6vw,4.3rem);line-height:.98;letter-spacing:-.035em;margin:0 0 22px">We make marketplace growth profitable, and boring to worry about.</h1>
@@ -2430,18 +2344,6 @@
         </div>
       </section>
 
-      <!-- MARKETPLACES BAND -->
-      <section style="background:var(--mist);padding:clamp(44px,5vw,64px) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-        <div style="max-width:1100px;margin:0 auto;padding:0 clamp(20px,4vw,48px);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px 34px">
-          <span style="font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700">Marketplaces we run</span>
-          <span class="se-chiphover" style="display:inline-flex;align-items:center;gap:9px;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:16px;color:var(--ink-soft)"><span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:24px"><svg viewBox="0 0 50 30" style="width:100%;height:auto"><path d="M7 19c7 4 23 4.5 31 0" stroke="#FF9900" stroke-width="3.4" fill="none" stroke-linecap="round"/><path d="M35 15l4.5 1.3-1.3 4.6" stroke="#FF9900" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="24" y="13" font-family="Arial,sans-serif" font-weight="800" font-size="13" fill="#232F3E" text-anchor="middle">a</text></svg></span>Amazon</span>
-          <span class="se-chiphover" style="display:inline-flex;align-items:center;gap:9px;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:16px;color:var(--ink-soft)"><span style="display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:#111;border-radius:7px;padding:5px"><svg viewBox="0 0 32 34" style="width:100%;height:100%"><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#25F4EE" transform="translate(-1.2,-1.2)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#FE2C55" transform="translate(1.2,1.2)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#fff"/></svg></span>TikTok Shop</span>
-          <span class="se-chiphover" style="display:inline-flex;align-items:center;gap:9px;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:16px;color:var(--ink-soft)"><span style="display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:#95BF47;border-radius:7px;padding:5px"><svg viewBox="0 0 30 32" style="width:100%;height:100%"><path d="M19 8l2.6.6L25 30 8 32 5 11l4-1.5z" fill="#fff"/><text x="14.5" y="25" font-family="Arial" font-weight="800" font-size="12" fill="#95BF47" text-anchor="middle">S</text></svg></span>Shopify</span>
-          <span class="se-chiphover" style="display:inline-flex;align-items:center;gap:9px;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:16px;color:var(--ink-soft)"><span style="display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:#fff;border:1px solid var(--line);border-radius:7px;padding:4px"><svg viewBox="0 0 32 32" style="width:100%;height:100%"><g stroke="#0071CE" stroke-width="3.4" stroke-linecap="round"><line x1="16" y1="3" x2="16" y2="11"/><line x1="16" y1="21" x2="16" y2="29"/><line x1="4.8" y1="9.5" x2="11.6" y2="13.5"/><line x1="20.4" y1="18.5" x2="27.2" y2="22.5"/><line x1="4.8" y1="22.5" x2="11.6" y2="18.5"/><line x1="20.4" y1="13.5" x2="27.2" y2="9.5"/></g></svg></span>Walmart</span>
-          <span class="se-chiphover" style="display:inline-flex;align-items:center;gap:9px;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:16px;color:var(--ink-soft)"><span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:24px"><svg viewBox="0 0 50 24" style="width:100%;height:auto"><text x="25" y="19" font-family="Arial,sans-serif" font-weight="800" font-style="italic" font-size="20" text-anchor="middle"><tspan fill="#E53238">e</tspan><tspan fill="#0064D2">b</tspan><tspan fill="#F5AF02">a</tspan><tspan fill="#86B817">y</tspan></text></svg></span>eBay</span>
-        </div>
-      </section>
-
       <!-- CTA -->
       <section style="background:linear-gradient(150deg,#5A56A5 0%,#3A3680 50%,#16112A 100%);color:#fff;padding:clamp(64px,9vw,120px) 0;position:relative;overflow:hidden;text-align:center">
         <div style="position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:600px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(139,136,201,.35),transparent 65%);pointer-events:none"></div>
@@ -2462,7 +2364,7 @@
         <div style="position:relative;max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,48px)">
           <div data-reveal style="max-width:720px">
             <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--lav);font-weight:600;margin-bottom:20px">Results</div>
-            <h1 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.6rem,6vw,4.6rem);line-height:.95;letter-spacing:-.035em;margin:0 0 18px">Real accounts. Real screenshots. Real dates.</h1>
+            <h1 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.6rem,6vw,4.6rem);line-height:.95;letter-spacing:-.035em;margin:0 0 18px">Real accounts. Real numbers. Real results.</h1>
             <p style="font-size:clamp(1.05rem,1.5vw,1.2rem);line-height:1.6;color:#C2C0D4;max-width:600px;margin:0">A library of live results from accounts we manage. Numbers depend on your brand, margins and market, these are ours, not promises.</p>
           </div>
         </div>
@@ -2933,7 +2835,7 @@ class Component extends DCLogic {
 
   componentDidMount() {
     this._onHash = () => {
-      this.setState({ route: this.parse(), menuOpen: false, megaOpen: false, activeSec: '' });
+      this.setState({ route: this.parse(), menuOpen: false, megaOpen: false, activeSec: '', openFaq: null });
       try { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); } catch(e){}
       this.setTitle();
     };
@@ -3423,7 +3325,7 @@ class Component extends DCLogic {
         accent:'#1A9455', accentSoft:'rgba(26,148,85,.12)', logoKey:'gcc',
         who:['Brands proven in one market ready for the next','US brands expanding into the UK and Europe','EU brands entering the US','Teams that need localization, not just translation'],
         industries:['Beauty & Fragrance','Health & Wellness','Home & Living','Electronics','Fashion','Mother & Baby','Grocery','Sports'],
-        quote:{ text:'They sequenced our expansion properly, the US first, then the UK and Germany, with content built for each market. It saved us from an expensive scattershot approach.', name:'Daniel', role:'Managing Director, Wellness Brand', initial:'O' },
+        quote:{ text:'They sequenced our expansion properly, the US first, then the UK and Germany, with content built for each market. It saved us from an expensive scattershot approach.', name:'Daniel', role:'Managing Director, Wellness Brand', initial:'D' },
         outcomes:[{v:'Sequenced',l:'Markets and marketplaces entered in the right order',n:'Strategy before spend'},{v:'Localized',l:'Positioning and content built for each market',n:'Research-driven'},{v:'Connected',l:'Inventory, logistics and payments integrated',n:'One operating picture'}],
         caseSlug:'uk-flagship', caseMetric:'£3.38M', caseLabel:'managed-account sales', caseTitle:'The management system we bring to new regions',
         eyebrow:'Region · US & Europe',
@@ -3482,7 +3384,7 @@ class Component extends DCLogic {
         strategy:'Run the full account as one system, advertising, listings, inventory and health, to scale clean.',
         execution:['Managed advertising across the catalog','Maintained catalog and ASIN health','Planned inventory through peak seasons','Reported on profit and rank weekly'],
         result:'£3.38M in ordered product sales across 104,863 orders between May 2024 and May 2026, live in Seller Central.',
-        quote:'They look at the full funnel, listings, pricing, reviews and performance. That\u2019s what made the difference.', quoteName:'Janessa · CEO' },
+        quote:'They look at the full funnel, listings, pricing, reviews and performance. That\u2019s what made the difference.', quoteName:'Verified result' },
       { slug:'us-scale', market:'Amazon US', cat:'PPC & Scale', brand:'Amazon US Account', title:'$1.78M sales at +416% growth', metric:'+416%', metricLabel:'sales growth', sub:'A US account rebuilt for efficiency, then scaled hard.',
         challenge:'An underperforming US account with inefficient spend and limited rank.',
         audit:'Significant ad waste and ranking headroom on core terms.',
@@ -3516,7 +3418,7 @@ class Component extends DCLogic {
       tiktok: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"><g><path d="M29 8c.9 4.6 3.6 7.7 8.3 8.4v6.4c-3 0-5.7-1-8.3-2.7V32a11 11 0 1 1-11-11c.7 0 1.4.1 2.1.2v6.5A5 5 0 1 0 25 32V8z" fill="#25F4EE" transform="translate(-1.8 -1.8)"/><path d="M29 8c.9 4.6 3.6 7.7 8.3 8.4v6.4c-3 0-5.7-1-8.3-2.7V32a11 11 0 1 1-11-11c.7 0 1.4.1 2.1.2v6.5A5 5 0 1 0 25 32V8z" fill="#FE2C55" transform="translate(1.8 1.8)"/><path d="M29 8c.9 4.6 3.6 7.7 8.3 8.4v6.4c-3 0-5.7-1-8.3-2.7V32a11 11 0 1 1-11-11c.7 0 1.4.1 2.1.2v6.5A5 5 0 1 0 25 32V8z" fill="#0B0B0B"/></g></svg>',
       ebay: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 36" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"><text x="32" y="27" font-family="Arial,sans-serif" font-weight="800" font-style="italic" font-size="27" text-anchor="middle"><tspan fill="#E53238">e</tspan><tspan fill="#0064D2">b</tspan><tspan fill="#F5AF02">a</tspan><tspan fill="#86B817">y</tspan></text></svg>',
       shopify: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"><path d="M30 14l2.6.6L37 41l-18 3-3.4-23 4-1.6z" fill="#95BF47"/><path d="M30 14c0-3-1.3-5.3-3.4-5.3-2.6 0-3.8 3-4.2 5" fill="none" stroke="#5E8E3E" stroke-width="2"/><text x="25.5" y="36" font-family="Arial,sans-serif" font-weight="800" font-size="13" fill="#fff" text-anchor="middle">S</text></svg>',
-      noon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 34" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"><rect x="2" y="3" width="60" height="28" rx="9" fill="#FEEE00"/><text x="32" y="24" font-family="Arial,sans-serif" font-weight="800" font-size="19" fill="#000" text-anchor="middle">noon</text></svg>'
+      gcc: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"><circle cx="24" cy="24" r="16" fill="none" stroke="#1A9455" stroke-width="3"/><path d="M8 24h32M24 8c5 5.5 5 26.5 0 32M24 8c-5 5.5-5 26.5 0 32" fill="none" stroke="#1A9455" stroke-width="2.4" stroke-linecap="round"/></svg>'
     };
     const enc = {};
     for (const k in raw) enc[k] = 'data:image/svg+xml;utf8,' + encodeURIComponent(raw[k]);
@@ -3634,7 +3536,7 @@ class Component extends DCLogic {
 
   comparisonData() {
     return [
-      { area:'Marketplace coverage', shopin:'Amazon, TikTok Shop, Shopify, Walmart, eBay', typical:'Amazon only' },
+      { area:'Marketplace coverage', shopin:'Amazon, TikTok Shop, Shopify, Walmart, eBay, plus US and EU expansion', typical:'Amazon only' },
       { area:'Scope of work', shopin:'Full account: ads, listings, creative, ops, health', typical:'Ads, or listings, in isolation' },
       { area:'Reporting', shopin:'Weekly, tied to profit', typical:'Monthly, vanity metrics' },
       { area:'Strategy calls', shopin:'Standing weekly call', typical:'Occasional or none' },
@@ -3675,10 +3577,10 @@ class Component extends DCLogic {
         key:'walmart', accent:'#0071DC', accentDeep:'#005EA6', accent2:'#FFC220', accentSoft:'rgba(0,113,220,.1)', logoKey:'walmart',
         badge:'Done-for-you Walmart wholesale',
         heroTitle:'Make money with Walmart automation.',
-        heroSub:'Walmart is one of the world\u2019s largest and fastest-growing marketplaces. With Shopin Ecom\u2019s Walmart Automation you build a fully automated wholesale business and earn consistent profits, while our expert team runs the entire operation for you.',
+        heroSub:'Walmart is one of the world\u2019s largest and fastest-growing marketplaces. With Shopinecom\u2019s Walmart Automation you build a fully automated wholesale business and earn consistent profits, while our expert team runs the entire operation for you.',
         stats:[{v:'15 to 55%',l:'Expected ROI range'},{v:'$5,000',l:'Minimum monthly investment'},{v:'WFS + FBM',l:'Fulfilment model'},{v:'100%',l:'Done for you'}],
         overviewTitle:'A complete, done-for-you Walmart automation service',
-        overviewBody:'Shopin Ecom runs a full wholesale operation through WFS (Walmart Fulfillment Services) and FBM (Fulfilled by Merchant). You never touch the daily tasks; our automation system runs your store end to end.',
+        overviewBody:'Shopinecom runs a full wholesale operation through WFS (Walmart Fulfillment Services) and FBM (Fulfilled by Merchant). You never touch the daily tasks; our automation system runs your store end to end.',
         included:[
           {ic:'search',t:'Product research and market analysis'},
           {ic:'supplier',t:'Supplier sourcing and wholesale purchasing'},
@@ -3727,7 +3629,7 @@ class Component extends DCLogic {
         key:'ebay', accent:'#0064D2', accentDeep:'#0052AD', accent2:'#FF5A60', accentSoft:'rgba(0,100,210,.1)', logoKey:'ebay',
         badge:'Done-for-you eBay wholesale',
         heroTitle:'Step into profitable eBay selling.',
-        heroSub:'eBay wholesale means buying products in bulk from trusted suppliers and selling them online for profit. Shopin Ecom makes it completely hassle-free: we source, store, ship, manage orders and generate sales. You pay only when you make a profit.',
+        heroSub:'eBay wholesale means buying products in bulk from trusted suppliers and selling them online for profit. Shopinecom makes it completely hassle-free: we source, store, ship, manage orders and generate sales. You pay only when you make a profit.',
         stats:[{v:'20 to 45%',l:'ROI, sometimes higher'},{v:'$3,000',l:'Minimum investment'},{v:'No fees',l:'Only profit sharing'},{v:'Day one',l:'Profit from the first sale'}],
         overviewTitle:'eBay wholesale, made simple',
         overviewBody:'From sourcing high-demand products to warehousing, logistics, order management and sales, we manage it all with an expert team, automated reporting and strong distribution partnerships. Clients can start earning from the very first sale.',
@@ -3870,7 +3772,7 @@ class Component extends DCLogic {
       box:['M3 7l9-4 9 4-9 4-9-4z','M3 7v10l9 4 9-4V7']
     };
     const autoIcEl = (ic) => React.createElement('svg', { width: 19, height: 19, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.85, strokeLinecap: 'round', strokeLinejoin: 'round' }, (AUTO_IC[ic] || AUTO_IC.box).map((d, i) => React.createElement('path', { key: i, d })));
-    const activeService = (r.name === 'service') ? (() => { const s = this.svcMap()[r.slug]; if (!s) return null; const d = details[r.slug] || {}; const lk = d.logoKey || ''; const painsList = (d.pains || []).map((t, i) => ({ text: t, n: '0' + (i + 1) })); const manageList = (d.manages || []).map((t, i) => ({ label: t, iconEl: mIconEl(t), n: (i + 1 < 10 ? '0' : '') + (i + 1) })); const industryList = (d.industries || []).map((t) => ({ label: t, iconEl: catIconEl(t) })); const psList = (d.ps || []).map((x, i) => ({ ...x, n: '0' + (i + 1) })); return { ...s, ...d, painsList, manageList, industryList, psList, manageCount: (d.manages || []).length, accent2: ({amazon:'#FFB84D',walmart:'#5AB0FF',tiktok:'#FF6B8A',ebay:'#4D9BFF',gcc:'#4FD08A'}[lk] || '#8B88C9'), accentDeep: ({amazon:'#9E4E00',walmart:'#005EA6',tiktok:'#C01A42',ebay:'#0052AD',gcc:'#0F6B3D'}[lk] || '#4A4690'), channelShort: ({amazon:'Amazon',walmart:'Walmart',tiktok:'TikTok Shop',ebay:'eBay',gcc:'the US & Europe'}[lk] || 'every marketplace'), isAmz: lk==='amazon', isWmt: lk==='walmart', isTtk: lk==='tiktok', isEby: lk==='ebay', isGcc: lk==='gcc' }; })() : null;
+    const activeService = (r.name === 'service') ? (() => { const s = this.svcMap()[r.slug]; if (!s) return null; const d = details[r.slug] || {}; const lk = d.logoKey || ''; const painsList = (d.pains || []).map((t, i) => ({ text: t, n: '0' + (i + 1) })); const manageList = (d.manages || []).map((t, i) => ({ label: t, iconEl: mIconEl(t), n: (i + 1 < 10 ? '0' : '') + (i + 1) })); const industryList = (d.industries || []).map((t) => ({ label: t, iconEl: catIconEl(t) })); const psList = (d.ps || []).map((x, i) => ({ ...x, n: '0' + (i + 1) })); return { ...s, ...d, painsList, manageList, industryList, psList, manageCount: (d.manages || []).length, accent2: ({amazon:'#FFB84D',walmart:'#5AB0FF',tiktok:'#FF6B8A',ebay:'#4D9BFF',gcc:'#4FD08A'}[lk] || '#8B88C9'), accentDeep: ({amazon:'#9E4E00',walmart:'#005EA6',tiktok:'#C01A42',ebay:'#0052AD',gcc:'#0F6B3D'}[lk] || '#4A4690'), channelShort: ({amazon:'Amazon',walmart:'Walmart',tiktok:'TikTok Shop',ebay:'eBay',gcc:'Amazon US, UK and EU'}[lk] || 'every marketplace'), isAmz: lk==='amazon', isWmt: lk==='walmart', isTtk: lk==='tiktok', isEby: lk==='ebay', isGcc: lk==='gcc' }; })() : null;
     const activeCase = (r.name === 'case') ? (cases.find(c => c.slug === r.slug) || null) : null;
     const autoMap = this.autoData();
     const autoRaw = (r.name === 'service' && autoMap[r.slug]) ? autoMap[r.slug] : null;
@@ -3981,7 +3883,7 @@ class Component extends DCLogic {
           o[k] = {
             set: this.setExpandFrom(k),
             chipBg: on ? '#fff' : 'rgba(255,255,255,.06)', chipColor: on ? 'var(--ink)' : '#fff', chipBorder: on ? '#fff' : 'rgba(255,255,255,.14)',
-            isSource: on, show: on ? 'none' : 'block',
+            isSource: on,
             cardBg: on ? 'linear-gradient(150deg,rgba(90,86,165,.4),rgba(58,54,128,.15))' : 'rgba(255,255,255,.04)',
             cardBorder: on ? 'rgba(139,136,201,.6)' : 'rgba(255,255,255,.1)',
             badge: on ? 'Selling here' : 'Ready to launch',
@@ -4022,7 +3924,7 @@ class Component extends DCLogic {
       footerPad: (this.state.isMobile && r.name !== 'contact') ? 'calc(104px + env(safe-area-inset-bottom))' : '32px',
       setMkt: this.setMkt,
       caseFilters: ['All','Amazon','Amazon UK','Amazon US'].map(f => ({ label:f, active: this.state.filter === f, set: this.setFilter(f), chipBg: this.state.filter === f ? 'var(--ink)' : '#fff', chipColor: this.state.filter === f ? '#fff' : 'var(--ink-soft)', chipBorder: this.state.filter === f ? 'var(--ink)' : 'var(--line)' })),
-      filteredCases: (this.state.filter === 'All') ? cases : cases.filter(c => c.market === this.state.filter || (this.state.filter === 'Amazon' && c.market.indexOf('Amazon') === 0)),
+      filteredCases: (this.state.filter === 'All') ? cases : cases.filter(c => c.market === this.state.filter),
       caseCols: this.state.isMobile ? '1fr' : 'repeat(auto-fit,minmax(300px,1fr))',
       detailCols: this.state.isMobile ? '1fr' : '1.5fr 1fr',
       capCols: this.state.isMobile ? '1fr' : '0.82fr 1.18fr', capPreviewDisplay: this.state.isMobile ? 'none' : 'flex',
@@ -4034,7 +3936,7 @@ class Component extends DCLogic {
         'walmart-seller-management': { n: 'Walmart', g: 'linear-gradient(140deg,#0071CE,#004B97)', t: 'Done-for-you automation', w: 'W', sh: 'rgba(0,113,206,.55)' },
         'tiktok-shop-management': { n: 'TikTok Shop', g: 'linear-gradient(140deg,#2B2B33,#0F0F14)', t: 'Shop and content engine', w: 'T', sh: 'rgba(254,44,85,.4)' },
         'ebay-store-management': { n: 'eBay', g: 'linear-gradient(140deg,#E53238,#B71C1C)', t: 'Wholesale store growth', w: 'e', sh: 'rgba(229,50,56,.5)' },
-        'global-expansion': { n: 'Global Expansion', g: 'linear-gradient(140deg,#1A9455,#0B5B35)', t: 'US, UK and EU launch', w: 'G', sh: 'rgba(26,148,85,.5)' } };
+        'global-expansion': { n: 'International Expansion', g: 'linear-gradient(140deg,#1A9455,#0B5B35)', t: 'US, UK and EU launch', w: 'G', sh: 'rgba(26,148,85,.5)' } };
         return Object.keys(M).filter(k => k !== r.slug).map(k => ({ slug: k, ...M[k] })); })() : [],
       resources: this.resourceData(),
       openFaq: this.state.openFaq,
@@ -4042,7 +3944,7 @@ class Component extends DCLogic {
       serviceFaqs: activeService ? (activeService.faqs || []).map((f, i) => ({ ...f, open: this.state.openFaq === i, rot: this.state.openFaq === i ? '45deg' : '0deg', toggle: this.toggleFaq(i) })) : [],
       aboutStats: [
         { value:'$25M+', label:'In tracked sales across the accounts we run' },
-        { value:'6', label:'Major marketplaces managed under one team' },
+        { value:'5', label:'Major marketplaces managed under one team' },
         { value:'4.8', label:'Average rating from verified brand owners' }
       ],
       values: [
