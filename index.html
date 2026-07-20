@@ -157,8 +157,13 @@
   .se-ps-row:hover{transform:translateX(5px);box-shadow:0 22px 44px -30px rgba(22,17,42,.45);border-color:var(--lav)!important}
   .se-ps-row:hover .se-ps-arrow{transform:translateX(4px);opacity:1}
   .se-ps-arrow{transition:transform .35s cubic-bezier(.34,1.56,.64,1),opacity .3s;opacity:.5}
+  #svc-faqs>div>div>div{transition:border-color .25s ease,box-shadow .25s ease}
+  #svc-faqs>div>div>div:hover{border-color:var(--lav)!important;box-shadow:0 12px 28px -20px rgba(90,86,165,.5)}
   @media (prefers-reduced-motion: reduce){.se-card-hover:hover,.se-tilt:hover,.se-fill-grid>*:hover{transform:none!important}.se-particle,.se-ring-spin{animation:none!important}.se-metric-glow::after{animation:none!important}.se-grid-anim>*{animation:none!important;opacity:1!important}}
+  .se-cap-row:active{transform:scale(.98)}
+  @media (prefers-reduced-motion: reduce){.se-accordion-body{animation:none!important}.se-cap-row:active,.se-vid:hover,.se-vid:hover .se-vid-img{transform:none!important}}
   @media (max-width:640px){.se-announce-sub{display:none}.se-subnav-cta{display:none!important}}
+  @media (max-width:640px){.se-proofvids{justify-content:center}.se-chartbadge{top:auto!important;bottom:10px!important;right:10px!important}}
   @media (max-width:640px){.se-scroll-fade{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 44px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 44px),transparent);padding-right:44px;scrollbar-width:none}}
   @media (max-width:900px){select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%236B6880' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")!important;background-repeat:no-repeat!important;background-position:right 14px center!important;padding-right:42px!important}}
   @media (max-width:900px){.se-social{width:44px!important;height:44px!important}}
@@ -493,7 +498,7 @@
                 <span class="se-chiphover" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:28px;background:#111;border:1px solid #111;border-radius:8px;padding:6px;box-shadow:0 3px 8px -4px rgba(22,17,42,.2)"><svg viewBox="0 0 32 34" style="width:100%;height:100%"><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#25F4EE" transform="translate(-1.2,-1.2)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#FE2C55" transform="translate(1.2,1.2)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#fff"/></svg></span>
                 <span class="se-chiphover" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:28px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:4px;box-shadow:0 3px 8px -4px rgba(22,17,42,.2)"><svg viewBox="0 0 50 24" style="width:100%;height:auto"><text x="25" y="19" font-family="Arial,sans-serif" font-weight="800" font-style="italic" font-size="20" text-anchor="middle"><tspan fill="#E53238">e</tspan><tspan fill="#0064D2">b</tspan><tspan fill="#F5AF02">a</tspan><tspan fill="#86B817">y</tspan></text></svg></span>
                 <span class="se-chiphover" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:28px;background:#95BF47;border:1px solid #95BF47;border-radius:8px;padding:5px;box-shadow:0 3px 8px -4px rgba(22,17,42,.2)"><svg viewBox="0 0 30 32" style="width:100%;height:100%"><path d="M19 8l2.6.6L25 30 8 32 5 11l4-1.5z" fill="#fff"/><text x="14.5" y="25" font-family="Arial" font-weight="800" font-size="12" fill="#95BF47" text-anchor="middle">S</text></svg></span>
-                <span class="se-chiphover" style="display:inline-flex;align-items:center;justify-content:center;width:42px;height:28px;background:#95BF47;border:1px solid #95BF47;border-radius:8px;box-shadow:0 3px 8px -4px rgba(22,17,42,.2)"><svg viewBox="0 0 30 32" style="width:52%;height:auto"><path d="M19 8l2.6.6L25 30 8 32 5 11l4-1.5z" fill="#fff"/><text x="14.5" y="25" font-family="Arial" font-weight="800" font-size="12" fill="#95BF47" text-anchor="middle">S</text></svg></span>
+                <span class="se-chiphover" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:28px;background:linear-gradient(140deg,#1A9455,#0B5B35);border:1px solid #0B5B35;border-radius:8px;box-shadow:0 3px 8px -4px rgba(22,17,42,.2);color:#fff"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></span>
               </div>
             </div>
             <!-- 4.8 rating -->
@@ -1472,7 +1477,7 @@
           </div>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr));gap:14px">
             <sc-for list="{{ auto.stats }}" as="s" hint-placeholder-count="4">
-              <div class="se-tilt" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:22px 20px">
+              <div data-reveal="scale" class="se-tilt" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:22px 20px">
                 <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.7rem,4vw,2.4rem);line-height:1;letter-spacing:-.03em;color:#fff;margin-bottom:8px">{{ s.v }}</div>
                 <div style="font-size:13px;color:#A8A6C4;line-height:1.35">{{ s.l }}</div>
               </div>
@@ -1506,7 +1511,7 @@
             </div>
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:14px">
               <sc-for list="{{ auto.includedList }}" as="it" hint-placeholder-count="6">
-                <div data-reveal style="position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 18px 20px;box-shadow:0 6px 20px -16px rgba(22,17,42,.5);transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-4px);box-shadow:0 18px 36px -18px rgba(22,17,42,.55)">
+                <div data-reveal="zoom" style="position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 18px 20px;box-shadow:0 6px 20px -16px rgba(22,17,42,.5);transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-4px);box-shadow:0 18px 36px -18px rgba(22,17,42,.55)">
                   <span style="position:absolute;top:15px;right:17px;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:.82rem;color:{{ auto.accent }};opacity:.38;letter-spacing:.02em">{{ it.n }}</span>
                   <span style="display:flex;width:46px;height:46px;border-radius:13px;background:linear-gradient(140deg,{{ auto.accent }},{{ auto.accent2 }});align-items:center;justify-content:center;color:#fff;box-shadow:0 12px 24px -14px {{ auto.accent }};margin-bottom:14px">{{ it.icoEl }}</span>
                   <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3">{{ it.t }}</div>
@@ -1540,7 +1545,7 @@
                 <span style="display:flex;gap:11px;align-items:flex-start;font-size:14.5px;color:#E9E8F4"><span style="flex-shrink:0;width:22px;height:22px;border-radius:7px;background:rgba(124,240,182,.16);color:#7CF0B6;display:flex;align-items:center;justify-content:center;margin-top:1px"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>{{ c }}</span>
               </sc-for>
             </div>
-            <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(124,240,182,.12);border:1px solid rgba(124,240,182,.25);color:#15724A;font-weight:700;font-size:13px;padding:8px 14px;border-radius:100px">{{ auto.investNote }}</div>
+            <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(124,240,182,.12);border:1px solid rgba(124,240,182,.25);color:#7CF0B6;font-weight:700;font-size:13px;padding:8px 14px;border-radius:100px">{{ auto.investNote }}</div>
           </div>
           <div data-reveal style="background:linear-gradient(150deg,{{ auto.accent }},#16112A);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:clamp(28px,4vw,40px);position:relative;overflow:hidden">
             <div style="position:absolute;top:-40px;right:-30px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);pointer-events:none"></div>
@@ -1649,7 +1654,7 @@
         <div style="position:relative;max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,60px)">
           <div data-reveal style="max-width:640px;margin-bottom:32px">
             <div style="display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--lav);font-weight:700;margin-bottom:14px"><span style="position:relative;width:8px;height:8px"><span style="position:absolute;inset:0;border-radius:50%;background:#36C281"></span><span class="se-anim" style="position:absolute;inset:0;border-radius:50%;background:#36C281;animation:sePing 2s ease-out infinite"></span></span>Real results, real stories</div>
-            <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:1.02;letter-spacing:-.03em;margin:0">Stores we run. Numbers we grow.</h2>
+            <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:1.02;letter-spacing:-.03em;margin:0">Stores we run. Numbers we <span class="se-gradtext">grow.</span></h2>
           </div>
           <sc-if value="{{ auto.hasProof }}">
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px;margin-bottom:18px">
@@ -1668,9 +1673,9 @@
           </div>
           </sc-if>
           <sc-if value="{{ auto.hasVideo }}">
-          <div data-reveal style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:26px">
+          <div data-reveal class="se-proofvids" style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:26px">
             <sc-for list="{{ auto.proofVideoList }}" as="pv">
-              <div style="flex:1 1 200px;max-width:{{ pv.vmax }};border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:#0a0716">
+              <div class="se-vid" style="flex:1 1 200px;max-width:{{ pv.vmax }};border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:#0a0716">
                 <sc-if value="{{ pv.src }}"><video data-src="{{ pv.src }}" controls playsinline preload="metadata" style="width:100%;display:block;background:#0a0716"></video></sc-if>
               </div>
             </sc-for>
@@ -1773,7 +1778,7 @@
             <button onClick="{{ svcJump.results }}" class="se-subnav-link" style="flex-shrink:0;font:inherit;font-weight:600;font-size:14px;color:{{ svcNav.results.c }};background:{{ svcNav.results.bg }};border:0;cursor:pointer;padding:9px 13px;border-radius:9px;white-space:nowrap;transition:background .25s,color .25s">Results</button>
             <button onClick="{{ svcJump.faqs }}" class="se-subnav-link" style="flex-shrink:0;font:inherit;font-weight:600;font-size:14px;color:{{ svcNav.faqs.c }};background:{{ svcNav.faqs.bg }};border:0;cursor:pointer;padding:9px 13px;border-radius:9px;white-space:nowrap;transition:background .25s,color .25s">FAQs</button>
           </div>
-          <a href="#/contact" onClick="{{ go }}" class="se-press se-subnav-cta" style="flex-shrink:0;display:inline-flex;align-items:center;gap:7px;background:var(--purple);color:#fff;font-weight:700;font-size:13.5px;text-decoration:none;padding:9px 16px;border-radius:10px;box-shadow:0 8px 20px -10px rgba(90,86,165,.9)">Free Audit <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="#/contact" onClick="{{ go }}" class="se-press se-shine se-subnav-cta" style="flex-shrink:0;display:inline-flex;align-items:center;gap:7px;background:var(--purple);color:#fff;font-weight:700;font-size:13.5px;text-decoration:none;padding:9px 16px;border-radius:10px;box-shadow:0 8px 20px -10px rgba(90,86,165,.9)">Free Audit <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </nav>
 
@@ -1805,7 +1810,7 @@
           </div>
           <div class="se-fill-grid">
             <sc-for list="{{ activeService.outcomes }}" as="o" hint-placeholder-count="3">
-              <div data-reveal class="se-tilt" style="position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:clamp(24px,3vw,32px);backdrop-filter:blur(6px)">
+              <div data-reveal="scale" class="se-tilt" style="position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:clamp(24px,3vw,32px);backdrop-filter:blur(6px)">
                 <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,{{ activeService.accent }},{{ activeService.accent2 }})"></div>
                 <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.4rem,5.5vw,3.4rem);letter-spacing:-.04em;line-height:.9;background:linear-gradient(120deg,#fff,{{ activeService.accent2 }});-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">{{ o.v }}</div>
                 <div style="font-size:15px;font-weight:600;color:#fff;margin-top:14px;line-height:1.4">{{ o.l }}</div>
@@ -1835,7 +1840,7 @@
               <sc-for list="{{ svcCaps }}" as="m" hint-placeholder-count="8">
                 <div>
                 <button onClick="{{ m.onSelect }}" class="se-cap-row" style="width:100%;text-align:left;font:inherit;cursor:pointer;display:flex;align-items:center;gap:13px;background:{{ m.rowBg }};color:{{ m.rowFg }};border:1px solid {{ m.rowBorder }};border-radius:14px;padding:12px 15px;transition:background .25s,color .25s,border-color .25s,transform .25s;box-shadow:0 3px 14px -12px rgba(22,17,42,.4)">
-                  <span style="flex-shrink:0;width:40px;height:40px;border-radius:11px;background:{{ m.rowIcoBg }};color:{{ m.rowIcoFg }};display:flex;align-items:center;justify-content:center;transition:background .25s,color .25s">{{ m.iconEl }}</span>
+                  <span class="se-cap-row-ico" style="flex-shrink:0;width:40px;height:40px;border-radius:11px;background:{{ m.rowIcoBg }};color:{{ m.rowIcoFg }};display:flex;align-items:center;justify-content:center;transition:background .25s,color .25s,transform .3s cubic-bezier(.34,1.56,.64,1)">{{ m.iconEl }}</span>
                   <span style="flex:1;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;line-height:1.25">{{ m.label }}</span>
                   <span style="flex-shrink:0;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:12px;color:{{ m.rowNumFg }};transition:color .25s">{{ m.n }}</span>
                 </button>
@@ -1865,7 +1870,7 @@
       </section>
 
       <!-- industries -->
-      <section style="background:var(--mist);padding:0 0 clamp(60px,8vw,104px)">
+      <section style="background-color:var(--mist);background-image:radial-gradient(circle at 90% -80px,{{ activeService.accentSoft }},transparent 55%),radial-gradient(rgba(90,86,165,.06) 1px,transparent 1px);background-size:auto,22px 22px;padding:0 0 clamp(60px,8vw,104px)">
         <div style="max-width:1100px;margin:0 auto;padding:0 clamp(20px,4vw,48px)">
           <div data-reveal style="margin-bottom:28px">
             <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--purple);font-weight:600;margin-bottom:12px">Categories we grow</div>
@@ -1949,9 +1954,9 @@
                 </div>
               </div>
             </div>
-            <div class="se-tilt" style="position:absolute;bottom:-16px;left:-16px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;box-shadow:0 22px 44px -22px rgba(22,17,42,.55);display:flex;align-items:center;gap:10px">
+            <div class="se-float-b" style="position:absolute;bottom:-16px;left:-16px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;box-shadow:0 22px 44px -22px rgba(22,17,42,.55);display:flex;align-items:center;gap:10px">
               <span style="display:flex;gap:1px;color:var(--amber)"><svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg></span>
-              <div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:14px;color:var(--ink);line-height:1">4.9</div><div style="font-size:9.5px;color:var(--muted)">avg rating</div></div>
+              <div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:14px;color:var(--ink);line-height:1">4.8</div><div style="font-size:9.5px;color:var(--muted)">avg rating</div></div>
             </div>
           </div>
         </div>
@@ -1959,6 +1964,7 @@
 
       <!-- 90-day roadmap -->
       <section id="svc-process" style="background:var(--ink);color:#fff;padding:clamp(60px,8vw,104px) 0;position:relative;overflow:hidden;scroll-margin-top:130px">
+        <div class="se-anim" aria-hidden="true" style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);background-size:200% 100%;animation:seGradShift 8s ease infinite;z-index:1"></div>
         <div data-parallax="0.06" style="position:absolute;top:-120px;right:-100px;width:420px;height:420px;border-radius:46% 54% 60% 40%/52% 44% 56% 48%;background:radial-gradient(circle at 40% 40%,{{ activeService.accent }},transparent 72%);opacity:.22;pointer-events:none"></div>
         <div style="position:relative;max-width:1100px;margin:0 auto;padding:0 clamp(20px,4vw,48px)">
           <div data-reveal style="max-width:600px;margin-bottom:40px">
@@ -1967,14 +1973,14 @@
             <p style="font-size:1.05rem;line-height:1.6;color:#C2C0DE;margin:0">No vague onboarding. Here's exactly what happens once we start.</p>
           </div>
           <div style="position:relative;display:flex;flex-direction:column;gap:14px">
-            <div data-reveal class="se-tilt" style="display:flex;flex-wrap:wrap;gap:clamp(14px,2.5vw,28px);align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:clamp(22px,3vw,32px)">
+            <div data-reveal="left" class="se-tilt" style="display:flex;flex-wrap:wrap;gap:clamp(14px,2.5vw,28px);align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:clamp(22px,3vw,32px)">
               <div style="flex:0 0 auto;display:flex;align-items:center;gap:14px;min-width:180px">
                 <span style="flex-shrink:0;width:54px;height:54px;border-radius:15px;background:linear-gradient(140deg,{{ activeService.accent }},rgba(0,0,0,.25));display:flex;align-items:center;justify-content:center;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:1.3rem;color:#fff;box-shadow:0 12px 26px -12px rgba(0,0,0,.6)">01</span>
                 <div><div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--lav);font-weight:700">Days 1 to 14</div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:#fff">Onboard &amp; audit</div></div>
               </div>
               <p style="flex:1;min-width:240px;font-size:14.5px;line-height:1.55;color:#C2C0DE;margin:0">Full account access, a deep teardown of ads, listings and health, and a prioritised list of the fastest, most profitable wins.</p>
             </div>
-            <div data-reveal class="se-tilt" style="display:flex;flex-wrap:wrap;gap:clamp(14px,2.5vw,28px);align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:clamp(22px,3vw,32px)">
+            <div data-reveal="right" class="se-tilt" style="display:flex;flex-wrap:wrap;gap:clamp(14px,2.5vw,28px);align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:clamp(22px,3vw,32px)">
               <div style="flex:0 0 auto;display:flex;align-items:center;gap:14px;min-width:180px">
                 <span style="flex-shrink:0;width:54px;height:54px;border-radius:15px;background:linear-gradient(140deg,{{ activeService.accent }},rgba(0,0,0,.25));display:flex;align-items:center;justify-content:center;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:1.3rem;color:#fff;box-shadow:0 12px 26px -12px rgba(0,0,0,.6)">02</span>
                 <div><div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--lav);font-weight:700">Days 15 to 45</div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:#fff">Rebuild &amp; launch</div></div>
@@ -2024,7 +2030,7 @@
       <!-- service testimonial -->
       <section style="background:var(--mist);padding:clamp(60px,8vw,100px) 0">
         <div style="max-width:920px;margin:0 auto;padding:0 clamp(20px,4vw,48px)">
-          <figure data-reveal class="se-tilt" style="margin:0;background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(28px,4.5vw,48px);position:relative;overflow:hidden;box-shadow:0 30px 70px -40px rgba(22,17,42,.4)">
+          <figure data-reveal="scale" class="se-tilt" style="margin:0;background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(28px,4.5vw,48px);position:relative;overflow:hidden;box-shadow:0 30px 70px -40px rgba(22,17,42,.4)">
             <div style="position:absolute;top:18px;right:34px;font-family:'Cabinet Grotesk',sans-serif;font-size:8rem;line-height:1;color:{{ activeService.accentSoft }};pointer-events:none">"</div>
             <div style="position:relative;display:flex;gap:3px;color:var(--amber);margin-bottom:20px">
               <svg width="19" height="19" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg width="19" height="19" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg width="19" height="19" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg width="19" height="19" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg width="19" height="19" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
@@ -2057,7 +2063,7 @@
                   <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:4.5rem;color:rgba(255,255,255,.16);letter-spacing:-.03em">{{ v.initial }}</span>
                   <img class="se-vid-img" src="{{ v.thumb }}" alt="Video testimonial from {{ v.name }}" loading="lazy" onLoad="{{ imgFallback }}" style="position:relative;width:100%;height:100%;object-fit:cover;display:block"/>
                   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,9,24,.15) 40%,rgba(13,9,24,.85) 100%)"></div>
-                  <span class="se-vid-play" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.7)"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="color:#16112A;margin-left:3px"><path d="M7 5v14l12-7z"/></svg></span>
+                  <span class="se-vid-play" style="position:absolute;top:50%;left:50%;margin:-28px 0 0 -28px;width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.7)"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="color:#16112A;margin-left:3px"><path d="M7 5v14l12-7z"/></svg></span>
                   <span style="position:absolute;top:12px;left:12px;display:inline-flex;align-items:center;gap:6px;background:rgba(13,9,24,.7);backdrop-filter:blur(4px);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:5px 10px;border-radius:8px"><svg width="12" height="12" viewBox="0 0 24 24" fill="#FF0000"><path d="M23 12a3 3 0 0 0-2.1-2.1C19 9.4 12 9.4 12 9.4s-7 0-8.9.5A3 3 0 0 0 1 12a31 31 0 0 0 0 .1 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5A3 3 0 0 0 23 12z" opacity=".9"/><path d="M10 15l5-3-5-3z" fill="#fff"/></svg>Watch</span>
                 </div>
                 <div style="padding:16px 18px 18px">
@@ -2123,7 +2129,7 @@
           <div data-reveal style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:30px">
             <div style="max-width:560px">
               <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--lav);font-weight:600;margin-bottom:14px">Receipts, not adjectives</div>
-              <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:1.02;letter-spacing:-.03em;margin:0">Real accounts. Real screenshots.</h2>
+              <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:1.02;letter-spacing:-.03em;margin:0">Real accounts. Real <span class="se-gradtext">screenshots.</span></h2>
             </div>
             <a href="#/case-studies" onClick="{{ go }}" style="display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:600;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,.22);padding:12px 20px;border-radius:12px" style-hover="background:rgba(255,255,255,.08)">All case studies <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
@@ -2180,7 +2186,7 @@
             </div>
           </div>
           <div data-reveal style="position:relative;background:linear-gradient(180deg,#FBFBFE,#fff);border:1px solid var(--line);border-radius:22px;padding:clamp(18px,3vw,32px);box-shadow:0 24px 50px -30px rgba(22,17,42,.25)">
-            <div style="position:absolute;top:clamp(14px,2.5vw,26px);right:clamp(14px,2.5vw,26px);display:flex;align-items:center;gap:9px;background:var(--ink);border-radius:12px;padding:10px 14px;box-shadow:0 16px 32px -14px rgba(0,0,0,.55);z-index:2">
+            <div class="se-chartbadge" style="position:absolute;top:clamp(14px,2.5vw,26px);right:clamp(14px,2.5vw,26px);display:flex;align-items:center;gap:9px;background:var(--ink);border-radius:12px;padding:10px 14px;box-shadow:0 16px 32px -14px rgba(0,0,0,.55);z-index:2">
               <span style="width:28px;height:28px;border-radius:8px;background:{{ activeService.accentSoft }};color:{{ activeService.accent }};display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
               <span style="line-height:1.1"><span style="display:block;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:14.5px;color:#fff">+416%</span><span style="display:block;font-size:10.5px;color:#A8A6C4;font-weight:600">best account growth</span></span>
             </div>
@@ -2229,7 +2235,7 @@
                 <div style="padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px;flex:1">
                   <div style="font-size:12.5px;color:var(--muted);font-weight:600">{{ c.brand }}</div>
                   <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.1rem;line-height:1.3;letter-spacing:-.01em">{{ c.title }}</div>
-                  <span style="display:inline-flex;align-items:center;gap:7px;color:var(--purple);font-weight:700;font-size:14px;margin-top:auto">Read the case study <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  <span style="display:inline-flex;align-items:center;gap:7px;color:var(--purple);font-weight:700;font-size:14px;margin-top:auto">Read the case study <svg class="se-slide-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                 </div>
               </a>
             </sc-for>
@@ -2250,7 +2256,7 @@
                   <span style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--mist);display:flex;align-items:center;justify-content:center;color:var(--purple);transition:transform .25s;transform:rotate({{ f.rot }})">
                     <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
                 </button>
-                <sc-if value="{{ f.open }}"><div style="padding:0 22px 22px;font-size:1rem;line-height:1.6;color:var(--ink-soft)">{{ f.a }}</div></sc-if>
+                <sc-if value="{{ f.open }}"><div class="se-accordion-body" style="padding:0 22px 22px;font-size:1rem;line-height:1.6;color:var(--ink-soft)">{{ f.a }}</div></sc-if>
               </div>
             </sc-for>
           </div>
@@ -2284,7 +2290,7 @@
       <!-- service CTA -->
       <section style="background:var(--mist);padding:clamp(56px,7vw,92px) 0;text-align:center">
         <div data-reveal style="max-width:680px;margin:0 auto;padding:0 clamp(20px,4vw,48px)">
-          <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:1.08;letter-spacing:-.02em;margin:0 0 18px">See exactly what this could do for you.</h2>
+          <div style="width:72px;height:4px;border-radius:3px;margin:0 auto 20px;background:linear-gradient(95deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)"></div><h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:1.08;letter-spacing:-.02em;margin:0 0 18px">See exactly what this could do for you.</h2>
           <p style="font-size:1.1rem;line-height:1.6;color:var(--ink-soft);margin:0 0 28px">Book a free audit. We'll review your channel live and hand you a prioritised roadmap, no pressure, no obligation.</p>
           <a href="#/contact" onClick="{{ go }}" style="display:inline-flex;align-items:center;gap:9px;background:var(--purple);color:#fff;font-weight:600;font-size:16px;text-decoration:none;padding:15px 28px;border-radius:13px" style-hover="transform:translateY(-2px)">Get a Free Audit
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
