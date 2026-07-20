@@ -1767,11 +1767,11 @@
       <nav style="position:sticky;top:73px;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)">
         <div style="max-width:1100px;margin:0 auto;padding:0 clamp(20px,4vw,48px);height:56px;display:flex;align-items:center;gap:6px">
           <div class="se-scroll-fade" style="display:flex;align-items:center;gap:2px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;flex:1;margin-right:8px">
-            <button onClick="{{ svcJump.overview }}" class="se-subnav-link" style="flex-shrink:0;font:inherit;font-weight:600;font-size:14px;color:var(--ink-soft);background:none;border:0;cursor:pointer;padding:9px 13px;border-radius:9px;white-space:nowrap">Overview</button>
-            <button onClick="{{ svcJump.manage }}" class="se-subnav-link" style="flex-shrink:0;font:inherit;font-weight:600;font-size:14px;color:var(--ink-soft);background:none;border:0;cursor:pointer;padding:9px 13px;border-radius:9px;white-space:nowrap">What we manage</button>
-            <button onClick="{{ svcJump.process }}" class="se-subnav-link" style="flex-shrink:0;font:inherit;font-weight:600;font-size:14px;color:var(--ink-soft);background:none;border:0;cursor:pointer;padding:9px 13px;border-radius:9px;white-space:nowrap">Process</button>
-            <button onClick="{{ svcJump.results }}" class="se-subnav-link" style="flex-shrink:0;font:inherit;font-weight:600;font-size:14px;color:var(--ink-soft);background:none;border:0;cursor:pointer;padding:9px 13px;border-radius:9px;white-space:nowrap">Results</button>
-            <button onClick="{{ svcJump.faqs }}" class="se-subnav-link" style="flex-shrink:0;font:inherit;font-weight:600;font-size:14px;color:var(--ink-soft);background:none;border:0;cursor:pointer;padding:9px 13px;border-radius:9px;white-space:nowrap">FAQs</button>
+            <button onClick="{{ svcJump.overview }}" class="se-subnav-link" style="flex-shrink:0;font:inherit;font-weight:600;font-size:14px;color:{{ svcNav.overview.c }};background:{{ svcNav.overview.bg }};border:0;cursor:pointer;padding:9px 13px;border-radius:9px;white-space:nowrap;transition:background .25s,color .25s">Overview</button>
+            <button onClick="{{ svcJump.manage }}" class="se-subnav-link" style="flex-shrink:0;font:inherit;font-weight:600;font-size:14px;color:{{ svcNav.manage.c }};background:{{ svcNav.manage.bg }};border:0;cursor:pointer;padding:9px 13px;border-radius:9px;white-space:nowrap;transition:background .25s,color .25s">What we manage</button>
+            <button onClick="{{ svcJump.process }}" class="se-subnav-link" style="flex-shrink:0;font:inherit;font-weight:600;font-size:14px;color:{{ svcNav.process.c }};background:{{ svcNav.process.bg }};border:0;cursor:pointer;padding:9px 13px;border-radius:9px;white-space:nowrap;transition:background .25s,color .25s">Process</button>
+            <button onClick="{{ svcJump.results }}" class="se-subnav-link" style="flex-shrink:0;font:inherit;font-weight:600;font-size:14px;color:{{ svcNav.results.c }};background:{{ svcNav.results.bg }};border:0;cursor:pointer;padding:9px 13px;border-radius:9px;white-space:nowrap;transition:background .25s,color .25s">Results</button>
+            <button onClick="{{ svcJump.faqs }}" class="se-subnav-link" style="flex-shrink:0;font:inherit;font-weight:600;font-size:14px;color:{{ svcNav.faqs.c }};background:{{ svcNav.faqs.bg }};border:0;cursor:pointer;padding:9px 13px;border-radius:9px;white-space:nowrap;transition:background .25s,color .25s">FAQs</button>
           </div>
           <a href="#/contact" onClick="{{ go }}" class="se-press se-subnav-cta" style="flex-shrink:0;display:inline-flex;align-items:center;gap:7px;background:var(--purple);color:#fff;font-weight:700;font-size:13.5px;text-decoration:none;padding:9px 16px;border-radius:10px;box-shadow:0 8px 20px -10px rgba(90,86,165,.9)">Free Audit <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
@@ -2883,6 +2883,7 @@ class Component extends DCLogic {
   state = {
     route: this.parse(),
     menuOpen: false,
+    activeSec: '',
     mobSvcOpen: false,
     waOpen: false,
     megaOpen: false,
@@ -2918,7 +2919,7 @@ class Component extends DCLogic {
 
   componentDidMount() {
     this._onHash = () => {
-      this.setState({ route: this.parse(), menuOpen: false, megaOpen: false });
+      this.setState({ route: this.parse(), menuOpen: false, megaOpen: false, activeSec: '' });
       try { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); } catch(e){}
       this.setTitle();
     };
@@ -2940,6 +2941,12 @@ class Component extends DCLogic {
             const center = rect.top + rect.height / 2 - window.innerHeight / 2;
             el.style.transform = 'translate3d(0,' + (-center * sp).toFixed(1) + 'px,0)';
           });
+        }
+        if (this.state.route && this.state.route.name === 'service') {
+          const ids = ['svc-overview', 'svc-manage', 'svc-process', 'svc-results', 'svc-faqs'];
+          let act = '';
+          for (const id of ids) { const sec = document.getElementById(id); if (sec && sec.getBoundingClientRect().top <= 150) act = id; }
+          if (act !== this.state.activeSec) this.setState({ activeSec: act });
         }
       });
     };
@@ -3043,7 +3050,11 @@ class Component extends DCLogic {
     // safety: reveal everything after 1s (scheduled first so nothing can block it)
     clearTimeout(this._revealFallback);
     this._revealFallback = setTimeout(() => {
-      this._root && this._root.querySelectorAll('[data-reveal]').forEach(el => { if (!el.dataset.revealed) revealNow(el, 0); });
+      if (!this._root) return;
+      const all = this._root.querySelectorAll('[data-reveal]');
+      const ioAlive = Array.prototype.some.call(all, el => el.dataset.revealed);
+      const vh2 = Math.max(window.innerHeight || 0, document.documentElement.clientHeight || 0, 600);
+      all.forEach(el => { if (!el.dataset.revealed && (!ioAlive || el.getBoundingClientRect().top < vh2 + 80)) revealNow(el, 0); });
     }, 1000);
     if (this._io) this._io.disconnect();
     this._io = new IntersectionObserver((entries) => {
@@ -3857,6 +3868,7 @@ class Component extends DCLogic {
       isService: r.name === 'service' && !!activeService && !auto,
       isAuto: !!auto, auto,
       svcJump: { overview: this.scrollToSec('svc-overview'), manage: this.scrollToSec('svc-manage'), process: this.scrollToSec('svc-process'), results: this.scrollToSec('svc-results'), faqs: this.scrollToSec('svc-faqs') },
+      svcNav: (() => { const a = this.state.activeSec; const mk = (id) => ({ bg: a === id ? 'var(--lav-2)' : 'transparent', c: a === id ? 'var(--purple-d)' : 'var(--ink-soft)' }); return { overview: mk('svc-overview'), manage: mk('svc-manage'), process: mk('svc-process'), results: mk('svc-results'), faqs: mk('svc-faqs') }; })(),
       isAbout: r.name === 'about',
       isCases: r.name === 'case-studies',
       isCase: r.name === 'case' && !!activeCase,
