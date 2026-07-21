@@ -863,7 +863,7 @@
                 <div style="position:relative;aspect-ratio:16/10;background:var(--ink);overflow:hidden">
                   <sc-if value="{{ v.thumb }}"><img src="{{ v.thumb }}" alt="Video review from {{ v.name }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"/></sc-if>
                   <span style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,17,42,.05) 40%,rgba(13,9,24,.92) 100%)"></span>
-                  <span style="position:absolute;top:12px;left:12px;display:inline-flex;align-items:center;gap:6px;background:rgba(13,9,24,.7);backdrop-filter:blur(4px);color:#fff;font-size:10.5px;font-weight:700;padding:5px 9px 5px 6px;border-radius:7px"><span style="display:inline-flex;width:18px;height:14px;background:#fff;border-radius:4px;align-items:center;justify-content:center"><svg viewBox="0 0 50 30" style="width:90%;height:auto"><path d="M7 19c7 4 23 4.5 31 0" stroke="#FF9900" stroke-width="3.6" fill="none" stroke-linecap="round"/><path d="M35 15l4.5 1.3-1.3 4.6" stroke="#FF9900" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="24" y="13" font-family="Arial,sans-serif" font-weight="800" font-size="14" fill="#232F3E" text-anchor="middle">a</text></svg></span>Amazon</span>
+                  <span style="position:absolute;top:12px;left:12px;display:inline-flex;align-items:center;gap:6px;background:rgba(13,9,24,.7);backdrop-filter:blur(4px);color:#fff;font-size:10.5px;font-weight:700;padding:5px 9px 5px 6px;border-radius:7px"><span style="display:inline-flex;width:18px;height:14px;background:#fff;border-radius:4px;align-items:center;justify-content:center"><svg width="9" height="9" viewBox="0 0 24 24" fill="var(--purple)"><path d="M8 5v14l11-7z"/></svg></span>Client review</span>
                   <span class="se-logo-chip" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.5)"><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--purple)"><path d="M8 5v14l11-7z"/></svg></span>
                   <div style="position:absolute;left:16px;right:16px;bottom:14px"><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.05rem;color:#fff">{{ v.name }}</div><div style="font-size:12px;color:#C2C0DE;margin-top:2px">{{ v.role }}</div></div>
                 </div>
@@ -871,7 +871,7 @@
               </a>
             </sc-for>
           </div>
-          <p style="font-size:12px;color:var(--muted);margin-top:14px">Reviews open on YouTube. Every review is from an Amazon brand owner who worked directly with our team.</p>
+          <p style="font-size:12px;color:var(--muted);margin-top:14px">Reviews open on YouTube. Every review is from a brand owner who worked directly with our team.</p>
         </div>
       </section>
 
@@ -3490,13 +3490,15 @@ class Component extends DCLogic {
   }
 
   videoData() {
+    // Sourced from youtube.com/@ShopinEcom. The channel holds 11 uploads, but five are
+    // alternate takes of the same six speakers, so one upload per speaker is listed here.
     return [
-      { id:'UC664_1SwS8', name:'Verified brand owner', role:'Amazon brand owner', market:'Amazon', quote:'A brand owner shares, in their own words, what changed after our team took over their marketplace growth.' },
-      { id:'PJCS29OBmKQ', name:'Brian Swoope', role:'Amazon brand owner', market:'Amazon', quote:'Brian walks through how our team took over his Amazon account and grew it from the ground up.' },
-      { id:'vZiD33iB1lo', name:'Jay', role:'Amazon brand owner', market:'Amazon', quote:'Jay talks about consistent growth on Amazon after handing over management to our team.' },
-      { id:'vKPyKF7vf5o', name:'Angela', role:'Amazon brand owner', market:'Amazon', quote:'Angela breaks down her experience working with us and the results she has seen on her store.' },
-      { id:'43oSz5jY_F0', name:'Chris', role:'Amazon brand owner', market:'Amazon', quote:'Chris shares what it is like having our team run his Amazon brand and the growth that followed.' },
-      { id:'IOLBY-sIkCY', name:'Verified brand owner', role:'Amazon brand owner', market:'Amazon', quote:'A brand owner shares how we fixed his listings, ads and strategy, and what changed in the numbers.' }
+      { id:'GzvV2I8rm9E', name:'What our clients say', role:'Client compilation \u00b7 3:01' },
+      { id:'pZ-ZqjVP80U', name:'Client review 01', role:'Verified brand owner \u00b7 0:32' },
+      { id:'Zmu6jWYhi0c', name:'Client review 02', role:'Verified brand owner \u00b7 0:34' },
+      { id:'zZvC8pOi9wU', name:'Client review 03', role:'Verified brand owner \u00b7 1:00' },
+      { id:'hJvaCyK3hMs', name:'Client review 04', role:'Verified brand owner \u00b7 0:32' },
+      { id:'RGry4dZ-cdQ', name:'Client review 05', role:'Verified brand owner \u00b7 0:45' }
     ];
   }
 
