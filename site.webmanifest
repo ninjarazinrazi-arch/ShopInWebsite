@@ -1,0 +1,11 @@
+{
+  "name": "Shopinecom",
+  "short_name": "Shopinecom",
+  "icons": [
+    { "src": "assets/favicon-192.png", "sizes": "192x192", "type": "image/png" }
+  ],
+  "theme_color": "#5A56A5",
+  "background_color": "#16112A",
+  "display": "browser",
+  "start_url": "/"
+}
