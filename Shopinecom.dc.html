@@ -184,7 +184,7 @@
   @media (max-width:340px){.se-ind-grid{grid-template-columns:1fr}}
   @media (max-width:900px){.se-inc-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
   @media (max-width:340px){.se-inc-grid{grid-template-columns:1fr!important}}
-  /* A {{ }} value renders inside <span class="sc-interp">, so the parent div carrying
+  /* A {{ }} value renders inside an sc-interp span, so the parent div carrying
      background-clip:text had no glyphs of its own to clip to: the gradient painted as a solid
      bar and the inherited -webkit-text-fill-color:transparent blanked the number. The gradient
      now sits on the span that owns the text; the inline colour is the visible fallback. */
