@@ -178,6 +178,10 @@
   .se-expcard:active{transform:scale(.985)}
   .se-expcard:focus-visible{outline:2px solid var(--lav);outline-offset:3px}
   @media (max-width:900px){.se-expcard{min-height:44px}}
+  @media (min-width:901px){.se-grid-5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}}
+  .se-ind-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+  @media (max-width:900px){.se-ind-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media (max-width:340px){.se-ind-grid{grid-template-columns:1fr}}
   /* A {{ }} value renders inside <span class="sc-interp">, so the parent div carrying
      background-clip:text had no glyphs of its own to clip to: the gradient painted as a solid
      bar and the inherited -webkit-text-fill-color:transparent blanked the number. The gradient
@@ -425,7 +429,7 @@
           <!-- LEFT: text -->
           <div>
             <div class="se-hero-1" style="display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:100px;padding:8px 20px 8px 8px;margin-bottom:26px;box-shadow:0 8px 26px -12px rgba(255,153,0,.5)">
-              <span style="display:inline-flex;align-items:center;background:#fff;border-radius:100px;padding:6px 13px;box-shadow:0 2px 8px -2px rgba(0,0,0,.3)"><img src="assets/badges/amazon-verified-partner.webp" alt="" width="120" height="40" style="height:40px;width:auto;display:block"/></span>
+              <span style="display:inline-flex;align-items:center;background:#fff;border-radius:16px;padding:8px 16px;box-shadow:0 2px 10px -2px rgba(0,0,0,.35)"><svg width="118" height="44" viewBox="0 0 118 44" role="img" aria-label="Amazon Ads Verified Partner"><text x="2" y="17" font-family="Arial,sans-serif" font-weight="700" font-size="16" fill="#232F3E">amazon</text><text x="63" y="17" font-family="Arial,sans-serif" font-weight="400" font-size="16" fill="#232F3E">ads</text><path d="M4 21c9 5 26 5.5 36 .5" stroke="#FF9900" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M35 19.5l5.5 1.6-1.6 5.4" stroke="#FF9900" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="2" y="39" font-family="Arial,sans-serif" font-weight="600" font-size="12.5" fill="#5A5770">Verified partner</text></svg></span>
               <span style="display:flex;flex-direction:column;line-height:1.15"><span style="font-size:13.5px;font-weight:700;color:#fff">Amazon Ads Verified Partner</span><span style="display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:500;color:#D9D7EC"><span style="color:var(--amber)">&#9733;</span>4.8 client rating</span></span>
             </div>
             <h1 class="se-hero-2" style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.6rem,5.4vw,4.5rem);line-height:1.02;letter-spacing:-.025em;margin:0 0 22px">Marketplace growth,<br/><span class="se-gradtext">managed end to end.</span></h1>
@@ -998,7 +1002,7 @@
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;flex-wrap:wrap">
               <span style="font-size:13px;color:#A8A6C4">You sell on <strong style="color:#fff;font-weight:700">{{ exFromName }}</strong>. Here's where we take you next:</span>
             </div>
-            <div class="se-fill-grid se-grid-anim">
+            <div class="se-fill-grid se-grid-anim se-grid-5">
               <button onClick="{{ exF.amazon.set }}" class="se-tilt se-expcard" style="display:block;width:100%;text-align:left;font:inherit;cursor:pointer;background:{{ exF.amazon.cardBg }};border:1px solid {{ exF.amazon.cardBorder }};border-radius:16px;padding:16px;opacity:{{ exF.amazon.dim }};transition:all .3s">
                 <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:32px;background:#fff;border-radius:9px;padding:6px;margin-bottom:12px"><svg viewBox="0 0 50 30" style="width:100%;height:auto"><path d="M7 19c7 4 23 4.5 31 0" stroke="#FF9900" stroke-width="3.4" fill="none" stroke-linecap="round"/><path d="M35 15l4.5 1.3-1.3 4.6" stroke="#FF9900" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="24" y="13" font-family="Arial,sans-serif" font-weight="800" font-size="14" fill="#232F3E" text-anchor="middle">a</text></svg></span>
                 <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:#fff;margin-bottom:8px">Amazon</div>
@@ -1053,7 +1057,7 @@
                 <h3 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.4rem,3.5vw,2.1rem);letter-spacing:-.02em;margin:0 0 10px">All-in-one marketplace expertise</h3>
                 <p style="font-size:15px;line-height:1.6;color:#C2C0DE;margin:0">One team running Amazon, TikTok Shop, Shopify, Walmart and eBay across the US and Europe, so every decision compounds instead of cancelling out.</p>
               </div>
-              <div style="position:relative;display:flex;flex-wrap:wrap;gap:8px;max-width:200px">
+              <div style="position:relative;display:flex;flex-wrap:wrap;gap:8px;max-width:264px">
                 <span class="se-chiphover" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:36px;background:#fff;border-radius:10px;padding:7px"><svg viewBox="0 0 50 30" style="width:100%;height:auto"><path d="M7 19c7 4 23 4.5 31 0" stroke="#FF9900" stroke-width="3.4" fill="none" stroke-linecap="round"/><path d="M35 15l4.5 1.3-1.3 4.6" stroke="#FF9900" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="24" y="13" font-family="Arial,sans-serif" font-weight="800" font-size="14" fill="#232F3E" text-anchor="middle">a</text></svg></span>
                 <span class="se-chiphover" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:36px;background:#fff;border-radius:10px;padding:7px"><svg viewBox="0 0 32 32" style="width:100%;height:100%"><g stroke="#0071CE" stroke-width="3.6" stroke-linecap="round"><line x1="16" y1="3" x2="16" y2="11"/><line x1="16" y1="21" x2="16" y2="29"/><line x1="4.8" y1="9.5" x2="11.6" y2="13.5"/><line x1="20.4" y1="18.5" x2="27.2" y2="22.5"/><line x1="4.8" y1="22.5" x2="11.6" y2="18.5"/><line x1="20.4" y1="13.5" x2="27.2" y2="9.5"/></g></svg></span>
                 <span class="se-chiphover" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:36px;background:#111;border-radius:10px;padding:8px"><svg viewBox="0 0 32 34" style="width:100%;height:100%"><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#25F4EE" transform="translate(-1.2,-1.2)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#FE2C55" transform="translate(1.2,1.2)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#fff"/></svg></span>
@@ -1185,9 +1189,9 @@
           </div>
           <div data-reveal style="margin-bottom:28px">
             <div class="se-scroll-fade" style="overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch">
-            <div style="position:relative;display:flex;gap:6px;min-width:max-content">
-            <div style="position:absolute;left:0;right:0;top:21px;height:3px;background:var(--line);border-radius:2px"></div>
-            <div style="position:absolute;left:0;top:21px;height:3px;background:linear-gradient(95deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);background-size:200% 100%;animation:seGradShift 5s ease infinite;border-radius:2px;width:{{ onbProgress }};transition:width .45s cubic-bezier(.16,1,.3,1);box-shadow:0 0 12px -2px rgba(90,86,165,.6)"></div>
+            <div style="position:relative;display:flex;align-items:flex-start;gap:6px;min-width:max-content">
+            <div style="position:absolute;left:0;right:0;top:19.5px;height:3px;background:var(--line);border-radius:2px"></div>
+            <div style="position:absolute;left:0;top:19.5px;height:3px;background:linear-gradient(95deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);background-size:200% 100%;animation:seGradShift 5s ease infinite;border-radius:2px;width:{{ onbProgress }};transition:width .45s cubic-bezier(.16,1,.3,1);box-shadow:0 0 12px -2px rgba(90,86,165,.6)"></div>
               <sc-for list="{{ onbList }}" as="o" hint-placeholder-count="7">
                 <button onClick="{{ o.set }}" style="flex:1;min-width:90px;text-align:center;font:inherit;cursor:pointer;background:none;border:0;padding:0">
                   <span class="se-tap" style="display:flex;width:42px;height:42px;margin:0 auto 10px;border-radius:50%;background:{{ o.oBg }};color:{{ o.oColor }};border:2px solid {{ o.oBorder }};align-items:center;justify-content:center;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:13px;transition:all .25s">{{ o.n }}</span>
@@ -1430,11 +1434,11 @@
                 <div><div style="font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#15724A;margin-bottom:2px">Step 3 · You</div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:.98rem;color:var(--ink);line-height:1.15">Collect the profit</div></div>
               </div>
             </div>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:14px">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(178px,100%),1fr));gap:14px">
               <sc-for list="{{ auto.includedList }}" as="it" hint-placeholder-count="6">
                 <div data-reveal="zoom" class="se-gradtop" style="position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 18px 20px;overflow:hidden;box-shadow:0 6px 20px -16px rgba(22,17,42,.5);transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-4px);box-shadow:0 18px 36px -18px rgba(22,17,42,.55)">
-                  <span style="position:absolute;top:15px;right:17px;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:.82rem;color:{{ auto.accent }};opacity:.38;letter-spacing:.02em">{{ it.n }}</span>
-                  <span style="display:flex;width:46px;height:46px;border-radius:13px;background:linear-gradient(140deg,{{ auto.accent }},{{ auto.accent2 }});align-items:center;justify-content:center;color:#fff;box-shadow:0 12px 24px -14px {{ auto.accent }};margin-bottom:14px">{{ it.icoEl }}</span>
+                  <span style="position:absolute;top:14px;right:14px;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:.72rem;color:{{ auto.accentDeep }};background:{{ auto.accentSoft }};padding:3px 9px;border-radius:100px;letter-spacing:.03em">{{ it.n }}</span>
+                  <span style="display:flex;width:46px;height:46px;border-radius:13px;background:{{ auto.accentSoft }};align-items:center;justify-content:center;color:{{ auto.accentDeep }};margin-bottom:14px">{{ it.icoEl }}</span>
                   <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3">{{ it.t }}</div>
                 </div>
               </sc-for>
@@ -1485,15 +1489,15 @@
             <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:{{ auto.accentDeep }};font-weight:700;margin-bottom:14px">Your security and control</div>
             <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.06;letter-spacing:-.025em;margin:0">Your money stays yours, always.</h2>
           </div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px;margin-bottom:26px">
+          <div style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:26px">
             <sc-for list="{{ auto.security }}" as="p" hint-placeholder-count="6">
-              <div data-reveal class="se-tilt" style="display:flex;gap:13px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px">
+              <div data-reveal class="se-tilt" style="flex:1 1 min(280px,100%);display:flex;gap:13px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px">
                 <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:{{ auto.accentSoft }};color:{{ auto.accentDeep }};display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></span>
                 <span style="font-size:14.5px;line-height:1.5;color:var(--ink);font-weight:500">{{ p }}</span>
               </div>
             </sc-for>
           </div>
-          <div data-reveal style="display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:100px;padding:12px 22px;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15px;color:var(--ink)"><span style="width:9px;height:9px;border-radius:50%;background:#15724A"></span>{{ auto.securityNote }}</div>
+          <div data-reveal style="display:flex;width:100%;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 22px;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15px;color:var(--ink)"><span style="width:9px;height:9px;border-radius:50%;background:#15724A"></span>{{ auto.securityNote }}</div>
         </div>
       </section>
       </sc-if>
@@ -1506,15 +1510,15 @@
             <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:{{ auto.accentDeep }};font-weight:700;margin-bottom:14px">Your part</div>
             <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.06;letter-spacing:-.025em;margin:0">{{ auto.roleTitle }}</h2>
           </div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px;margin-bottom:26px">
+          <div style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:26px">
             <sc-for list="{{ auto.role }}" as="rl" hint-placeholder-count="4">
-              <div data-reveal class="se-tilt" style="display:flex;gap:13px;align-items:flex-start;background:var(--mist);border:1px solid var(--line);border-radius:16px;padding:20px">
+              <div data-reveal class="se-tilt" style="flex:1 1 min(210px,100%);display:flex;gap:13px;align-items:flex-start;background:var(--mist);border:1px solid var(--line);border-radius:16px;padding:20px">
                 <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:{{ auto.accentSoft }};color:{{ auto.accentDeep }};display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7L9 18l-5-5"/></svg></span>
                 <span style="font-size:14.5px;line-height:1.5;color:var(--ink);font-weight:500">{{ rl }}</span>
               </div>
             </sc-for>
           </div>
-          <div data-reveal style="display:flex;align-items:flex-start;gap:11px;background:var(--mist);border:1px solid var(--line);border-radius:18px;padding:16px 22px;font-size:14.5px;line-height:1.55;color:var(--ink);max-width:660px"><span style="flex-shrink:0;width:9px;height:9px;border-radius:50%;background:{{ auto.accent }};margin-top:7px"></span>{{ auto.roleNote }}</div>
+          <div data-reveal style="display:flex;align-items:flex-start;gap:11px;background:var(--mist);border:1px solid var(--line);border-radius:14px;padding:14px 22px;font-size:14.5px;line-height:1.55;color:var(--ink);width:100%"><span style="flex-shrink:0;width:9px;height:9px;border-radius:50%;background:{{ auto.accent }};margin-top:7px"></span>{{ auto.roleNote }}</div>
         </div>
       </section>
       </sc-if>
@@ -1584,7 +1588,7 @@
               </div>
             </sc-for>
           </div>
-          <div data-reveal style="display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:100px;padding:12px 22px;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15px;color:var(--ink)"><span style="width:9px;height:9px;border-radius:50%;background:{{ auto.accent }}"></span>{{ auto.growthNote }}</div>
+          <div data-reveal style="display:flex;width:100%;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 22px;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15px;color:var(--ink)"><span style="width:9px;height:9px;border-radius:50%;background:{{ auto.accent }}"></span>{{ auto.growthNote }}</div>
         </div>
       </section>
       </sc-if>
@@ -1614,7 +1618,7 @@
           </div>
           </sc-if>
           <sc-if value="{{ auto.hasVideo }}">
-          <div data-reveal class="se-proofvids" style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:26px">
+          <div data-reveal class="se-proofvids" style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:26px">
             <sc-for list="{{ auto.proofVideoList }}" as="pv">
               <div class="se-vid" style="flex:1 1 200px;max-width:{{ pv.vmax }};border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:#0a0716">
                 <sc-if value="{{ pv.src }}"><video data-src="{{ pv.src }}" controls playsinline preload="metadata" aria-label="Sales proof video" style="width:100%;display:block;background:#0a0716"></video></sc-if>
@@ -1817,7 +1821,7 @@
             <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--purple);font-weight:600;margin-bottom:12px">Categories we grow</div>
             <h3 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.1;letter-spacing:-.02em;margin:0;max-width:560px">Deep experience across the verticals that move on this channel.</h3>
           </div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(180px,100%),1fr));gap:12px">
+          <div class="se-ind-grid">
             <sc-for list="{{ activeService.industryList }}" as="ind" hint-placeholder-count="8">
               <div data-reveal class="se-tilt se-cat" style="--cap-accent:{{ activeService.accent }};position:relative;overflow:hidden;display:flex;align-items:center;gap:13px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 17px;box-shadow:0 3px 14px -11px rgba(22,17,42,.4)">
                 <span class="se-cat-ico" style="flex-shrink:0;width:38px;height:38px;border-radius:11px;background:{{ activeService.accent }};background-image:linear-gradient(140deg,rgba(255,255,255,.34),rgba(255,255,255,0));display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 8px 18px -9px {{ activeService.accent }}">{{ ind.iconEl }}</span>
@@ -2218,7 +2222,7 @@
             <sc-for list="{{ svcOthers }}" as="o" hint-placeholder-count="4">
               <a href="#/services/{{ o.slug }}" onClick="{{ go }}" data-reveal class="se-tilt" style="display:flex;flex-direction:column;gap:14px;text-decoration:none;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:22px;backdrop-filter:blur(6px);transition:all .25s" style-hover="background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.24);transform:translateY(-3px)">
                 <span style="display:flex;align-items:center;justify-content:space-between">
-                  <span style="width:44px;height:44px;border-radius:13px;background:{{ o.g }};display:flex;align-items:center;justify-content:center;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:20px;color:#fff;box-shadow:0 12px 24px -10px {{ o.sh }}">{{ o.w }}</span>
+                  <span style="width:44px;height:44px;border-radius:13px;background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;box-shadow:0 12px 24px -10px {{ o.sh }}"><img src="{{ o.logo }}" alt="" style="width:100%;height:100%;object-fit:contain;display:block"/></span>
                   <span style="width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#C2C0D4"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                 </span>
                 <span style="line-height:1.2"><span style="display:block;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:5px">{{ o.n }}</span><span style="display:block;font-size:13px;color:#A8A6C4;font-weight:500">{{ o.t }}</span></span>
@@ -3972,7 +3976,7 @@ class Component extends DCLogic {
         'tiktok-shop-management': { n: 'TikTok Shop', g: 'linear-gradient(140deg,#2B2B33,#0F0F14)', t: 'Shop and content engine', w: 'T', sh: 'rgba(254,44,85,.4)' },
         'ebay-store-management': { n: 'eBay', g: 'linear-gradient(140deg,#E53238,#B71C1C)', t: 'Wholesale store growth', w: 'e', sh: 'rgba(229,50,56,.5)' },
         'global-expansion': { n: 'International Expansion', g: 'linear-gradient(140deg,#1A9455,#0B5B35)', t: 'US, UK and EU launch', w: 'I', sh: 'rgba(26,148,85,.5)' } };
-        return Object.keys(M).filter(k => k !== r.slug).map(k => ({ slug: k, ...M[k] })); })() : [],
+        const LK = { 'amazon-account-management':'amazon', 'walmart-seller-management':'walmart', 'tiktok-shop-management':'tiktok', 'ebay-store-management':'ebay', 'global-expansion':'gcc' }; const logos = this.marketplaceLogos(); return Object.keys(M).filter(k => k !== r.slug).map(k => ({ slug: k, ...M[k], logo: logos[LK[k]] })); })() : [],
       resources: this.resourceData(),
       openFaq: this.state.openFaq,
       showForm: !this.state.submitted,
