@@ -3,6 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -498,7 +503,7 @@
                 <svg width="72" height="34" viewBox="0 0 72 34" fill="none"><defs><linearGradient id="gA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#23A86B" stop-opacity=".25"/><stop offset="1" stop-color="#23A86B" stop-opacity="0"/></linearGradient></defs><path d="M2,28 12,24 22,26 32,16 42,18 52,9 70,3" fill="none" stroke="#15724A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M2,28 12,24 22,26 32,16 42,18 52,9 70,3 70,34 2,34Z" fill="url(#gA)"/></svg>
               </div>
               <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.3rem,7.5vw,4rem);line-height:.84;letter-spacing:-.04em;color:var(--ink)"><span data-count="25" data-prefix="$" data-suffix="M+">$25M+</span></div>
-              <div style="font-size:13px;line-height:1.4;color:var(--ink-soft);margin-top:12px;font-weight:500">Tracked sales across accounts we run</div><div style="margin-top:14px;padding-top:14px;border-top:1px solid rgba(22,17,42,.08);display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;color:var(--muted)"><span style="display:inline-flex;width:16px;height:16px;border-radius:5px;background:#E2F5EA;color:#15724A;align-items:center;justify-content:center"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Live Seller Central data</div>
+              <div style="font-size:13px;line-height:1.4;color:var(--ink-soft);margin-top:12px;font-weight:500">Tracked sales across accounts we run</div><div style="margin-top:14px;padding-top:14px;border-top:1px solid rgba(22,17,42,.08);display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;color:var(--muted)"><span style="display:inline-flex;width:16px;height:16px;border-radius:5px;background:#E2F5EA;color:#15724A;align-items:center;justify-content:center"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Live seller-dashboard data</div>
             </div>
             <!-- +416% -->
             <div data-reveal class="se-tilt se-shine se-metric-glow" style="position:relative;overflow:hidden;background:linear-gradient(165deg,#F2F1FC,#fff);border:1px solid #E4E2F4;border-radius:24px;padding:clamp(22px,3.5vw,34px)">
@@ -624,7 +629,7 @@
             <sc-for list="{{ proofShots }}" as="ps" hint-placeholder-count="4">
               <div class="se-tilt" style="flex:0 0 auto;width:min(250px,72vw);scroll-snap-align:start;background:linear-gradient(180deg,#221B36,#15101f);border:1px solid rgba(255,255,255,.1);border-radius:18px;overflow:hidden;box-shadow:0 20px 50px -30px rgba(0,0,0,.8)">
                 <div style="aspect-ratio:4/3;position:relative;background:#0a0716;overflow:hidden">
-                  <img src="{{ ps.src }}" alt="Amazon account result: {{ ps.value }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top right;display:block"/>
+                  <img src="{{ ps.src }}" alt="Verified account result: {{ ps.value }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top right;display:block"/>
                   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,9,24,0) 40%,rgba(13,9,24,.85) 100%)"></div>
                   <span style="position:absolute;top:11px;left:11px;display:inline-flex;align-items:center;gap:6px;background:rgba(13,9,24,.7);backdrop-filter:blur(4px);color:#fff;font-size:10px;font-weight:700;letter-spacing:.05em;padding:5px 9px;border-radius:7px"><span style="position:relative;width:6px;height:6px;flex-shrink:0"><span style="position:absolute;inset:0;border-radius:50%;background:#36C281"></span><span class="se-anim" style="position:absolute;inset:0;border-radius:50%;background:#36C281;animation:sePing 2s ease-out infinite"></span></span>LIVE</span>
                   <span style="position:absolute;bottom:10px;right:11px;display:inline-flex;align-items:center;gap:4px;background:rgba(54,194,129,.95);color:#06281A;font-size:11px;font-weight:800;padding:4px 9px;border-radius:7px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17l6-6 4 4 4-6"/></svg>{{ ps.growth }}</span>
@@ -636,7 +641,7 @@
               </div>
             </sc-for>
           </div>
-          <p style="font-size:12px;color:#8C8AA8;margin-top:14px">Live Seller Central accounts. Results vary by brand, margins, market and starting position.</p>
+          <p style="font-size:12px;color:#8C8AA8;margin-top:14px">Live Amazon Seller Central and TikTok Shop Seller Center accounts. Results vary by brand, margins, market and starting position.</p>
         </div>
       </section>
 
@@ -2070,10 +2075,10 @@
             <a href="#/case-studies" onClick="{{ go }}" style="display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:600;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,.22);padding:12px 20px;border-radius:12px" style-hover="background:rgba(255,255,255,.08)">All case studies <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
           <div tabindex="0" role="group" aria-label="Verified account screenshots" style="display:flex;gap:clamp(12px,1.5vw,16px);overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 10px;-webkit-overflow-scrolling:touch;scrollbar-width:none">
-            <sc-for list="{{ proofShots }}" as="ps" hint-placeholder-count="6">
+            <sc-for list="{{ svcProofShots }}" as="ps" hint-placeholder-count="6">
               <div class="se-tilt" style="flex:0 0 auto;width:min(260px,78vw);scroll-snap-align:start;background:linear-gradient(180deg,#221B36,#15101f);border:1px solid rgba(255,255,255,.1);border-radius:18px;overflow:hidden;box-shadow:0 24px 54px -30px rgba(0,0,0,.8)">
                 <div style="aspect-ratio:4/3;position:relative;background:#0a0716;overflow:hidden">
-                  <img src="{{ ps.src }}" alt="Verified Seller Central result: {{ ps.value }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block"/>
+                  <img src="{{ ps.src }}" alt="Verified seller dashboard result: {{ ps.value }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block"/>
                   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,9,24,0) 45%,rgba(13,9,24,.9) 100%)"></div>
                   <span style="position:absolute;top:11px;left:11px;display:inline-flex;align-items:center;gap:6px;background:rgba(13,9,24,.72);backdrop-filter:blur(4px);color:#fff;font-size:10px;font-weight:700;letter-spacing:.05em;padding:5px 9px;border-radius:7px"><span style="position:relative;width:6px;height:6px;flex-shrink:0"><span style="position:absolute;inset:0;border-radius:50%;background:#36C281"></span><span class="se-anim" style="position:absolute;inset:0;border-radius:50%;background:#36C281;animation:sePing 2s ease-out infinite"></span></span>LIVE</span>
                   <span style="position:absolute;bottom:10px;right:11px;display:inline-flex;align-items:center;gap:4px;background:rgba(54,194,129,.95);color:#06281A;font-size:11px;font-weight:800;padding:4px 9px;border-radius:7px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17l6-6 4 4 4-6"/></svg>{{ ps.growth }}</span>
@@ -2104,7 +2109,7 @@
               <div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14px;color:#fff;line-height:1.15">5 marketplaces</div><div style="font-size:12px;color:#A8A6C4">One accountable team</div></div>
             </div>
           </div>
-          <p style="font-size:12px;color:#8C8AA8;margin-top:18px">Live Amazon Seller Central accounts we run. Results vary by brand, margins, market and starting position.</p>
+          <p style="font-size:12px;color:#8C8AA8;margin-top:18px">Live seller dashboards from accounts we run. Results vary by brand, margins, market and starting position.</p>
         </div>
       </section>
 
@@ -2677,7 +2682,7 @@
             </div>
             <div>
               <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.3rem;margin:0 0 10px">Results disclaimer</h2>
-              <p style="font-size:1.02rem;line-height:1.65;color:var(--ink-soft);margin:0">Client results shown on this site are real results from live accounts we manage, captured from Seller Central. Interface panels labelled as concept or report previews are illustrative only. All figures are examples, not guarantees. Your results depend on your brand, margins, market, product and starting position. Past performance does not guarantee future results.</p>
+              <p style="font-size:1.02rem;line-height:1.65;color:var(--ink-soft);margin:0">Client results shown on this site are real results from live accounts we manage, captured from the platforms' own seller dashboards, Amazon Seller Central and TikTok Shop Seller Center. Interface panels labelled as concept or report previews are illustrative only. All figures are examples, not guarantees. Your results depend on your brand, margins, market, product and starting position. Past performance does not guarantee future results.</p>
             </div>
           </div>
           <div data-reveal style="margin-top:40px">
@@ -3497,6 +3502,22 @@ class Component extends DCLogic {
     ];
   }
 
+  proofShotsData() {
+    // platform tags drive the per-service results gallery; the home gallery shows all of them
+    return [
+      { src:'assets/proof/account-screenshots/account-ss-13.webp', value:'$1.78M', label:'Total sales on a managed US account', growth:'+416%', platform:'amazon' },
+      { src:'assets/proof/tiktok/tiktok-6mo-674k.webp', value:'$674K', label:'Six-month GMV on one TikTok Shop', growth:'+245%', platform:'tiktok' },
+      { src:'assets/proof/account-screenshots/account-ss-04.webp', value:'$497.7K', label:'Sales after rebuild and scale', growth:'+163%', platform:'amazon' },
+      { src:'assets/proof/tiktok/tiktok-28d-345k.webp', value:'$345.3K', label:'28-day GMV, TikTok Shop Seller Center', growth:'+221%', platform:'tiktok' },
+      { src:'assets/proof/account-screenshots/account-ss-22.webp', value:'\u00a31.43M', label:'Year-to-date sales, Amazon UK', growth:'YTD', platform:'amazon' },
+      { src:'assets/proof/tiktok/tiktok-nov-322k.webp', value:'$322.2K', label:'Single-month GMV and orders, TikTok Shop', growth:'+158%', platform:'tiktok' },
+      { src:'assets/proof/account-screenshots/account-ss-15.webp', value:'$194.7K', label:'Full-funnel growth result', growth:'+224%', platform:'amazon' },
+      { src:'assets/proof/tiktok/tiktok-28d-108k.webp', value:'$108.8K', label:'28-day GMV five weeks earlier, same shop', growth:'+40%', platform:'tiktok' },
+      { src:'assets/proof/account-screenshots/account-ss-06.webp', value:'\u00a3532K', label:'Total sales, managed account', growth:'Live', platform:'amazon' },
+      { src:'assets/proof/account-screenshots/account-ss-31.webp', value:'\u00a31.03M', label:'12-month sales, Amazon UK', growth:'12 mo', platform:'amazon' }
+    ];
+  }
+
   videoData() {
     // Sourced from youtube.com/@ShopinEcom. The channel holds 11 uploads, but five are
     // alternate takes of the same six speakers, so one upload per speaker is listed here.
@@ -4046,14 +4067,8 @@ class Component extends DCLogic {
         { title:'US and EU market knowledge', desc:'Deep expertise across the US, UK and European Amazon marketplaces.', grad:'linear-gradient(135deg,#5A56A5,#8B88C9)', icon:'<path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>' }
       ],
       testimonials: this.renderTestimonials(),
-      proofShots: [
-        { src:'assets/proof/account-screenshots/account-ss-13.webp', value:'$1.78M', label:'Total sales on a managed US account', growth:'+416%' },
-        { src:'assets/proof/account-screenshots/account-ss-04.webp', value:'$497.7K', label:'Sales after rebuild and scale', growth:'+163%' },
-        { src:'assets/proof/account-screenshots/account-ss-15.webp', value:'$194.7K', label:'Full-funnel growth result', growth:'+224%' },
-        { src:'assets/proof/account-screenshots/account-ss-22.webp', value:'£1.43M', label:'Year-to-date sales, Amazon UK', growth:'YTD' },
-        { src:'assets/proof/account-screenshots/account-ss-06.webp', value:'£532K', label:'Total sales, managed account', growth:'Live' },
-        { src:'assets/proof/account-screenshots/account-ss-31.webp', value:'£1.03M', label:'12-month sales, Amazon UK', growth:'12 mo' }
-      ],
+      proofShots: this.proofShotsData(),
+      svcProofShots: this.proofShotsData().filter(p => (r.name === 'service' && r.slug === 'tiktok-shop-management') ? p.platform === 'tiktok' : p.platform === 'amazon'),
       clientLogoImgs: ['ecom-hot-sauce','benz-hawk','byld-commerce','afm','extreme-commerce','orrys-vital','my-protect-kit','canarie-shirts','dot','bd'].map(n => 'assets/logos/'+n+'.webp')
     };
   }
