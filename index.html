@@ -182,6 +182,8 @@
   .se-ind-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
   @media (max-width:900px){.se-ind-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
   @media (max-width:340px){.se-ind-grid{grid-template-columns:1fr}}
+  @media (max-width:900px){.se-inc-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+  @media (max-width:340px){.se-inc-grid{grid-template-columns:1fr!important}}
   /* A {{ }} value renders inside <span class="sc-interp">, so the parent div carrying
      background-clip:text had no glyphs of its own to clip to: the gradient painted as a solid
      bar and the inherited -webkit-text-fill-color:transparent blanked the number. The gradient
@@ -1434,7 +1436,7 @@
                 <div><div style="font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#15724A;margin-bottom:2px">Step 3 · You</div><div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:.98rem;color:var(--ink);line-height:1.15">Collect the profit</div></div>
               </div>
             </div>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(178px,100%),1fr));gap:14px">
+            <div class="se-inc-grid" style="display:grid;grid-template-columns:repeat({{ auto.incCols }},minmax(0,1fr));gap:14px">
               <sc-for list="{{ auto.includedList }}" as="it" hint-placeholder-count="6">
                 <div data-reveal="zoom" class="se-gradtop" style="position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 18px 20px;overflow:hidden;box-shadow:0 6px 20px -16px rgba(22,17,42,.5);transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-4px);box-shadow:0 18px 36px -18px rgba(22,17,42,.55)">
                   <span style="position:absolute;top:14px;right:14px;font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:.72rem;color:{{ auto.accentDeep }};background:{{ auto.accentSoft }};padding:3px 9px;border-radius:100px;letter-spacing:.03em">{{ it.n }}</span>
@@ -1620,8 +1622,8 @@
           <sc-if value="{{ auto.hasVideo }}">
           <div data-reveal class="se-proofvids" style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:26px">
             <sc-for list="{{ auto.proofVideoList }}" as="pv">
-              <div class="se-vid" style="flex:1 1 200px;max-width:{{ pv.vmax }};border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:#0a0716">
-                <sc-if value="{{ pv.src }}"><video data-src="{{ pv.src }}" controls playsinline preload="metadata" aria-label="Sales proof video" style="width:100%;display:block;background:#0a0716"></video></sc-if>
+              <div class="se-vid" style="flex:1 1 min(260px,100%);max-width:420px;aspect-ratio:16/9;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:#0a0716">
+                <sc-if value="{{ pv.src }}"><video data-src="{{ pv.src }}" controls playsinline preload="metadata" aria-label="Sales proof video" style="width:100%;height:100%;object-fit:cover;display:block;background:#0a0716"></video></sc-if>
               </div>
             </sc-for>
           </div>
@@ -3815,7 +3817,7 @@ class Component extends DCLogic {
     const activeCase = (r.name === 'case') ? (cases.find(c => c.slug === r.slug) || null) : null;
     const autoMap = this.autoData();
     const autoRaw = (r.name === 'service' && autoMap[r.slug]) ? autoMap[r.slug] : null;
-    const auto = autoRaw ? { ...autoRaw, includedList: (autoRaw.included||[]).map((x,i)=>({ ...x, icoEl: autoIcEl(x.ic), n:(i+1<10?'0':'')+(i+1) })), reportList: (autoRaw.reports||[]).map(rp=>({ ...rp, hasItems: !!(rp.items&&rp.items.length) })), proofImgs: (autoRaw.proofImgs||[]).map(p=>({ ...p, ratio: autoRaw.proofRatio||'1600/801' })), hasSecurity: !!(autoRaw.security&&autoRaw.security.length), hasRole: !!(autoRaw.role&&autoRaw.role.length), hasGrowth: !!(autoRaw.growth&&autoRaw.growth.length), hasProof: !!(autoRaw.proofImgs&&autoRaw.proofImgs.length), proofVideoList: (function(){var vs=autoRaw.proofVideos||(autoRaw.proofVideo?[autoRaw.proofVideo]:[]);return vs.map(function(v){return {src:v, vmax:(vs.length>1?'240px':'420px')};});})(), hasVideo: !!(autoRaw.proofVideo || (autoRaw.proofVideos&&autoRaw.proofVideos.length)) } : null;
+    const auto = autoRaw ? { ...autoRaw, incCols: ((autoRaw.included||[]).length % 5 === 0) ? 5 : (((autoRaw.included||[]).length % 3 === 0) ? 3 : 4), includedList: (autoRaw.included||[]).map((x,i)=>({ ...x, icoEl: autoIcEl(x.ic), n:(i+1<10?'0':'')+(i+1) })), reportList: (autoRaw.reports||[]).map(rp=>({ ...rp, hasItems: !!(rp.items&&rp.items.length) })), proofImgs: (autoRaw.proofImgs||[]).map(p=>({ ...p, ratio: autoRaw.proofRatio||'1600/801' })), hasSecurity: !!(autoRaw.security&&autoRaw.security.length), hasRole: !!(autoRaw.role&&autoRaw.role.length), hasGrowth: !!(autoRaw.growth&&autoRaw.growth.length), hasProof: !!(autoRaw.proofImgs&&autoRaw.proofImgs.length), proofVideoList: (function(){var vs=autoRaw.proofVideos||(autoRaw.proofVideo?[autoRaw.proofVideo]:[]);return vs.map(function(v){return {src:v, vmax:(vs.length>1?'240px':'420px')};});})(), hasVideo: !!(autoRaw.proofVideo || (autoRaw.proofVideos&&autoRaw.proofVideos.length)) } : null;
     return {
       setRoot: this.setRoot, setMain: this.setMain, setProgress: this.setProgress, go: this.go, noop: this.noop,
       setField: this.setField, submitForm: this.submitForm, toggleFaq: this.toggleFaq,
