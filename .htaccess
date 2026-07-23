@@ -15,3 +15,13 @@ RewriteRule ^(.*)$ https://shopinecom.com/$1 [R=301,L]
 RedirectMatch 404 ^/(dist|reference-build)(/|$)
 RedirectMatch 404 ^/README\.md$
 </IfModule>
+
+# SPA routing: clean paths (/services/..., /about, /case/...) all serve the app.
+# Real files and directories are excluded so assets keep resolving normally.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !\.\w+$
+RewriteRule . /index.html [L]
+</IfModule>
