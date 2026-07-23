@@ -186,7 +186,7 @@
   @media (max-width:340px){.se-ind-grid{grid-template-columns:1fr}}
   @media (max-width:900px){.se-inc-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
   @media (max-width:340px){.se-inc-grid{grid-template-columns:1fr!important}}
-  @media (min-width:901px){.se-legalbar{padding-right:104px}}
+  .se-legalbar{padding-right:96px}
   /* A {{ }} value renders inside an sc-interp span, so the parent div carrying
      background-clip:text had no glyphs of its own to clip to: the gradient painted as a solid
      bar and the inherited -webkit-text-fill-color:transparent blanked the number. The gradient
@@ -274,8 +274,8 @@
             <!-- service cards -->
             <div>
               <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px"><span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700">Marketplace management</span><span style="flex:1;height:1px;background:var(--line)"></span></div>
-              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:6px">
-                <a href="#/services/amazon-account-management" onClick="{{ go }}" class="se-mega-card" style="display:flex;gap:12px;align-items:flex-start;padding:13px;border-radius:14px;border:1px solid transparent;text-decoration:none">
+              <div style="display:flex;flex-wrap:wrap;gap:6px">
+                <a href="#/services/amazon-account-management" onClick="{{ go }}" class="se-mega-card" style="flex:1 1 min(250px,100%);display:flex;gap:12px;align-items:flex-start;padding:13px;border-radius:14px;border:1px solid transparent;text-decoration:none">
                   <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;background:linear-gradient(140deg,#FF9900,#FF7A00);border-radius:11px;padding:8px;flex-shrink:0;box-shadow:0 8px 16px -8px rgba(255,153,0,.6)"><svg viewBox="0 0 50 30" style="width:100%;height:auto"><path d="M7 19c7 4 23 4.5 31 0" stroke="#fff" stroke-width="3.6" fill="none" stroke-linecap="round"/><path d="M35 15l4.5 1.3-1.3 4.6" stroke="#fff" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="24" y="13" font-family="Arial,sans-serif" font-weight="800" font-size="14" fill="#fff" text-anchor="middle">a</text></svg></span>
                   <span style="flex:1;min-width:0">
                     <span style="display:flex;align-items:center;gap:7px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:var(--ink)">Amazon Account Management</span><span style="font-size:9px;font-weight:800;letter-spacing:.06em;color:#fff;background:var(--purple);padding:2.5px 7px;border-radius:5px">FLAGSHIP</span></span>
@@ -283,7 +283,7 @@
                   </span>
                   <span class="se-mega-arrow" style="align-self:center;color:var(--purple)"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                 </a>
-                <a href="#/services/tiktok-shop-management" onClick="{{ go }}" class="se-mega-card" style="display:flex;gap:12px;align-items:flex-start;padding:13px;border-radius:14px;border:1px solid transparent;text-decoration:none">
+                <a href="#/services/tiktok-shop-management" onClick="{{ go }}" class="se-mega-card" style="flex:1 1 min(250px,100%);display:flex;gap:12px;align-items:flex-start;padding:13px;border-radius:14px;border:1px solid transparent;text-decoration:none">
                   <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;background:#111;border-radius:11px;padding:9px;flex-shrink:0;box-shadow:0 8px 16px -8px rgba(0,0,0,.5)"><svg viewBox="0 0 32 34" style="width:100%;height:100%"><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#25F4EE" transform="translate(-1.2,-1.2)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#FE2C55" transform="translate(1.2,1.2)"/><path d="M21 5c.6 3 2.4 5 5.5 5.4v4.2c-2 0-3.8-.6-5.5-1.7v8.1a8 8 0 1 1-8-8c.5 0 1 .05 1.4.13v4.3A3.7 3.7 0 1 0 17 21V5z" fill="#fff"/></svg></span>
                   <span style="flex:1;min-width:0">
                     <span style="display:flex;align-items:center;gap:7px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:var(--ink)">TikTok Shop Management</span><span style="font-size:9px;font-weight:800;letter-spacing:.06em;color:#B23A66;background:#FCEDF2;padding:2.5px 7px;border-radius:5px">TRENDING</span></span>
@@ -291,7 +291,7 @@
                   </span>
                   <span class="se-mega-arrow" style="align-self:center;color:var(--purple)"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                 </a>
-                <a href="#/services/walmart-seller-management" onClick="{{ go }}" class="se-mega-card" style="display:flex;gap:12px;align-items:flex-start;padding:13px;border-radius:14px;border:1px solid transparent;text-decoration:none">
+                <a href="#/services/walmart-seller-management" onClick="{{ go }}" class="se-mega-card" style="flex:1 1 min(250px,100%);display:flex;gap:12px;align-items:flex-start;padding:13px;border-radius:14px;border:1px solid transparent;text-decoration:none">
                   <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;background:linear-gradient(140deg,#0071CE,#004B97);border-radius:11px;padding:8px;flex-shrink:0;box-shadow:0 8px 16px -8px rgba(0,113,206,.6)"><svg viewBox="0 0 32 32" style="width:100%;height:100%"><g stroke="#FFC220" stroke-width="3.6" stroke-linecap="round"><line x1="16" y1="3" x2="16" y2="11"/><line x1="16" y1="21" x2="16" y2="29"/><line x1="4.8" y1="9.5" x2="11.6" y2="13.5"/><line x1="20.4" y1="18.5" x2="27.2" y2="22.5"/><line x1="4.8" y1="22.5" x2="11.6" y2="18.5"/><line x1="20.4" y1="13.5" x2="27.2" y2="9.5"/></g></svg></span>
                   <span style="flex:1;min-width:0">
                     <span style="display:block;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:var(--ink)">Walmart Seller Management</span>
@@ -299,7 +299,7 @@
                   </span>
                   <span class="se-mega-arrow" style="align-self:center;color:var(--purple)"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                 </a>
-                <a href="#/services/ebay-store-management" onClick="{{ go }}" class="se-mega-card" style="display:flex;gap:12px;align-items:flex-start;padding:13px;border-radius:14px;border:1px solid transparent;text-decoration:none">
+                <a href="#/services/ebay-store-management" onClick="{{ go }}" class="se-mega-card" style="flex:1 1 min(250px,100%);display:flex;gap:12px;align-items:flex-start;padding:13px;border-radius:14px;border:1px solid transparent;text-decoration:none">
                   <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;background:#fff;border:1px solid var(--line);border-radius:11px;padding:7px;flex-shrink:0"><svg viewBox="0 0 50 24" style="width:100%;height:auto"><text x="25" y="19" font-family="Arial,sans-serif" font-weight="800" font-style="italic" font-size="20" text-anchor="middle"><tspan fill="#E53238">e</tspan><tspan fill="#0064D2">b</tspan><tspan fill="#F5AF02">a</tspan><tspan fill="#86B817">y</tspan></text></svg></span>
                   <span style="flex:1;min-width:0">
                     <span style="display:block;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:var(--ink)">eBay Store Management</span>
@@ -307,7 +307,7 @@
                   </span>
                   <span class="se-mega-arrow" style="align-self:center;color:var(--purple)"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                 </a>
-                <a href="#/services/global-expansion" onClick="{{ go }}" class="se-mega-card" style="display:flex;gap:12px;align-items:flex-start;padding:13px;border-radius:14px;border:1px solid transparent;text-decoration:none">
+                <a href="#/services/global-expansion" onClick="{{ go }}" class="se-mega-card" style="flex:1 1 min(250px,100%);display:flex;gap:12px;align-items:flex-start;padding:13px;border-radius:14px;border:1px solid transparent;text-decoration:none">
                   <span class="se-logo-chip" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;background:linear-gradient(140deg,#1A9455,#0B5B35);border-radius:11px;color:#fff;flex-shrink:0;box-shadow:0 8px 16px -8px rgba(11,91,53,.6)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></span>
                   <span style="flex:1;min-width:0">
                     <span style="display:flex;align-items:center;gap:7px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:var(--ink)">International Expansion</span><span style="font-size:9px;font-weight:800;letter-spacing:.06em;color:#0B5B35;background:#E2F5EA;padding:2.5px 7px;border-radius:5px">EXPANSION</span></span>
@@ -315,7 +315,7 @@
                   </span>
                   <span class="se-mega-arrow" style="align-self:center;color:var(--purple)"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                 </a>
-                <a href="#/services" onClick="{{ go }}" class="se-mega-card" style="display:flex;gap:12px;align-items:center;padding:13px;border-radius:14px;border:1px dashed var(--line);text-decoration:none">
+                <a href="#/services" onClick="{{ go }}" class="se-mega-card" style="flex:1 1 min(250px,100%);display:flex;gap:12px;align-items:center;padding:13px;border-radius:14px;border:1px dashed var(--line);text-decoration:none">
                   <span style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;background:var(--lav-2);border-radius:11px;color:var(--purple);flex-shrink:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span>
                   <span style="flex:1;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:var(--purple)">View all services</span>
                   <span class="se-mega-arrow" style="color:var(--purple)"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -523,7 +523,7 @@
               <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(2.3rem,7.5vw,4rem);line-height:.84;letter-spacing:-.04em;color:var(--ink)"><span data-count="416" data-prefix="+" data-suffix="%">+416%</span></div>
               <div style="font-size:13px;line-height:1.4;color:var(--ink-soft);margin-top:12px;font-weight:500">Sales growth on a single managed account</div><div style="margin-top:14px;padding-top:14px;border-top:1px solid rgba(22,17,42,.08);display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;color:var(--muted)"><span style="display:inline-flex;width:16px;height:16px;border-radius:5px;background:#E2F5EA;color:#15724A;align-items:center;justify-content:center"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Verified, 90-day window</div>
             </div>
-            <!-- 6 marketplaces with logos -->
+            <!-- 5 marketplaces with logos -->
             <div data-reveal class="se-tilt se-shine se-metric-glow" style="position:relative;overflow:hidden;background:linear-gradient(165deg,#EEF3FB,#fff);border:1px solid #DEE8F4;border-radius:24px;padding:clamp(22px,3.5vw,34px)">
               <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:clamp(16px,2.5vw,24px)">
                 <span style="width:48px;height:48px;border-radius:15px;background:linear-gradient(140deg,#3A86E0,#1F5BB5);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 24px -10px rgba(42,111,219,.8)"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></span>
@@ -1405,9 +1405,9 @@
             <a href="#/contact" onClick="{{ go }}" class="se-press" style="display:inline-flex;align-items:center;gap:9px;white-space:nowrap;background:{{ auto.accent }};color:#fff;font-weight:700;font-size:16px;text-decoration:none;padding:15px 28px;border-radius:13px;box-shadow:0 16px 34px -14px {{ auto.accent }}">Start earning today <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             <a href="#/contact" onClick="{{ go }}" style="display:inline-flex;align-items:center;gap:9px;white-space:nowrap;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#fff;font-weight:600;font-size:16px;text-decoration:none;padding:15px 26px;border-radius:13px">Book a call</a>
           </div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr));gap:14px">
+          <div style="display:flex;flex-wrap:wrap;gap:14px">
             <sc-for list="{{ auto.stats }}" as="s" hint-placeholder-count="4">
-              <div data-reveal="scale" class="se-tilt" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:22px 20px">
+              <div data-reveal="scale" class="se-tilt" style="flex:1 1 min(190px,100%);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:22px 20px">
                 <div style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.7rem,4vw,2.4rem);line-height:1;letter-spacing:-.03em;color:#fff;margin-bottom:8px">{{ s.v }}</div>
                 <div style="font-size:13px;color:#A8A6C4;line-height:1.35">{{ s.l }}</div>
               </div>
@@ -1585,9 +1585,9 @@
             <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:{{ auto.accentDeep }};font-weight:700;margin-bottom:14px">Long-term growth vision</div>
             <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.06;letter-spacing:-.025em;margin:0">{{ auto.growthTitle }}</h2>
           </div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:14px;margin-bottom:24px">
+          <div style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:24px">
             <sc-for list="{{ auto.growth }}" as="g" hint-placeholder-count="3">
-              <div data-reveal class="se-tilt" style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;gap:13px;align-items:flex-start">
+              <div data-reveal class="se-tilt" style="flex:1 1 min(260px,100%);background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;gap:13px;align-items:flex-start">
                 <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:{{ auto.accentSoft }};color:{{ auto.accentDeep }};display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-8M14 7h7v7"/></svg></span>
                 <span style="font-size:15px;line-height:1.5;color:var(--ink);font-weight:500">{{ g }}</span>
               </div>
@@ -1607,9 +1607,9 @@
             <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:1.02;letter-spacing:-.03em;margin:0">Stores we run. Numbers we <span class="se-gradtext">grow.</span></h2>
           </div>
           <sc-if value="{{ auto.hasProof }}">
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px;margin-bottom:18px">
+          <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:18px">
             <sc-for list="{{ auto.proofImgs }}" as="pi">
-              <div class="se-tilt" style="background:linear-gradient(180deg,#221B36,#15101f);border:1px solid rgba(255,255,255,.1);border-radius:18px;overflow:hidden;box-shadow:0 24px 54px -30px rgba(0,0,0,.8)">
+              <div class="se-tilt" style="flex:1 1 min(300px,100%);background:linear-gradient(180deg,#221B36,#15101f);border:1px solid rgba(255,255,255,.1);border-radius:18px;overflow:hidden;box-shadow:0 24px 54px -30px rgba(0,0,0,.8)">
                 <div style="position:relative;aspect-ratio:{{ pi.ratio }};overflow:hidden;background:#0a0716">
                   <sc-if value="{{ pi.src }}"><img data-src="{{ pi.src }}" alt="Seller dashboard screenshot: {{ pi.v }} {{ pi.l }}" style="width:100%;height:100%;object-fit:contain;object-position:top;display:block"/></sc-if>
                   <span style="position:absolute;top:11px;left:11px;display:inline-flex;align-items:center;gap:6px;background:rgba(13,9,24,.72);backdrop-filter:blur(4px);color:#fff;font-size:10px;font-weight:700;letter-spacing:.05em;padding:5px 9px;border-radius:7px"><span style="position:relative;width:6px;height:6px"><span style="position:absolute;inset:0;border-radius:50%;background:#36C281"></span></span>LIVE</span>
@@ -2035,9 +2035,9 @@
             <h2 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:clamp(1.7rem,3.2vw,2.6rem);line-height:1.08;letter-spacing:-.02em;margin:0 0 12px">A+ Content and Storefront Design, done properly.</h2>
             <p style="font-size:1.05rem;line-height:1.6;color:var(--ink-soft);margin:0">Better creative lifts conversion on the traffic you already pay for. We build it in two tiers, plus a fully branded storefront.</p>
           </div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:16px">
+          <div style="display:flex;flex-wrap:wrap;gap:16px">
             <!-- Basic A+ -->
-            <div data-reveal class="se-tilt" style="background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(24px,3vw,30px);display:flex;flex-direction:column">
+            <div data-reveal class="se-tilt" style="flex:1 1 min(280px,100%);background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(24px,3vw,30px);display:flex;flex-direction:column">
               <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:var(--ink)">Basic A+ Content</span><span style="font-size:10.5px;font-weight:800;letter-spacing:.06em;color:var(--muted);background:var(--mist);border:1px solid var(--line);padding:4px 9px;border-radius:6px">STANDARD</span></div>
               <p style="font-size:14px;line-height:1.55;color:var(--muted);margin:0 0 18px">Standard modules that turn a plain listing into a branded, scannable story.</p>
               <div style="display:flex;flex-direction:column;gap:11px">
@@ -2047,7 +2047,7 @@
               </div>
             </div>
             <!-- Premium A+ -->
-            <div data-reveal class="se-tilt" style="background:var(--ink);color:#fff;border:1px solid var(--ink);border-radius:20px;padding:clamp(24px,3vw,30px);display:flex;flex-direction:column;position:relative;overflow:hidden">
+            <div data-reveal class="se-tilt" style="flex:1 1 min(280px,100%);background:var(--ink);color:#fff;border:1px solid var(--ink);border-radius:20px;padding:clamp(24px,3vw,30px);display:flex;flex-direction:column;position:relative;overflow:hidden">
               <div style="position:absolute;top:-40px;right:-30px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(90,86,165,.5),transparent 70%);pointer-events:none"></div>
               <div style="position:relative;display:flex;align-items:center;justify-content:space-between;margin-bottom:16px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:#fff">Premium A+ Content</span><span style="font-size:10.5px;font-weight:800;letter-spacing:.06em;color:#fff;background:var(--purple);padding:4px 9px;border-radius:6px">PREMIUM</span></div>
               <p style="position:relative;font-size:14px;line-height:1.55;color:#C2C0DE;margin:0 0 18px">Interactive, premium modules that behave like a mini landing page and push AOV.</p>
@@ -2058,7 +2058,7 @@
               </div>
             </div>
             <!-- Storefront Design -->
-            <div data-reveal class="se-tilt" style="background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(24px,3vw,30px);display:flex;flex-direction:column">
+            <div data-reveal class="se-tilt" style="flex:1 1 min(280px,100%);background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(24px,3vw,30px);display:flex;flex-direction:column">
               <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:var(--ink)">Storefront Design</span><span style="width:34px;height:34px;border-radius:10px;background:linear-gradient(140deg,#B23A66,#8B4A9C);color:#fff;display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 14h5"/></svg></span></div>
               <p style="font-size:14px;line-height:1.55;color:var(--muted);margin:0 0 18px">A fully branded, multi-page store that showcases your range and keeps shoppers on your brand.</p>
               <div style="display:flex;flex-direction:column;gap:11px">
@@ -2153,11 +2153,11 @@
               <circle cx="905" cy="46" r="9" fill="{{ activeService.accent }}" stroke="#fff" stroke-width="4"/>
             </svg>
             <div style="height:1px;background:var(--line);margin:clamp(14px,2.5vw,22px) 0"></div>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:clamp(12px,2vw,20px)">
-              <div style="display:flex;flex-direction:column;gap:6px"><span style="display:inline-flex;align-items:center;gap:8px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:12px;color:{{ activeService.accentDeep }};background:{{ activeService.accentSoft }};border-radius:100px;padding:3px 10px;white-space:nowrap">DAYS 0 TO 30</span></span><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:var(--ink)">Audit and foundations</span><span style="font-size:13px;line-height:1.5;color:var(--muted)">Deep audit, quick wins shipped, tracking wired to profit.</span></div>
-              <div style="display:flex;flex-direction:column;gap:6px"><span style="display:inline-flex;align-items:center;gap:8px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:12px;color:{{ activeService.accentDeep }};background:{{ activeService.accentSoft }};border-radius:100px;padding:3px 10px;white-space:nowrap">DAYS 31 TO 60</span></span><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:var(--ink)">Relaunch and rebuild</span><span style="font-size:13px;line-height:1.5;color:var(--muted)">Listings, ads and pricing rebuilt around what converts.</span></div>
-              <div style="display:flex;flex-direction:column;gap:6px"><span style="display:inline-flex;align-items:center;gap:8px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:12px;color:{{ activeService.accentDeep }};background:{{ activeService.accentSoft }};border-radius:100px;padding:3px 10px;white-space:nowrap">DAYS 61 TO 90</span></span><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:var(--ink)">Scale what works</span><span style="font-size:13px;line-height:1.5;color:var(--muted)">Budget concentrates on winners; losers get cut fast.</span></div>
-              <div style="display:flex;flex-direction:column;gap:6px"><span style="display:inline-flex;align-items:center;gap:8px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:12px;color:#fff;background:{{ activeService.accentDeep }};border-radius:100px;padding:3px 10px;white-space:nowrap">MONTH 6 PLUS</span></span><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:var(--ink)">Compounding growth</span><span style="font-size:13px;line-height:1.5;color:var(--muted)">Rank, reviews and repeat purchase stack on each other.</span></div>
+            <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,2vw,20px)">
+              <div style="flex:1 1 min(200px,100%);display:flex;flex-direction:column;gap:6px"><span style="display:inline-flex;align-items:center;gap:8px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:12px;color:{{ activeService.accentDeep }};background:{{ activeService.accentSoft }};border-radius:100px;padding:3px 10px;white-space:nowrap">DAYS 0 TO 30</span></span><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:var(--ink)">Audit and foundations</span><span style="font-size:13px;line-height:1.5;color:var(--muted)">Deep audit, quick wins shipped, tracking wired to profit.</span></div>
+              <div style="flex:1 1 min(200px,100%);display:flex;flex-direction:column;gap:6px"><span style="display:inline-flex;align-items:center;gap:8px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:12px;color:{{ activeService.accentDeep }};background:{{ activeService.accentSoft }};border-radius:100px;padding:3px 10px;white-space:nowrap">DAYS 31 TO 60</span></span><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:var(--ink)">Relaunch and rebuild</span><span style="font-size:13px;line-height:1.5;color:var(--muted)">Listings, ads and pricing rebuilt around what converts.</span></div>
+              <div style="flex:1 1 min(200px,100%);display:flex;flex-direction:column;gap:6px"><span style="display:inline-flex;align-items:center;gap:8px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:12px;color:{{ activeService.accentDeep }};background:{{ activeService.accentSoft }};border-radius:100px;padding:3px 10px;white-space:nowrap">DAYS 61 TO 90</span></span><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:var(--ink)">Scale what works</span><span style="font-size:13px;line-height:1.5;color:var(--muted)">Budget concentrates on winners; losers get cut fast.</span></div>
+              <div style="flex:1 1 min(200px,100%);display:flex;flex-direction:column;gap:6px"><span style="display:inline-flex;align-items:center;gap:8px"><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:12px;color:#fff;background:{{ activeService.accentDeep }};border-radius:100px;padding:3px 10px;white-space:nowrap">MONTH 6 PLUS</span></span><span style="font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:var(--ink)">Compounding growth</span><span style="font-size:13px;line-height:1.5;color:var(--muted)">Rank, reviews and repeat purchase stack on each other.</span></div>
             </div>
           </div>
         </div>
@@ -2512,9 +2512,9 @@
         </div>
       </section>
       <section style="background:#fff;padding:0 0 clamp(56px,7vw,88px)">
-        <div style="max-width:1100px;margin:0 auto;padding:0 clamp(20px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px">
+        <div style="max-width:1100px;margin:0 auto;padding:0 clamp(20px,4vw,48px);display:flex;flex-wrap:wrap;gap:18px">
           <sc-for list="{{ resources }}" as="rs" hint-placeholder-count="4">
-            <article data-reveal class="se-card-hover se-tilt se-shine" style="display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 4px 18px -12px rgba(22,17,42,.2)">
+            <article data-reveal class="se-card-hover se-tilt se-shine" style="flex:1 1 min(230px,100%);display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 4px 18px -12px rgba(22,17,42,.2)">
               <div style="height:128px;background:linear-gradient(135deg,#5A56A5,#322C5C);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;padding:20px">
                 <div style="position:absolute;top:-30px;right:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.1)"></div>
                 <span style="position:relative;background:rgba(255,255,255,.18);color:#fff;font-size:11px;font-weight:700;letter-spacing:.05em;padding:6px 12px;border-radius:7px">{{ rs.tag }}</span>
@@ -2730,7 +2730,7 @@
 
   <!-- ===== FOOTER ===== -->
   <footer style="background:var(--ink-2);color:#fff;padding:0 0 {{ footerPad }};position:relative">
-    <div style="height:3px;background:linear-gradient(90deg,#FF9900,#0071CE,#FE2C55,#95BF47,#FEEE00,#5A56A5);background-size:200% 100%;animation:seGradShift 8s ease infinite"></div>
+    <div style="height:3px;background:linear-gradient(90deg,#FF9900,#FE2C55,#95BF47,#0071CE,#E53238,#5A56A5);background-size:200% 100%;animation:seGradShift 8s ease infinite"></div>
     <div style="max-width:1280px;margin:0 auto;padding:clamp(40px,5vw,64px) clamp(20px,4vw,48px) 0">
       <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;justify-content:center;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:40px">
         <span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8C8AA8;font-weight:600">Marketplaces we run</span><span style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Amazon, TikTok Shop, Shopify, Walmart, eBay</span>
@@ -3574,7 +3574,7 @@ class Component extends DCLogic {
       { key:'inventory', label:'Inventory risks', what:'We review stock cover and peak-season exposure.', why:'Stockouts kill rank that took months to build.', action:'Plan restock and forecast for peaks.' },
       { key:'creative', label:'Creative weaknesses', what:'We assess imagery, A+ Content and storefront.', why:'Weak creative loses the click before the sale.', action:'Direct new photography, infographics and A+.' },
       { key:'pricing', label:'Pricing opportunities', what:'We analyse price against margin and the market.', why:'Price is the fastest lever on profit, used carelessly.', action:'Set pricing and promotions to protect margin.' },
-      { key:'expansion', label:'Expansion opportunities', what:'We identify the next profitable marketplace or region.', why:'One channel caps your ceiling, the portfolio raises it.', action:'We sequence Walmart, TikTok Shop or the EU.' }
+      { key:'expansion', label:'Expansion opportunities', what:'We identify the next profitable marketplace or region.', why:'One channel caps your ceiling, the portfolio raises it.', action:'We sequence TikTok Shop, Walmart or the EU.' }
     ];
   }
 
